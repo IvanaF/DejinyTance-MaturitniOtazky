@@ -2,6 +2,24 @@
  * Main Application Logic
  */
 
+/**
+ * Get correct Czech plural form
+ * @param {number} count - Number to get plural for
+ * @param {string} one - Form for 1 (e.g., "otázka")
+ * @param {string} few - Form for 2-4 (e.g., "otázky")
+ * @param {string} many - Form for 5+ (e.g., "otázek")
+ * @returns {string} Correct plural form
+ */
+function getCzechPlural(count, one, few, many) {
+  if (count === 1) {
+    return one;
+  }
+  if (count >= 2 && count <= 4) {
+    return few;
+  }
+  return many;
+}
+
 // Initialize app when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
@@ -80,7 +98,8 @@ async function initIndexPage() {
     // Load all topics
     console.log('Načítání otázek...');
     const topics = await topicLoader.loadAllTopics();
-    console.log(`Načteno ${topics.length} otázek:`, topics);
+    const plural = getCzechPlural(topics.length, 'otázka', 'otázky', 'otázek');
+    console.log(`Načteno ${topics.length} ${plural}:`, topics);
     
   if (topics.length === 0) {
     console.error('No topics loaded. Check console for errors.');
@@ -101,14 +120,6 @@ async function initIndexPage() {
 
     // Update stats
     updateIndexStats(topics.length);
-    
-    // Listen for progress updates
-    window.addEventListener('progressUpdated', () => {
-      updateIndexStats(topics.length);
-      renderTopicList('topicsList', topics, false);
-      renderTopicList('mobileTopicsList', topics, false);
-      renderTopicList('indexTopicsList', topics, true);
-    });
   } catch (error) {
     console.error('Error initializing index page:', error);
     const containers = ['topicsList', 'mobileTopicsList', 'indexTopicsList'];
@@ -166,9 +177,6 @@ async function initTopicPage() {
       flashcardsHandler.init(topic.flashcards);
     }
 
-    // Setup completion toggle
-    setupCompletionToggle(topicId);
-
     // Setup navigation
     setupTopicNavigation(topicId);
   } catch (error) {
@@ -196,19 +204,39 @@ function renderTopicList(containerId, topics, isIndexPage, activeTopicId = null)
     return;
   }
 
-  container.innerHTML = topics.map(topic => {
-    const isCompleted = progressTracker.isCompleted(topic.id);
+  container.innerHTML = topics.map((topic, index) => {
     const isActive = activeTopicId === topic.id;
     const url = isIndexPage ? topicLoader.getTopicUrl(topic.id) : topicLoader.getTopicUrl(topic.id);
+    // Use order field if available, otherwise use index + 1
+    const topicNumber = topic.order || (index + 1);
+    
+    // Image with fallback
+    const imageHtml = topic.image ? `
+      <img src="${escapeHtml(topic.image)}" alt="${escapeHtml(topic.title)}" class="topic-image" 
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="topic-image-fallback" style="display: none;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2v4m0 12v4M2 12h4m12 0h4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </div>
+    ` : `
+      <div class="topic-image-fallback">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2v4m0 12v4M2 12h4m12 0h4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </div>
+    `;
     
     return `
       <li class="topic-item">
         <a href="${url}" class="topic-link ${isActive ? 'active' : ''}" ${isActive ? 'aria-current="page"' : ''}>
-          <div class="topic-info">
-            <div class="topic-title">${escapeHtml(topic.title)}</div>
+          <div class="topic-image-container">
+            ${imageHtml}
           </div>
-          <div class="topic-status">
-            <div class="completion-check ${isCompleted ? 'completed' : ''}" aria-label="${isCompleted ? 'Dokončeno' : 'Nedokončeno'}"></div>
+          <div class="topic-info">
+            <div class="topic-title">${topicNumber}. ${escapeHtml(topic.title)}</div>
           </div>
         </a>
       </li>
@@ -222,15 +250,10 @@ function renderTopicList(containerId, topics, isIndexPage, activeTopicId = null)
  */
 function updateIndexStats(totalTopics) {
   const totalElement = document.getElementById('totalTopics');
-  const completedElement = document.getElementById('completedTopics');
   
   if (totalElement) {
-    totalElement.textContent = totalTopics;
-  }
-  
-  if (completedElement) {
-    const completed = progressTracker.getCompletionCount(totalTopics);
-    completedElement.textContent = completed;
+    const plural = getCzechPlural(totalTopics, 'otázka', 'otázky', 'otázek');
+    totalElement.textContent = `${totalTopics} ${plural}`;
   }
 }
 
@@ -245,10 +268,33 @@ function renderTopicContent(topic) {
     pageTitle.textContent = `${topic.title} - Dějiny tance a baletu - Maturitní otázky`;
   }
 
-  // Render header
+  // Render header with image
   const titleElement = document.getElementById('topicTitle');
   if (titleElement) {
-    titleElement.textContent = topic.title;
+    const topicNumber = topic.order || '';
+    const imageHtml = topic.image ? `
+      <img src="${escapeHtml(topic.image)}" alt="${escapeHtml(topic.title)}" class="topic-header-image"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="topic-header-image-fallback" style="display: none;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2v4m0 12v4M2 12h4m12 0h4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </div>
+    ` : `
+      <div class="topic-header-image-fallback">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2v4m0 12v4M2 12h4m12 0h4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </div>
+    `;
+    titleElement.innerHTML = `
+      <div class="topic-header-content">
+        <div class="topic-header-image-container">${imageHtml}</div>
+        <span>${topicNumber ? topicNumber + '. ' : ''}${escapeHtml(topic.title)}</span>
+      </div>
+    `;
   }
 
   // Render meta info (removed - no longer displaying time and difficulty)
@@ -257,30 +303,24 @@ function renderTopicContent(topic) {
     metaElement.innerHTML = '';
   }
 
-  // Render objectives
-  if (topic.objectives && topic.objectives.length > 0) {
-    const objectivesList = document.getElementById('objectivesList');
-    if (objectivesList) {
-      objectivesList.innerHTML = topic.objectives.map(obj => 
-        `<li class="objective-item">${escapeHtml(obj)}</li>`
-      ).join('');
+  // Render summary
+  if (topic.summary) {
+    const summaryContent = document.getElementById('summaryContent');
+    if (summaryContent) {
+      summaryContent.innerHTML = `<div class="summary-text">${markdownToHtml(topic.summary)}</div>`;
     }
   } else {
-    const objectivesSection = document.getElementById('objectivesSection');
-    if (objectivesSection) {
-      objectivesSection.style.display = 'none';
+    const summarySection = document.getElementById('summarySection');
+    if (summarySection) {
+      summarySection.style.display = 'none';
     }
   }
 
-  // Render materials
+  // Render materials (without summary, it's now separate)
   if (topic.materials) {
     const materialsContent = document.getElementById('materialsContent');
     if (materialsContent) {
       let html = '';
-      
-      if (topic.materials.summary) {
-        html += `<div class="materials-summary">${markdownToHtml(topic.materials.summary)}</div>`;
-      }
       
       if (topic.materials.sections && topic.materials.sections.length > 0) {
         html += topic.materials.sections.map(section => `
@@ -339,6 +379,69 @@ function renderTopicContent(topic) {
     }
   }
 
+  // Render mindmap
+  if (topic.mindmap) {
+    const mindmapContent = document.getElementById('mindmapContent');
+    if (mindmapContent) {
+      let html = '';
+      if (topic.mindmap.description) {
+        html += `<p class="mindmap-description">${escapeHtml(topic.mindmap.description)}</p>`;
+      }
+      if (topic.mindmap.image) {
+        html += `
+          <div class="mindmap-image-container">
+            <img src="${escapeHtml(topic.mindmap.image)}" alt="Myšlenková mapa pojmů" class="mindmap-image"
+                 onerror="this.style.display='none';">
+          </div>
+        `;
+      }
+      mindmapContent.innerHTML = html;
+    }
+  } else {
+    const mindmapSection = document.getElementById('mindmapSection');
+    if (mindmapSection) {
+      mindmapSection.style.display = 'none';
+    }
+  }
+
+  // Render quiz
+  if (topic.quiz && topic.quiz.questions && topic.quiz.questions.length > 0) {
+    const quizContent = document.getElementById('quizContent');
+    const quizSection = document.getElementById('quizSection');
+    
+    if (quizSection) {
+      // Update section title with question count (with correct plural)
+      const sectionTitle = quizSection.querySelector('.section-title');
+      if (sectionTitle) {
+        const spanElement = sectionTitle.querySelector('span');
+        if (spanElement) {
+          const count = topic.quiz.questions.length;
+          const plural = getCzechPlural(count, 'otázka', 'otázky', 'otázek');
+          spanElement.textContent = `Kvíz (${count} ${plural})`;
+        }
+      }
+    }
+    
+    if (quizContent) {
+      // Shuffle questions randomly
+      const shuffledQuestions = [...topic.quiz.questions].sort(() => Math.random() - 0.5);
+      
+      // Store shuffled questions globally for this topic
+      window.currentQuiz = {
+        questions: shuffledQuestions,
+        currentIndex: 0,
+        answers: {}
+      };
+      
+      renderQuizQuestion(0);
+    }
+  } else {
+    const quizSection = document.getElementById('quizSection');
+    if (quizSection) {
+      quizSection.style.display = 'none';
+    }
+  }
+
   // Render resources
   if (topic.resources && topic.resources.length > 0) {
     const resourcesList = document.getElementById('resourcesList');
@@ -358,39 +461,188 @@ function renderTopicContent(topic) {
       resourcesSection.style.display = 'none';
     }
   }
+
+  // Setup smooth scroll for quick navigation
+  setupQuickNavigation();
 }
 
 /**
- * Setup completion toggle
- * @param {string} topicId - Topic ID
+ * Render a single quiz question
+ * @param {number} questionIndex - Index of question to display
  */
-function setupCompletionToggle(topicId) {
-  const checkbox = document.getElementById('completionCheckbox');
-  const toggle = document.getElementById('completionToggle');
-  const label = document.getElementById('completionLabel');
-
-  if (!checkbox || !toggle || !label) return;
-
-  // Set initial state
-  const isCompleted = progressTracker.isCompleted(topicId);
-  checkbox.checked = isCompleted;
-  if (isCompleted) {
-    toggle.classList.add('completed');
-    label.textContent = 'Dokončeno';
+function renderQuizQuestion(questionIndex) {
+  const quizContent = document.getElementById('quizContent');
+  if (!quizContent || !window.currentQuiz) return;
+  
+  const quiz = window.currentQuiz;
+  const question = quiz.questions[questionIndex];
+  const totalQuestions = quiz.questions.length;
+  const isAnswered = quiz.answers[questionIndex] !== undefined;
+  const userAnswer = quiz.answers[questionIndex];
+  const isCorrect = userAnswer === question.correct;
+  
+  if (!question) return;
+  
+  const qId = `q${questionIndex}`;
+  let answersHtml = '';
+  
+  if (question.answers && question.answers.length > 0) {
+    answersHtml = question.answers.map((answer, aIndex) => {
+      const aId = `${qId}_a${aIndex}`;
+      const isSelected = userAnswer === aIndex;
+      const isCorrectAnswer = aIndex === question.correct;
+      let answerClass = 'quiz-answer';
+      
+      if (isAnswered) {
+        if (isCorrectAnswer) {
+          answerClass += ' quiz-answer-correct';
+        } else if (isSelected && !isCorrectAnswer) {
+          answerClass += ' quiz-answer-incorrect';
+        }
+      }
+      
+      return `
+        <div class="${answerClass}">
+          <input type="radio" id="${aId}" name="${qId}" value="${aIndex}" 
+                 ${isSelected ? 'checked' : ''} 
+                 ${isAnswered ? 'disabled' : ''}>
+          <label for="${aId}">${escapeHtml(answer)}</label>
+        </div>
+      `;
+    }).join('');
   }
+  
+  let resultHtml = '';
+  if (isAnswered) {
+    resultHtml = `
+      <div class="quiz-result ${isCorrect ? 'quiz-result-correct' : 'quiz-result-incorrect'}">
+        <div class="quiz-result-icon">${isCorrect ? '✓' : '✗'}</div>
+        <div class="quiz-result-text">
+          ${isCorrect ? 'Správně!' : 'Špatně. Správná odpověď je: ' + escapeHtml(question.answers[question.correct])}
+        </div>
+      </div>
+    `;
+  }
+  
+  const canGoPrev = questionIndex > 0;
+  const canGoNext = questionIndex < totalQuestions - 1;
+  
+  quizContent.innerHTML = `
+    <div class="quiz-container">
+      <div class="quiz-progress">
+        ${questionIndex + 1} z ${totalQuestions}
+      </div>
+      <div class="quiz-question">
+        <h3 class="quiz-question-title">${escapeHtml(question.question)}</h3>
+        <div class="quiz-answers">${answersHtml}</div>
+        ${resultHtml}
+      </div>
+      <div class="quiz-navigation">
+        <button class="quiz-nav-button" ${!canGoPrev ? 'disabled' : ''} onclick="navigateQuiz(${questionIndex - 1})">
+          ← Předchozí
+        </button>
+        ${!isAnswered ? `
+          <button class="quiz-submit-button" onclick="submitQuizAnswer(${questionIndex})">
+            Odeslat odpověď
+          </button>
+        ` : ''}
+        <button class="quiz-nav-button" ${!canGoNext ? 'disabled' : ''} onclick="navigateQuiz(${questionIndex + 1})">
+          Další →
+        </button>
+      </div>
+    </div>
+  `;
+}
 
-  // Handle toggle
-  checkbox.addEventListener('change', () => {
-    const completed = checkbox.checked;
-    progressTracker.setCompleted(topicId, completed);
+/**
+ * Submit quiz answer for current question
+ * @param {number} questionIndex - Index of question
+ */
+function submitQuizAnswer(questionIndex) {
+  if (!window.currentQuiz) return;
+  
+  const question = window.currentQuiz.questions[questionIndex];
+  const qId = `q${questionIndex}`;
+  const selectedAnswer = document.querySelector(`input[name="${qId}"]:checked`);
+  
+  if (!selectedAnswer) {
+    alert('Vyberte prosím odpověď');
+    return;
+  }
+  
+  const answerIndex = parseInt(selectedAnswer.value);
+  window.currentQuiz.answers[questionIndex] = answerIndex;
+  
+  // Re-render to show result
+  renderQuizQuestion(questionIndex);
+}
+
+/**
+ * Navigate to another quiz question
+ * @param {number} questionIndex - Index of question to navigate to
+ */
+function navigateQuiz(questionIndex) {
+  if (!window.currentQuiz) return;
+  
+  if (questionIndex >= 0 && questionIndex < window.currentQuiz.questions.length) {
+    window.currentQuiz.currentIndex = questionIndex;
+    renderQuizQuestion(questionIndex);
     
-    if (completed) {
-      toggle.classList.add('completed');
-      label.textContent = 'Dokončeno';
-    } else {
-      toggle.classList.remove('completed');
-      label.textContent = 'Označit jako dokončené';
+    // Scroll to top of quiz section
+    const quizSection = document.getElementById('quizSection');
+    if (quizSection) {
+      quizSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  }
+}
+
+/**
+ * Setup smooth scroll for quick navigation links
+ */
+function setupQuickNavigation() {
+  const navLinks = document.querySelectorAll('.quick-navigation a[href^="#"]');
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        e.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          const offset = 80; // Account for mobile nav height
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  });
+
+  // Smooth scroll for scroll-to-top buttons
+  const scrollToTopLinks = document.querySelectorAll('.scroll-to-top');
+  scrollToTopLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        e.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          // Account for mobile navigation bar height
+          const mobileNav = document.querySelector('.mobile-nav');
+          const offset = mobileNav && window.getComputedStyle(mobileNav).display !== 'none' ? 80 : 0;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
   });
 }
 
@@ -408,7 +660,8 @@ function setupTopicNavigation(topicId) {
   if (prevButton) {
     if (prevTopic) {
       prevButton.href = topicLoader.getTopicUrl(prevTopic.id);
-      prevButton.textContent = `← ${prevTopic.title}`;
+      const prevTopicNumber = prevTopic.order || '';
+      prevButton.textContent = prevTopicNumber ? `← ${prevTopicNumber}. ${prevTopic.title}` : `← ${prevTopic.title}`;
       prevButton.removeAttribute('aria-label');
     } else {
       prevButton.classList.add('disabled');
@@ -421,7 +674,8 @@ function setupTopicNavigation(topicId) {
   if (nextButton) {
     if (nextTopic) {
       nextButton.href = topicLoader.getTopicUrl(nextTopic.id);
-      nextButton.textContent = `${nextTopic.title} →`;
+      const nextTopicNumber = nextTopic.order || '';
+      nextButton.textContent = nextTopicNumber ? `${nextTopicNumber}. ${nextTopic.title} →` : `${nextTopic.title} →`;
       nextButton.removeAttribute('aria-label');
     } else {
       nextButton.classList.add('disabled');

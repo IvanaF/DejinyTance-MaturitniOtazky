@@ -1,0 +1,58 @@
+{
+  "id": "TXX",
+  "order": 0,
+  "title": "Topic Title",
+  "objectives": [
+    "Objective 1",
+    "Objective 2",
+    "Objective 3"
+  ],
+  "image": "assets/images/topics/TXX.jpg",
+  "materials": {
+    "summary": "Brief 1-2 paragraph summary generated from materials.",
+    "sections": [
+      {
+        "heading": "Section Heading",
+        "content": "Content text with paragraphs separated by \\n\\n."
+      }
+    ]
+  },
+  "audio": {
+    "title": "Podcast: Topic Title",
+    "src": "assets/audio/TXX.mp3",
+    "transcript": "Transcript text here."
+  },
+  "resources": [
+    {
+      "title": "Resource Title",
+      "url": "https://example.com/resource",
+      "reason": "Reason why this resource is relevant"
+    }
+  ],
+  "flashcards": [
+    {
+      "q": "Question text?",
+      "a": "Answer text."
+    }
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "question": "Question text?",
+        "answers": [
+          "Answer option 1",
+          "Answer option 2",
+          "Answer option 3",
+          "Answer option 4"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  "mindmap": {
+    "description": "Optional description of the mindmap",
+    "image": "assets/images/mindmaps/TXX.png"
+  },
+  "summary": "Optional summary text (1-2 paragraphs) generated from materials. This section appears separately from materials.summary in the UI."
+}
+

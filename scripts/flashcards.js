@@ -6,6 +6,22 @@
 class FlashcardsHandler {
   constructor() {
     this.flashcards = [];
+    this.shuffledCards = [];
+    this.currentIndex = 0;
+  }
+
+  /**
+   * Get Czech plural form
+   * @param {number} count - Number
+   * @param {string} one - Form for 1
+   * @param {string} few - Form for 2-4
+   * @param {string} many - Form for 5+
+   * @returns {string} Correct plural form
+   */
+  getCzechPlural(count, one, few, many) {
+    if (count === 1) return one;
+    if (count >= 2 && count <= 4) return few;
+    return many;
   }
 
   /**
@@ -14,39 +30,102 @@ class FlashcardsHandler {
    */
   init(flashcards) {
     this.flashcards = flashcards || [];
+    
+    // Shuffle flashcards randomly
+    this.shuffledCards = [...this.flashcards].sort(() => Math.random() - 0.5);
+    this.currentIndex = 0;
+    
+    // Update section title with count (only number, no plural)
+    const flashcardsSection = document.getElementById('flashcardsSection');
+    if (flashcardsSection && this.flashcards.length > 0) {
+      const sectionTitle = flashcardsSection.querySelector('.section-title span');
+      if (sectionTitle) {
+        sectionTitle.textContent = `Kartičky (${this.flashcards.length})`;
+      }
+    }
+    
     this.render();
   }
 
   /**
-   * Render flashcards to the container
+   * Render current flashcard to the container
    */
   render() {
     const container = document.getElementById('flashcardsContainer');
     if (!container) return;
 
-    if (this.flashcards.length === 0) {
+    if (this.shuffledCards.length === 0) {
       container.innerHTML = '<p>Pro toto téma nejsou k dispozici žádné kartičky.</p>';
       return;
     }
 
-    container.innerHTML = this.flashcards.map((card, index) => `
-      <div class="flashcard" data-index="${index}" role="button" tabindex="0" aria-label="Kartička ${index + 1}">
-        <div class="flashcard-question">${this.escapeHtml(card.q)}</div>
-        <div class="flashcard-answer">${this.markdownToHtml(card.a)}</div>
-        <div class="flashcard-hint">Klikněte pro zobrazení odpovědi</div>
+    const card = this.shuffledCards[this.currentIndex];
+    const totalCards = this.shuffledCards.length;
+    const canGoPrev = this.currentIndex > 0;
+    const canGoNext = this.currentIndex < totalCards - 1;
+
+    container.innerHTML = `
+      <div class="flashcard-container">
+        <div class="flashcard-progress">
+          ${this.currentIndex + 1} z ${totalCards}
+        </div>
+        <div class="flashcard" id="currentFlashcard" role="button" tabindex="0" aria-label="Kartička ${this.currentIndex + 1}">
+          <div class="flashcard-question">${this.escapeHtml(card.q)}</div>
+          <div class="flashcard-answer">${this.markdownToHtml(card.a)}</div>
+          <div class="flashcard-hint">Klikněte pro zobrazení odpovědi</div>
+        </div>
+        <div class="flashcard-navigation">
+          <button class="flashcard-nav-button" ${!canGoPrev ? 'disabled' : ''} onclick="flashcardsHandler.navigateFlashcard(${this.currentIndex - 1})">
+            ← Předchozí
+          </button>
+          <button class="flashcard-flip-button" onclick="flashcardsHandler.flipCurrentCard()">
+            Otočit kartu
+          </button>
+          <button class="flashcard-nav-button" ${!canGoNext ? 'disabled' : ''} onclick="flashcardsHandler.navigateFlashcard(${this.currentIndex + 1})">
+            Další →
+          </button>
+        </div>
       </div>
-    `).join('');
+    `;
 
     // Attach event listeners
-    container.querySelectorAll('.flashcard').forEach(card => {
-      card.addEventListener('click', (e) => this.flipCard(e.currentTarget));
-      card.addEventListener('keydown', (e) => {
+    const currentCard = document.getElementById('currentFlashcard');
+    if (currentCard) {
+      currentCard.addEventListener('click', () => this.flipCurrentCard());
+      currentCard.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          this.flipCard(e.currentTarget);
+          this.flipCurrentCard();
         }
       });
-    });
+    }
+  }
+
+  /**
+   * Navigate to another flashcard
+   * @param {number} index - Index of flashcard to navigate to
+   */
+  navigateFlashcard(index) {
+    if (index >= 0 && index < this.shuffledCards.length) {
+      this.currentIndex = index;
+      this.render();
+      
+      // Scroll to top of flashcards section
+      const flashcardsSection = document.getElementById('flashcardsSection');
+      if (flashcardsSection) {
+        flashcardsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }
+
+  /**
+   * Flip the current flashcard
+   */
+  flipCurrentCard() {
+    const currentCard = document.getElementById('currentFlashcard');
+    if (currentCard) {
+      this.flipCard(currentCard);
+    }
   }
 
   /**

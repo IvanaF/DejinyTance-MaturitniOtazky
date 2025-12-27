@@ -57,32 +57,101 @@
     <div class="content-wrapper">
       <div class="content-container">
         <!-- Topic Header -->
-        <header class="topic-header">
-          <h1 class="topic-title" id="topicTitle">Načítání...</h1>
+        <header class="topic-header" id="topicHeader">
+          <div class="topic-header-top">
+            <h1 class="topic-title" id="topicTitle">Načítání...</h1>
+            <a href="index.html" class="back-button" aria-label="Zpět na přehled">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+              <span>Zpět na přehled</span>
+            </a>
+          </div>
           <div class="topic-meta-info" id="topicMeta">
             <!-- Meta info will be populated -->
           </div>
         </header>
 
-        <!-- Completion Toggle -->
-        <div class="completion-toggle" id="completionToggle">
-          <input type="checkbox" id="completionCheckbox" aria-label="Označit téma jako dokončené">
-          <label for="completionCheckbox" class="completion-toggle-label" id="completionLabel">
-            Označit jako dokončené
-          </label>
-        </div>
+        <!-- Quick Navigation -->
+        <nav class="quick-navigation" id="quickNavigation" aria-label="Rychlá navigace">
+          <a href="#summarySection" class="quick-nav-button" aria-label="Shrnutí">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+            <span>Shrnutí</span>
+          </a>
+          <a href="#materialsSection" class="quick-nav-button" aria-label="Studijní text">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+            <span>Studijní text</span>
+          </a>
+          <a href="#audioSection" class="quick-nav-button" aria-label="Podcast">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+            </svg>
+            <span>Podcast</span>
+          </a>
+          <a href="#mindmapSection" class="quick-nav-button" aria-label="Myšlenková mapa pojmů">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 1v6m0 6v6M1 12h6m6 0h6"/>
+              <circle cx="5" cy="5" r="2"/>
+              <circle cx="19" cy="5" r="2"/>
+              <circle cx="5" cy="19" r="2"/>
+              <circle cx="19" cy="19" r="2"/>
+            </svg>
+            <span>Myšlenková mapa</span>
+          </a>
+          <a href="#flashcardsSection" class="quick-nav-button" aria-label="Kartičky">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+              <line x1="1" y1="10" x2="23" y2="10"/>
+            </svg>
+            <span>Kartičky</span>
+          </a>
+          <a href="#quizSection" class="quick-nav-button" aria-label="Kvíz">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <span>Kvíz</span>
+          </a>
+        </nav>
 
-        <!-- Objectives -->
-        <section class="topic-section" id="objectivesSection">
-          <h2 class="section-title">Výukové cíle</h2>
-          <ul class="objectives-list" id="objectivesList">
-            <!-- Objectives will be populated -->
-          </ul>
+        <!-- Summary -->
+        <section class="topic-section" id="summarySection">
+          <h2 class="section-title">
+            <a href="#topicHeader" class="scroll-to-top" aria-label="Zpět nahoru" title="Zpět nahoru">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="18 15 12 9 6 15"/>
+              </svg>
+            </a>
+            Shrnutí
+          </h2>
+          <div class="section-content" id="summaryContent">
+            <!-- Summary will be populated -->
+          </div>
         </section>
 
         <!-- Materials -->
         <section class="topic-section" id="materialsSection">
-          <h2 class="section-title">Materiály</h2>
+          <h2 class="section-title">
+            <a href="#topicHeader" class="scroll-to-top" aria-label="Zpět nahoru" title="Zpět nahoru">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="18 15 12 9 6 15"/>
+              </svg>
+            </a>
+            Studijní text
+          </h2>
           <div class="section-content" id="materialsContent">
             <!-- Materials will be populated -->
           </div>
@@ -90,15 +159,44 @@
 
         <!-- Audio -->
         <section class="topic-section" id="audioSection">
-          <h2 class="section-title">Audio</h2>
+          <h2 class="section-title">
+            <a href="#topicHeader" class="scroll-to-top" aria-label="Zpět nahoru" title="Zpět nahoru">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="18 15 12 9 6 15"/>
+              </svg>
+            </a>
+            Podcast
+          </h2>
           <div class="audio-section" id="audioContent">
             <!-- Audio player will be populated -->
           </div>
         </section>
 
+        <!-- Mind Map -->
+        <section class="topic-section" id="mindmapSection">
+          <h2 class="section-title">
+            <a href="#topicHeader" class="scroll-to-top" aria-label="Zpět nahoru" title="Zpět nahoru">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="18 15 12 9 6 15"/>
+              </svg>
+            </a>
+            Myšlenková mapa pojmů
+          </h2>
+          <div class="section-content" id="mindmapContent">
+            <!-- Mind map will be populated -->
+          </div>
+        </section>
+
         <!-- Resources -->
         <section class="topic-section" id="resourcesSection">
-          <h2 class="section-title">Další zdroje</h2>
+          <h2 class="section-title">
+            <a href="#topicHeader" class="scroll-to-top" aria-label="Zpět nahoru" title="Zpět nahoru">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="18 15 12 9 6 15"/>
+              </svg>
+            </a>
+            Další zdroje
+          </h2>
           <ul class="resources-list" id="resourcesList">
             <!-- Resources will be populated -->
           </ul>
@@ -106,9 +204,31 @@
 
         <!-- Flashcards -->
         <section class="topic-section" id="flashcardsSection">
-          <h2 class="section-title">Kartičky</h2>
+          <h2 class="section-title">
+            <a href="#topicHeader" class="scroll-to-top" aria-label="Zpět nahoru" title="Zpět nahoru">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="18 15 12 9 6 15"/>
+              </svg>
+            </a>
+            <span>Kartičky</span>
+          </h2>
           <div class="flashcards-container" id="flashcardsContainer">
             <!-- Flashcards will be populated -->
+          </div>
+        </section>
+
+        <!-- Quiz -->
+        <section class="topic-section" id="quizSection">
+          <h2 class="section-title">
+            <a href="#topicHeader" class="scroll-to-top" aria-label="Zpět nahoru" title="Zpět nahoru">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="18 15 12 9 6 15"/>
+              </svg>
+            </a>
+            <span>Kvíz</span>
+          </h2>
+          <div class="section-content" id="quizContent">
+            <!-- Quiz will be populated -->
           </div>
         </section>
 
@@ -128,7 +248,6 @@
 
   <!-- Scripts -->
   <script src="scripts/topic-loader.js"></script>
-  <script src="scripts/progress.js"></script>
   <script src="scripts/flashcards.js"></script>
   <script src="scripts/app.js"></script>
 </body>

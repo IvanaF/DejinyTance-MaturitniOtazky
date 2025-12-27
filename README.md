@@ -18,9 +18,12 @@ A modern, responsive self-study platform for learning dance history. Built as a 
 │       └── components.css     # UI components (topic cards, flashcards, etc.)
 ├── data/
 │   └── topics/
+│       ├── _TEMPLATE.json    # Template for new topics
 │       ├── T01.json          # Individual topic files
 │       ├── T02.json
 │       └── ...                # More topics to be added
+├── docs/
+│   └── SCALING_GUIDE.md      # Guide for adding new topics
 ├── scripts/
 │   ├── topic-loader.js        # Handles loading topic data
 │   ├── progress.js            # Progress tracking (abstracted storage)
@@ -60,110 +63,56 @@ http-server -p 8000
 
 **Note:** The site must be served via HTTP (not opened directly as `file://`) because it uses `fetch()` to load JSON files.
 
-## How Topics Are Added
+## Přidávání nových témat
 
-### Phase 0: Preparing Topic Content
+Pro detailní návod, jak přidat nová témata, viz **[Průvodce škálováním (SCALING_GUIDE.md)](docs/SCALING_GUIDE.md)**.
 
-1. Extract content from your PDF master file (`Dějiny tance a baletu.pdf`)
-2. For each chapter/topic, create a JSON file in `data/topics/` named `T##.json` (e.g., `T01.json`, `T02.json`)
+### Rychlý přehled
 
-### Topic JSON Schema
+1. Vytvořte JSON soubor v `data/topics/` (např. `T03.json`)
+2. Použijte `data/topics/_TEMPLATE.json` jako šablonu
+3. Vyplňte všechna pole podle struktury
+4. Přidejte obrázky do `assets/images/topics/`
+5. Přidejte audio soubory do `assets/audio/` (volitelné)
+6. Témata se automaticky zobrazí v seznamu
 
-Each topic file should follow this structure:
+### Šablona
 
-```json
-{
-  "id": "T01",
-  "order": 1,
-  "title": "Topic Title",
-  "estimated_time": "30-45 min",
-  "difficulty": "beginner",
-  "objectives": [
-    "Objective 1",
-    "Objective 2"
-  ],
-  "materials": {
-    "summary": "Brief summary of the topic...",
-    "sections": [
-      {
-        "heading": "Section Heading",
-        "content": "Content here. Can include **bold** and *italic* markdown formatting.\n\nMultiple paragraphs supported."
-      }
-    ]
-  },
-  "audio": {
-    "title": "Audio Title",
-    "src": "assets/audio/T01.mp3",
-    "transcript": "Optional transcript text"
-  },
-  "resources": [
-    {
-      "title": "Resource Title",
-      "url": "https://example.com",
-      "reason": "Why this resource is helpful"
-    }
-  ],
-  "flashcards": [
-    {
-      "q": "Question?",
-      "a": "Answer with **bold** support."
-    }
-  ]
-}
-```
+Pro rychlý start použijte: `data/topics/_TEMPLATE.json`
 
-### Field Descriptions
+### Podporované funkce
 
-- **id**: Unique topic identifier (e.g., "T01", "T02")
-- **order**: Numeric order for sequencing (used for next/previous navigation)
-- **title**: Display title of the topic
-- **estimated_time**: Optional time estimate (for display only)
-- **difficulty**: Optional difficulty level (beginner/intermediate/advanced)
-- **objectives**: Array of learning objectives
-- **materials**: 
-  - `summary`: Brief overview (supports markdown)
-  - `sections`: Array of content sections with headings
-- **audio**: Optional audio content
-  - `title`: Audio title
-  - `src`: Path to audio file (relative to root)
-  - `transcript`: Optional transcript (collapsible in UI)
-- **resources**: Array of external links with explanations
-- **flashcards**: Array of question/answer pairs (supports markdown in answers)
-
-### Markdown Support
-
-The following markdown is supported in content fields:
-- **Bold text**: `**text**`
-- *Italic text*: `*text*`
-- Line breaks (preserved)
-
-### Updating the Topic List
-
-Currently (Phase A), topics are hardcoded in `scripts/topic-loader.js`:
-```javascript
-const topicIds = ['T01', 'T02']; // Add more IDs here
-```
-
-In Phase B/C, this will be automatically scanned from the `data/topics/` directory.
+- ✅ Studijní materiály (sekce s nadpisy)
+- ✅ Shrnutí (automaticky generované 1-2 odstavce)
+- ✅ Podcast (audio soubory)
+- ✅ Kvízové otázky (po jedné, náhodné pořadí)
+- ✅ Flashcards (po jedné, náhodné pořadí)
+- ✅ Myšlenková mapa
+- ✅ Dodatečné zdroje
+- ✅ Obrázky témat
 
 ## Features
 
-### ✅ Implemented (Phase A)
+### ✅ Implemented
 
 - Responsive layout (desktop sidebar, mobile drawer)
 - Topic index page
 - Topic detail pages
-- Progress tracking (localStorage)
-- Navigation (next/previous topics)
-- Flashcard interactions
-- Audio player (placeholder)
+- Navigation (next/previous topics with numbers)
+- Flashcard interactions (one-by-one, random order)
+- Quiz functionality (one-by-one, random order, immediate feedback)
+- Audio player with transcript toggle
+- Mindmap support
+- Summary section
+- Quick navigation bar
 - Modern CSS variable-based design system
+- Image support for topics
 
-### 🚧 Architecture Ready (Not Yet Implemented)
+### 📋 Backlog
 
-- Notes functionality (Option A - architecture ready, UI disabled)
-- Content extraction from PDF (you'll prepare JSON files manually)
-- Automatic topic scanning (Phase B/C)
+- Progress tracking (localStorage) - removed from UI, architecture ready for future implementation
+- Notes functionality - architecture ready, UI disabled for MVP
+- Automatic topic scanning from directory (currently hardcoded in topic-loader.js)
 
 ## Design Customization
 
@@ -197,6 +146,10 @@ Targets modern browsers (last 2 versions of Chrome, Firefox, Safari, Edge). Uses
 2. Test with 2 real topics
 3. Verify all features work with real content
 4. Proceed to Phase C for scaling to ~30 topics
+
+## Time Tracker
+
+Pro sledování času stráveného na projektu, počtu promptů a použitých nástrojů viz [PROJECT_TIME_TRACKER.md](PROJECT_TIME_TRACKER.md).
 
 ## License
 

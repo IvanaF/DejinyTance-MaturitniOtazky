@@ -41,6 +41,40 @@
       "q": "Where can evidence of early dance be found?",
       "a": "Prehistoric cave paintings and early ritual artifacts."
     }
-  ]
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "question": "What were the primary purposes of early dance?",
+        "answers": [
+          "Only entertainment and celebration",
+          "Communication, celebration, religious ceremonies, and social bonding",
+          "Competition and sports",
+          "Only religious ceremonies"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Where can evidence of early dance be found?",
+        "answers": [
+          "Only in written documents",
+          "Modern dance studios",
+          "Prehistoric cave paintings and early ritual artifacts",
+          "Only in museums"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "What characterized the evolution of dance in different cultures?",
+        "answers": [
+          "All cultures developed identical dance styles",
+          "Different cultures developed unique styles reflecting their values and traditions",
+          "Dance did not evolve",
+          "Only Western cultures developed dance"
+        ],
+        "correct": 1
+      }
+    ]
+  }
 }
 
