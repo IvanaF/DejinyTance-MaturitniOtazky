@@ -2,6 +2,55 @@
 
 Tento dokument popisuje, jak přidat nová témata do studijní platformy.
 
+## Topic Index (Source of Truth)
+
+Soubor `data/topics/_TOPICS.csv` představuje jediný zdroj pravdy (single source of truth) pro všechna témata v projektu. Tento soubor obsahuje kompletní index všech kapitol extrahovaných ze zdrojového PDF dokumentu.
+
+### Účel souboru
+
+`_TOPICS.csv` slouží jako:
+- **Centrální registr témat** - obsahuje seznam všech kapitol, které mají být zpracovány
+- **Zdroj metadat** - poskytuje informace o názvech kapitol a jejich umístění v PDF
+- **Kontrolní mechanismus** - zajišťuje, že každé téma má správné pořadí a identifikaci
+
+### Struktura CSV souboru
+
+CSV soubor obsahuje následující sloupce:
+
+- `id` - Unikátní identifikátor tématu ve formátu `TXX`, kde `XX` je dvoumístné číslo s nulou na začátku (např. `T01`, `T02`, `T24`)
+- `order` - Číselné pořadí tématu (1, 2, 3, ...) odpovídající pořadí kapitol v PDF
+- `title` - Přesný název kapitoly ze zdrojového PDF (bez úprav)
+- `pdf_start_page` - Číslo stránky v PDF, kde kapitola začíná (1-indexované)
+- `pdf_end_page` - Číslo stránky v PDF, kde kapitola končí (1-indexované, poslední stránka před začátkem další kapitoly)
+
+### Použití v procesu vytváření témat
+
+CSV soubor je základem celého procesu škálování:
+
+1. **PDF → CSV**: Automatická nebo manuální extrakce kapitol ze zdrojového PDF do `_TOPICS.csv`
+2. **CSV → JSON**: Každý řádek v CSV odpovídá jednomu tématu, které se zpracuje do JSON souboru `TXX.json`
+3. **Validace**: Před vytvořením nebo úpravou JSON souboru se vždy ověří, že příslušný řádek existuje v CSV
+
+**Důležité pravidlo:** Žádný JSON soubor tématu (`TXX.json`) nesmí být vytvořen nebo upraven, pokud v `_TOPICS.csv` neexistuje odpovídající řádek se stejným `id`.
+
+### Updating or Correcting the Topic Index
+
+Index témat (`_TOPICS.csv`) může vyžadovat manuální kontrolu a opravy:
+
+- **Kontrola rozsahů stránek**: Automatická extrakce z PDF nemusí být vždy 100% přesná. Je třeba manuálně ověřit, že `pdf_start_page` a `pdf_end_page` správně vymezují hranice kapitol.
+
+- **Kontrola názvů**: Názvy kapitol by měly odpovídat přesně tomu, co je v PDF. Pokud došlo k chybě při extrakci textu, je třeba názvy opravit.
+
+- **Kontrola pořadí**: Pole `order` musí být jedinečné a postupně rostoucí (1, 2, 3, ...).
+
+**Před jakýmkoli generováním obsahu** musí být tento soubor zkontrolován a případně opraven, protože všechny následující kroky (vytváření JSON souborů, extrakce obsahu z PDF, atd.) na něm závisí.
+
+Po opravě CSV souboru:
+1. Ověřte, že soubor je validní CSV (správné oddělovače, escapované uvozovky)
+2. Zkontrolujte, že všechny `id` jsou ve formátu `TXX` s dvoumístným číslem
+3. Ověřte, že `order` je sekvenční a jedinečný
+4. Zkontrolujte, že rozsahy stránek dávají smysl (start < end, žádné překrývání)
+
 ## Struktura souboru tématu
 
 Každé téma má vlastní JSON soubor v `data/topics/` s názvem `TXX.json`, kde `XX` je číslo tématu (např. `T01.json`, `T02.json`).
@@ -76,7 +125,28 @@ Použijte `data/topics/_TEMPLATE.json` jako základ pro nové téma.
 - Kartičky se automaticky promíchají při načtení
 - Podporuje základní Markdown: `**tučné**` a `\n` pro nové řádky
 
-### 4. Obrázky
+### 4. Struktura dodatečných zdrojů
+
+```json
+"resources": [
+  {
+    "title": "Název zdroje",
+    "url": "https://example.com/resource",
+    "type": "video",
+    "reason": "Krátký popis proč je tento zdroj užitečný"
+  }
+]
+```
+
+**Pravidla:**
+- `title` - Název zdroje (povinné)
+- `url` - URL adresa zdroje (povinné)
+- `type` - Typ zdroje (volitelné): "video", "podcast", "article", "book", atd.
+- `reason` - Krátký popis zdroje (volitelné)
+- Zobrazuje se jako seznam ve formátu: `Název (typ) - popis`
+- Pokud `type` není zadán, zobrazí se pouze: `Název - popis`
+
+### 5. Obrázky
 
 **Umístění:**
 - Obrázky tématu: `assets/images/topics/TXX.jpg` (doporučená velikost: 200x200px nebo větší, čtvercový formát)
@@ -86,7 +156,7 @@ Použijte `data/topics/_TEMPLATE.json` jako základ pro nové téma.
 - Musí odpovídat ID tématu (např. T01.jpg, T02.png)
 - Podporované formáty: JPG, PNG, WebP
 
-### 5. Audio soubory
+### 6. Audio soubory
 
 **Umístění:** `assets/audio/TXX.mp3`
 

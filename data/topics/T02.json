@@ -1,24 +1,14 @@
 {
   "id": "T02",
   "order": 2,
-  "title": "Renaissance Dance Forms",
+  "title": "INDIE, ČÍNA, JAPONSKO",
   "objectives": [
     "Identify key Renaissance dance styles",
     "Understand social context of court dances",
     "Recognize influence on modern ballet"
   ],
   "materials": {
-    "summary": "Explore the sophisticated dance forms that emerged during the Renaissance period, particularly in European courts.",
-    "sections": [
-      {
-        "heading": "Court Dances",
-        "content": "The Renaissance period saw the rise of elaborate court dances that reflected the sophistication and etiquette of royal courts.\n\nThese dances were not merely entertainment—they were displays of grace, social status, and cultural refinement."
-      },
-      {
-        "heading": "Influence on Ballet",
-        "content": "Many elements of Renaissance court dance laid the foundation for classical ballet, including posture, footwork patterns, and the emphasis on elegance and control."
-      }
-    ]
+    "summary": "Explore the sophisticated dance forms that emerged during the Renaissance period, particularly in European courts."
   },
   "audio": {
     "title": "Podcast: Renaissance Dance Forms",
@@ -47,44 +37,11 @@
       "a": "It provided foundations in posture, footwork patterns, and the emphasis on elegance and control."
     }
   ],
-  "quiz": {
-    "questions": [
-      {
-        "question": "What characterized Renaissance court dances?",
-        "answers": [
-          "Simple folk dances",
-          "Elaborate choreography, displays of grace and social status, and emphasis on etiquette and refinement",
-          "Competitive sports",
-          "Religious rituals only"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "How did Renaissance dance influence ballet?",
-        "answers": [
-          "It had no influence",
-          "It provided foundations in posture, footwork patterns, and the emphasis on elegance and control",
-          "It replaced ballet completely",
-          "It only influenced modern dance"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "What was the primary purpose of Renaissance court dances?",
-        "answers": [
-          "Competition",
-          "Entertainment and displays of grace, social status, and cultural refinement",
-          "Religious worship",
-          "Military training"
-        ],
-        "correct": 1
-      }
-    ]
-  },
   "mindmap": {
     "description": "Myšlenková mapa znázorňuje sofistikované taneční formy renesance a jejich vliv na klasický balet.",
     "image": "assets/images/mindmaps/T02.png"
   },
-  "summary": "Renesanční období přineslo propracované dvorské tance, které odrážely sofistikovanost a etiketu královských dvorů. Tyto tance byly nejen zábavou, ale i projevy půvabu, společenského postavení a kulturního rafinování. Mnohé prvky renesančních dvorských tanců položily základy pro klasický balet, včetně postoje, vzorů pohybu nohou a důrazu na eleganci a kontrolu."
+  "materialsSource": "data/materials/T02_materials.json",
+  "summarySource": "data/summaries/T02_summary.txt",
+  "quizSource": "data/quizzes/T02_quiz.json"
 }
-

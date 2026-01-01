@@ -446,14 +446,17 @@ function renderTopicContent(topic) {
   if (topic.resources && topic.resources.length > 0) {
     const resourcesList = document.getElementById('resourcesList');
     if (resourcesList) {
-      resourcesList.innerHTML = topic.resources.map(resource => `
-        <li class="resource-item">
-          <a href="${escapeHtml(resource.url)}" target="_blank" rel="noopener noreferrer" class="resource-title">
-            ${escapeHtml(resource.title)}
-          </a>
-          ${resource.reason ? `<div class="resource-reason">${escapeHtml(resource.reason)}</div>` : ''}
-        </li>
-      `).join('');
+      resourcesList.innerHTML = topic.resources.map(resource => {
+        const typeText = resource.type ? ` (${escapeHtml(resource.type)})` : '';
+        const description = resource.reason ? ` - ${escapeHtml(resource.reason)}` : '';
+        return `
+          <li class="resource-item">
+            <a href="${escapeHtml(resource.url)}" target="_blank" rel="noopener noreferrer" class="resource-link">
+              ${escapeHtml(resource.title)}${typeText}${description}
+            </a>
+          </li>
+        `;
+      }).join('');
     }
   } else {
     const resourcesSection = document.getElementById('resourcesSection');

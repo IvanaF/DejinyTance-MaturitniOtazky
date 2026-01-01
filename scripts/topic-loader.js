@@ -70,6 +70,78 @@ class TopicLoader {
         throw new Error(`Otázka ${topicId} má neplatnou strukturu: chybí id nebo title`);
       }
       
+      // Load materials from external file if materialsSource is specified
+      if (topic.materialsSource) {
+        try {
+          const materialsUrl = topic.materialsSource;
+          console.log(`Načítání materiálů z ${materialsUrl}...`);
+          const materialsResponse = await fetch(materialsUrl);
+          if (materialsResponse.ok) {
+            const materialsData = await materialsResponse.json();
+            // Merge materials sections into topic.materials
+            if (materialsData.sections) {
+              if (!topic.materials) {
+                topic.materials = {};
+              }
+              topic.materials.sections = materialsData.sections;
+              // Preserve summary if it exists in topic, otherwise use empty string
+              if (!topic.materials.summary) {
+                topic.materials.summary = '';
+              }
+              console.log(`Materiály načteny: ${materialsData.sections.length} sekcí`);
+            }
+          } else {
+            console.warn(`Nepodařilo se načíst materiály z ${materialsUrl}: ${materialsResponse.status}`);
+          }
+        } catch (materialsError) {
+          console.warn(`Chyba při načítání materiálů pro ${topicId}:`, materialsError);
+          // Continue without external materials - topic will use inline materials if available
+        }
+      }
+      
+      // Load summary from external file if summarySource is specified
+      if (topic.summarySource) {
+        try {
+          const summaryUrl = topic.summarySource;
+          console.log(`Načítání shrnutí z ${summaryUrl}...`);
+          const summaryResponse = await fetch(summaryUrl);
+          if (summaryResponse.ok) {
+            const summaryText = await summaryResponse.text();
+            topic.summary = summaryText.trim();
+            console.log(`Shrnutí načteno (${summaryText.length} znaků)`);
+          } else {
+            console.warn(`Nepodařilo se načíst shrnutí z ${summaryUrl}: ${summaryResponse.status}`);
+          }
+        } catch (summaryError) {
+          console.warn(`Chyba při načítání shrnutí pro ${topicId}:`, summaryError);
+          // Continue without external summary - topic will use inline summary if available
+        }
+      }
+      
+      // Load quiz from external file if quizSource is specified
+      if (topic.quizSource) {
+        try {
+          const quizUrl = topic.quizSource;
+          console.log(`Načítání kvízu z ${quizUrl}...`);
+          const quizResponse = await fetch(quizUrl);
+          if (quizResponse.ok) {
+            const quizData = await quizResponse.json();
+            // Merge quiz questions into topic.quiz
+            if (quizData.questions) {
+              topic.quiz = {
+                questions: quizData.questions
+              };
+              console.log(`Kvíz načten: ${quizData.questions.length} otázek`);
+            }
+          } else {
+            console.warn(`Nepodařilo se načíst kvíz z ${quizUrl}: ${quizResponse.status}`);
+          }
+        } catch (quizError) {
+          console.warn(`Chyba při načítání kvízu pro ${topicId}:`, quizError);
+          // Continue without external quiz - topic will use inline quiz if available
+        }
+      }
+      
       return topic;
     } catch (error) {
       console.error(`Chyba při načítání otázky ${topicId}:`, error);

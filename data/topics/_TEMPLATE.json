@@ -26,6 +26,7 @@
     {
       "title": "Resource Title",
       "url": "https://example.com/resource",
+      "type": "article",
       "reason": "Reason why this resource is relevant"
     }
   ],
@@ -35,24 +36,11 @@
       "a": "Answer text."
     }
   ],
-  "quiz": {
-    "questions": [
-      {
-        "question": "Question text?",
-        "answers": [
-          "Answer option 1",
-          "Answer option 2",
-          "Answer option 3",
-          "Answer option 4"
-        ],
-        "correct": 0
-      }
-    ]
-  },
   "mindmap": {
     "description": "Optional description of the mindmap",
     "image": "assets/images/mindmaps/TXX.png"
   },
-  "summary": "Optional summary text (1-2 paragraphs) generated from materials. This section appears separately from materials.summary in the UI."
+  "materialsSource": "data/materials/TXX_materials.json",
+  "summarySource": "data/summaries/TXX_summary.txt",
+  "quizSource": "data/quizzes/TXX_quiz.json"
 }
-

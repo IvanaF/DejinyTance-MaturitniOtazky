@@ -253,13 +253,15 @@
 /* Quick Navigation */
 .quick-navigation {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-md);
+  flex-wrap: nowrap;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
   background-color: var(--color-background-alt);
   border-radius: var(--border-radius-md);
   margin-bottom: var(--spacing-2xl);
   border: 1px solid var(--color-border);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .quick-nav-button {
@@ -268,7 +270,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-xs);
-  padding: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
   background-color: var(--color-background);
   color: var(--color-text);
   text-decoration: none;
@@ -278,8 +280,9 @@
   font-weight: var(--font-weight-medium);
   transition: all var(--transition-fast);
   flex: 0 0 auto;
-  width: 120px;
-  min-height: 80px;
+  width: 100px;
+  min-height: 70px;
+  white-space: nowrap;
 }
 
 .quick-nav-button:hover {
@@ -291,8 +294,8 @@
 }
 
 .quick-nav-button svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
 }
 
@@ -300,32 +303,28 @@
   white-space: nowrap;
   text-align: center;
   line-height: 1.2;
+  font-size: var(--font-size-xs);
 }
 
 @media (max-width: 768px) {
   .quick-navigation {
-    padding: var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
     gap: var(--spacing-xs);
   }
   
   .quick-nav-button {
-    width: calc(33.333% - var(--spacing-xs));
-    flex: 0 0 auto;
-    min-height: 70px;
+    width: 90px;
+    min-height: 65px;
     padding: var(--spacing-xs);
-    font-size: var(--font-size-xs);
   }
   
   .quick-nav-button svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
-}
-
-@media (max-width: 480px) {
-  .quick-nav-button {
-    width: calc(50% - var(--spacing-xs));
-    flex: 0 0 auto;
+  
+  .quick-nav-button span {
+    font-size: 0.65rem;
   }
 }
 
@@ -334,32 +333,43 @@
 }
 
 .materials-summary {
-  font-size: var(--font-size-lg);
-  color: var(--color-text-light);
-  font-style: italic;
-  margin-bottom: var(--spacing-xl);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  color: var(--color-text);
+  font-style: normal;
+  margin-bottom: var(--spacing-lg);
   padding: var(--spacing-md);
   background-color: var(--color-background-alt);
   border-left: 4px solid var(--color-primary);
   border-radius: var(--border-radius-md);
 }
 
-.materials-section {
-  margin-bottom: var(--spacing-xl);
-}
-
-.materials-heading {
-  font-size: var(--font-size-xl);
-  margin-bottom: var(--spacing-md);
+.summary-text {
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
   color: var(--color-text);
 }
 
+.materials-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.materials-heading {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
+  color: #059669; /* Emerald green - subtle but distinctive */
+  font-weight: var(--font-weight-semibold);
+}
+
 .materials-content {
-  line-height: var(--line-height-relaxed);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  color: var(--color-text);
 }
 
 .materials-content p {
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  margin-top: 0;
 }
 
 /* Mindmap */
@@ -427,34 +437,26 @@
 
 /* Resources */
 .resources-list {
-  list-style: none;
-  padding: 0;
+  list-style: disc;
+  padding-left: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
 }
 
 .resource-item {
-  padding: var(--spacing-md);
-  background-color: var(--color-background-alt);
-  border-left: 4px solid var(--color-primary);
-  border-radius: var(--border-radius-md);
-  margin-bottom: var(--spacing-md);
-  transition: all var(--transition-fast);
+  margin-bottom: var(--spacing-sm);
+  line-height: var(--line-height-relaxed);
 }
 
-.resource-item:hover {
-  background-color: var(--color-background-hover);
-  transform: translateX(4px);
+.resource-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  display: inline;
 }
 
-.resource-title {
-  font-weight: var(--font-weight-medium);
-  margin-bottom: var(--spacing-xs);
-  display: inline-block;
-}
-
-.resource-reason {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-light);
-  margin-top: var(--spacing-xs);
+.resource-link:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
 }
 
 /* Flashcards */

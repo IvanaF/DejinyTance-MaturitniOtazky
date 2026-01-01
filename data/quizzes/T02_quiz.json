@@ -1,0 +1,654 @@
+{
+  "questions": [
+    {
+      "question": "Kde vznikl vznik indické civilizace?",
+      "answers": [
+        "v povodí řeky Indus, poloostrov Přední Indie",
+        "v povodí řeky Ganga",
+        "v povodí řeky Nil",
+        "v povodí řeky Eufrat"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy vznikla Harappská kultura?",
+      "answers": [
+        "kolem roku 3000 př. n. l.",
+        "kolem roku 2000 př. n. l.",
+        "kolem roku 4000 př. n. l.",
+        "kolem roku 2500 př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy probíhal rozkvět Harappské kultury?",
+      "answers": [
+        "2600–1900 př. n. l.",
+        "2500–2000 př. n. l.",
+        "2700–1800 př. n. l.",
+        "2400–1900 př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy obsadili Indii Árjové?",
+      "answers": [
+        "kolem roku 1500 př. n.l.",
+        "kolem roku 1000 př. n.l.",
+        "kolem roku 2000 př. n.l.",
+        "kolem roku 1200 př. n.l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jaká kultura vznikla po příchodu Árjů do Indie?",
+      "answers": [
+        "Védská kultura",
+        "Harappská kultura",
+        "Buddhistická kultura",
+        "Hinduistická kultura"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kolik základních kast bylo v indické společnosti?",
+      "answers": [
+        "čtyři",
+        "tři",
+        "pět",
+        "šest"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Která kasta byla nejvyšší společenská skupina v Indii?",
+      "answers": [
+        "brahmáni (kněží, intelektuálové)",
+        "kšatrijové",
+        "vaišjové",
+        "šúdrové"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Která kasta zahrnovala panovníky a bojovníky?",
+      "answers": [
+        "kšatrijové",
+        "brahmáni",
+        "vaišjové",
+        "šúdrové"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy dobyl Indii Alexandr Veliký?",
+      "answers": [
+        "334 př. n.l.",
+        "300 př. n.l.",
+        "350 př. n.l.",
+        "320 př. n.l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo byl nejvýznamnější indický panovník, který začal šířit buddhismus?",
+      "answers": [
+        "král Ašóka",
+        "Alexandr Veliký",
+        "král Chammurabi",
+        "Gilgameš"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy se Indie dostala pod nadvládu Britů?",
+      "answers": [
+        "od 15. stol. až do roku 1947",
+        "od 16. stol. až do roku 1945",
+        "od 14. stol. až do roku 1950",
+        "od 17. stol. až do roku 1948"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy se Indie stala samostatnou republikou?",
+      "answers": [
+        "1950",
+        "1947",
+        "1948",
+        "1952"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jak se nazývá nejznámější indická památka?",
+      "answers": [
+        "Tádž Mahal",
+        "Pyramidy v Gíze",
+        "Babylonská věž",
+        "Sfinga"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co znamená název Tádž Mahal?",
+      "answers": [
+        "slza věčnosti",
+        "palác králů",
+        "chrám bohů",
+        "věž moudrosti"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy byl stavěn Tádž Mahal?",
+      "answers": [
+        "1631 – 1648 (17 let)",
+        "1620 – 1635",
+        "1640 – 1655",
+        "1650 – 1665"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Z jakého materiálu je postaven Tádž Mahal?",
+      "answers": [
+        "z bílého mramoru",
+        "z pískovce",
+        "z vápence",
+        "z žuly"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kolik druhů náboženství bylo v Indii?",
+      "answers": [
+        "čtyři",
+        "tři",
+        "pět",
+        "dva"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kteří jsou nejvyšší božstva v hinduismu?",
+      "answers": [
+        "Brahma (stvořitel), Višnu (udržovatel), Šiva (ničitel), Kálí",
+        "Enki, Ištar, Tammúz",
+        "Amon, Re, Hor",
+        "Zeus, Héra, Poseidón"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Který bůh v hinduismu má podobu slona?",
+      "answers": [
+        "Ganéša (bůh štěstí)",
+        "Brahma",
+        "Višnu",
+        "Šiva"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jaké je posvátné zvíře v hinduismu?",
+      "answers": [
+        "kráva",
+        "slon",
+        "tygr",
+        "opice"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy vznikl buddhismus?",
+      "answers": [
+        "6. stol. př. n. l.",
+        "5. stol. př. n. l.",
+        "7. stol. př. n. l.",
+        "4. stol. př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo byl zakladatel buddhismu?",
+      "answers": [
+        "původem princ Siddharata Gautama",
+        "král Ašóka",
+        "Mahávíra",
+        "Brahma"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy vznikl džinismus?",
+      "answers": [
+        "5. stol. př. n. l., zakladatel Mahávíra",
+        "6. stol. př. n. l.",
+        "4. stol. př. n. l.",
+        "7. stol. př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je nirvána?",
+      "answers": [
+        "stav věčné blaženosti, k němuž dochází odříkáním a řádem",
+        "bůh v hinduismu",
+        "typ chrámu",
+        "typ tance"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy vznikl sikhismus?",
+      "answers": [
+        "na přelomu 15. a 16. stol.",
+        "na přelomu 14. a 15. stol.",
+        "na přelomu 16. a 17. stol.",
+        "na přelomu 13. a 14. stol."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jak se nazývá nejstarší dochovaný jazyk na světě?",
+      "answers": [
+        "sanskrt",
+        "klínové písmo",
+        "hieroglyfy",
+        "latina"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy se užíval sanskrt?",
+      "answers": [
+        "už ve 2. tisíciletí př. n. l.",
+        "už ve 3. tisíciletí př. n. l.",
+        "už ve 1. tisíciletí př. n. l.",
+        "už ve 4. tisíciletí př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kolik véd je v indické literatuře?",
+      "answers": [
+        "čtyři",
+        "tři",
+        "pět",
+        "dva"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jak se nazývá soubor oslavných písní pro bohy?",
+      "answers": [
+        "Rgvéda",
+        "Atharvavéda",
+        "Jadžurvéda",
+        "Sámavéda"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kolik veršů má Mahabharáta?",
+      "answers": [
+        "200 000 veršů",
+        "50 000 veršů",
+        "100 000 veršů",
+        "300 000 veršů"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kolik veršů má Rámajána?",
+      "answers": [
+        "50 000 veršů",
+        "200 000 veršů",
+        "100 000 veršů",
+        "25 000 veršů"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo je hlavní postava v Bhagavadgitě?",
+      "answers": [
+        "Krišna (reinkarnace boha Višny)",
+        "Ráma",
+        "Brahma",
+        "Šiva"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jak se nazývá epos, ve kterém princ Ráma vysvobozuje svou manželku Sítu?",
+      "answers": [
+        "Rámajána",
+        "Mahabharáta",
+        "Bhagavadgita",
+        "Rgvéda"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy probíhal ekonomický a kulturní vzestup Číny?",
+      "answers": [
+        "mezi 2. a 3. tisíciletím př. n. l.",
+        "mezi 1. a 2. tisíciletím př. n. l.",
+        "mezi 3. a 4. tisíciletím př. n. l.",
+        "mezi 4. a 5. tisíciletím př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Která řeka protéká severní Čínou?",
+      "answers": [
+        "Žlutá řeka (Chuan Che)",
+        "Jang-c'-tiang",
+        "Eufrat",
+        "Indus"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Která řeka protéká jižní Čínou?",
+      "answers": [
+        "Jang-c'-tiang",
+        "Žlutá řeka (Chuan Che)",
+        "Indus",
+        "Nil"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Který filozofický směr vznikl na severu Číny?",
+      "answers": [
+        "konfucianismus",
+        "taoismus",
+        "buddhismus",
+        "hinduismus"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Který filozofický směr vznikl na jihu Číny?",
+      "answers": [
+        "taoismus",
+        "konfucianismus",
+        "buddhismus",
+        "šintoismus"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy probíhala dynastie Šang v Číně?",
+      "answers": [
+        "2. tisíciletí př. n. l.",
+        "3. tisíciletí př. n. l.",
+        "1. tisíciletí př. n. l.",
+        "4. tisíciletí př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Která dynastie vytvořila jednotný stát s názvem Čína?",
+      "answers": [
+        "dynastie Čchyn (3. stol. př. n.l.)",
+        "dynastie Šang",
+        "dynastie Chan",
+        "dynastie Tchang"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy probíhala dynastie Chan v Číně?",
+      "answers": [
+        "3. stol. př. n.l. – 3. stol. n. l.",
+        "2. stol. př. n.l. – 2. stol. n. l.",
+        "4. stol. př. n.l. – 4. stol. n. l.",
+        "1. stol. př. n.l. – 1. stol. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jaké období se nazývá \"stříbrný věk Číny\"?",
+      "answers": [
+        "dynastie Chan",
+        "dynastie Tchang",
+        "dynastie Čchyn",
+        "dynastie Šang"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy probíhala dynastie Tchang v Číně?",
+      "answers": [
+        "7. – 10. stol. n. l.",
+        "6. – 9. stol. n. l.",
+        "8. – 11. stol. n. l.",
+        "5. – 8. stol. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jaké období se nazývá \"zlatý věk Číny\"?",
+      "answers": [
+        "dynastie Tchang",
+        "dynastie Chan",
+        "dynastie Čchyn",
+        "dynastie Šang"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy vznikla Čínská republika?",
+      "answers": [
+        "1912",
+        "1900",
+        "1920",
+        "1905"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy pronikl buddhismus do Číny?",
+      "answers": [
+        "v 1. stol. n. l., šíří se zejména po 4. stol. n. l.",
+        "v 2. stol. n. l.",
+        "v 3. stol. n. l.",
+        "v 1. stol. př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo byl zakladatel konfucianismu?",
+      "answers": [
+        "Konfucius (čínský myslitel, filozof a spisovatel)",
+        "Lao'c",
+        "Buddha",
+        "Mahávíra"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo byl zakladatel taoismu?",
+      "answers": [
+        "mudrc Lao'c ve 4. stol. př. n. l.",
+        "Konfucius",
+        "Buddha",
+        "Mahávíra"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jak se jmenuje hlavní dílo taoismu?",
+      "answers": [
+        "Tao te-ťing (Kniha o cestě a ctnosti)",
+        "I-ťing",
+        "Rgvéda",
+        "Mahabharáta"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co představuje princip Jin a Jang?",
+      "answers": [
+        "Jin = ženský, černý, negativní princip; Jang = mužský, bílý, světlý princip",
+        "dva bohy v taoismu",
+        "dva typy chrámů",
+        "dva typy tanců"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy vznikla Pekingská (Čínská) opera?",
+      "answers": [
+        "12. – 13. stol. n. l. v Pekingu",
+        "10. – 11. stol. n. l.",
+        "14. – 15. stol. n. l.",
+        "11. – 12. stol. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy byla založena konzervatoř Hrušňový sad v Číně?",
+      "answers": [
+        "714 n.l.",
+        "700 n.l.",
+        "750 n.l.",
+        "800 n.l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy vzniklo Japonsko?",
+      "answers": [
+        "50 000 př. n. l.",
+        "40 000 př. n. l.",
+        "60 000 př. n. l.",
+        "30 000 př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy probíhalo období Džómon v Japonsku?",
+      "answers": [
+        "10 000 – 3000 př. n. l.",
+        "8 000 – 2000 př. n. l.",
+        "12 000 – 4000 př. n. l.",
+        "9 000 – 2500 př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy probíhalo období Jamato v Japonsku?",
+      "answers": [
+        "250 – 710 n. l.",
+        "200 – 700 n. l.",
+        "300 – 750 n. l.",
+        "150 – 650 n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy probíhalo období Edo v Japonsku?",
+      "answers": [
+        "1600 – 1867",
+        "1500 – 1800",
+        "1700 – 1900",
+        "1550 – 1850"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy probíhalo období Meidži v Japonsku?",
+      "answers": [
+        "1868 – 1912",
+        "1850 – 1900",
+        "1870 – 1920",
+        "1860 – 1910"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jaké je hlavní město Japonska v období Meidži?",
+      "answers": [
+        "Tokio",
+        "Kjóto",
+        "Osaka",
+        "Nagoja"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy vznikl šintoismus?",
+      "answers": [
+        "5. stol. př. n. l.",
+        "6. stol. př. n. l.",
+        "4. stol. př. n. l.",
+        "7. stol. př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Od kdy se šíří buddhismus v Japonsku?",
+      "answers": [
+        "od 5. stol. n. l. z Korey",
+        "od 4. stol. n. l.",
+        "od 6. stol. n. l.",
+        "od 3. stol. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy vzniklo Divadlo Nó v Japonsku?",
+      "answers": [
+        "14. stol.",
+        "13. stol.",
+        "15. stol.",
+        "12. stol."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy vzniklo Divadlo Kabuki v Japonsku?",
+      "answers": [
+        "počátek 17. stol.",
+        "konec 16. stol.",
+        "počátek 18. stol.",
+        "konec 17. stol."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jak se nazývá krátká fraška na závěr představení Divadla Nó?",
+      "answers": [
+        "kjógen",
+        "kagura",
+        "gigaku",
+        "sarugaku"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy vznikl tanec Butó (tanec temnot)?",
+      "answers": [
+        "polovina 20. stol.",
+        "počátek 20. stol.",
+        "konec 19. stol.",
+        "konec 20. stol."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo jsou zakladatelé tance Butó?",
+      "answers": [
+        "Kazuo Óno a Tatsumi Hijikata",
+        "Harald Kreutzberg",
+        "Konfucius a Lao'c",
+        "Buddha a Mahávíra"
+      ],
+      "correct": 0
+    }
+  ]
+}

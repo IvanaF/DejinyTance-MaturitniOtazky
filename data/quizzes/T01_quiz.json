@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "question": "V jakém období dějin lidstva se nacházel pravěk?",
+      "answers": [
+        "cca od 3 milionů let př.n.l. – 4000 př.n.l.",
+        "cca od 1 milionu let př.n.l. – 2000 př.n.l.",
+        "cca od 500 000 let př.n.l. – 1000 př.n.l.",
+        "cca od 2 milionů let př.n.l. – 3000 př.n.l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Která věda se zabývá hmotnými nálezy a artefakty z pravěku?",
+      "answers": [
+        "archeologie",
+        "geologie",
+        "palentologie",
+        "antropologie"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy začala doba kamenná?",
+      "answers": [
+        "250 000 př. n. l.",
+        "300 000 př. n. l.",
+        "200 000 př. n. l.",
+        "150 000 př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kde se nacházejí jeskynní malby z mladšího paleolitu?",
+      "answers": [
+        "Altamira (Španělsko), Lascaux (Francie), Trois freres (Francie)",
+        "Pouze v Altamiře",
+        "Pouze ve Francii",
+        "Pouze v České republice"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jaké hudební nástroje doprovázely tanec v pravěku?",
+      "answers": [
+        "bubínky, tleskání, zpěv, flétna, píšťala",
+        "pouze bubínky",
+        "pouze zpěv",
+        "pouze tleskání"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jaký význam měl tanec v pravěku?",
+      "answers": [
+        "náboženský a rituální význam",
+        "pouze zábavní",
+        "pouze sportovní",
+        "pouze umělecký"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Které tance byly spojené s obživou v pravěku?",
+      "answers": [
+        "lovecké, tance za úrodu, vegetativní (zemědělské), zvířecí",
+        "pouze lovecké",
+        "pouze svatební",
+        "pouze pohřební"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co jsou exorcistické tance?",
+      "answers": [
+        "vymítačské tance, při kterých se šaman snažil odstranit zlo a nemoc",
+        "tance při oslavách",
+        "tance při lovu",
+        "tance při svatbách"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy byl ukončen proces sjednocování Egypta kolem řeky Nil?",
+      "answers": [
+        "na počátku 4. tisíciletí př. n. l.",
+        "na počátku 3. tisíciletí př. n. l.",
+        "na počátku 5. tisíciletí př. n. l.",
+        "na počátku 2. tisíciletí př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo sjednotil Horní a Dolní Egypt?",
+      "answers": [
+        "král Meni",
+        "faraon Džoser",
+        "Amenhotep IV.",
+        "Tutanchamon"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy probíhala Stará říše v Egyptě?",
+      "answers": [
+        "3150 př. n. l. – 2180 př.n.l.",
+        "3000 př. n. l. – 2000 př.n.l.",
+        "3200 př. n. l. – 2100 př.n.l.",
+        "3100 př. n. l. – 2200 př.n.l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo nechal postavit první pyramidu ve městě Sakkara?",
+      "answers": [
+        "faraon Džoser",
+        "král Meni",
+        "Amenhotep IV.",
+        "Tutanchamon"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jak se nazývá první pyramida postavená ve městě Sakkara?",
+      "answers": [
+        "Džoserova pyramida",
+        "Cheopsova pyramida",
+        "Rachefova pyramida",
+        "Menkaureova pyramida"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy probíhala Střední říše v Egyptě?",
+      "answers": [
+        "2180 př. n. l. – 1550 př. n. l.",
+        "2000 př. n. l. – 1500 př. n. l.",
+        "2200 př. n. l. – 1600 př. n. l.",
+        "2100 př. n. l. – 1400 př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo opět sjednotil Egypt pod jednoho vládce během Střední říše?",
+      "answers": [
+        "Mentuhotep II.",
+        "Amenhotep IV.",
+        "Džoser",
+        "Tutanchamon"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy probíhala Nová říše v Egyptě?",
+      "answers": [
+        "1550 př. n. l. – 332 př. n. l.",
+        "1500 př. n. l. – 300 př. n. l.",
+        "1600 př. n. l. – 350 př. n. l.",
+        "1400 př. n. l. – 320 př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Který faraon změnil polyteistické náboženství v monoteistické?",
+      "answers": [
+        "Amenhotep IV. (Achnaton)",
+        "Tutanchamon",
+        "Mentuhotep II.",
+        "Džoser"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jak se jmenovala manželka Amenhotepa IV. (Achnatona)?",
+      "answers": [
+        "Nefertiti",
+        "Kleopatra",
+        "Mut",
+        "Eset"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo byl syn Amenhotepa IV. a jeho nástupce?",
+      "answers": [
+        "Tutanchamon",
+        "Mentuhotep II.",
+        "Džoser",
+        "Alexandr Veliký"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy dobyl Egypt Alexandr Veliký?",
+      "answers": [
+        "333 př. n. l.",
+        "300 př. n. l.",
+        "350 př. n. l.",
+        "320 př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy skončila vláda faraonů v Egyptě?",
+      "answers": [
+        "30 př. n. l.",
+        "0 n.l.",
+        "50 př. n. l.",
+        "20 př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jaká byla poslední královna dynastie Ptolemaiovců?",
+      "answers": [
+        "Kleopatra",
+        "Nefertiti",
+        "Mut",
+        "Eset"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je sfinga?",
+      "answers": [
+        "lví tělo a lidská hlava, výška 20 m, délka 17 m",
+        "typ pyramidy",
+        "typ chrámu",
+        "typ sochy faraona"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Který typ pyramidy má tvar schodiště?",
+      "answers": [
+        "stupňovitá pyramida",
+        "lomená pyramida",
+        "pravá pyramida",
+        "sfinga"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Který egyptský bůh byl představován jako beran?",
+      "answers": [
+        "Amon",
+        "Hor",
+        "Re",
+        "Usir"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Která egyptská bohyně byla spojována s láskou, plodností, hudbou a tancem?",
+      "answers": [
+        "Hathor",
+        "Mut",
+        "Eset",
+        "Kleopatra"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jak se jmenuje bůh Slunce v egyptské mytologii?",
+      "answers": [
+        "Re",
+        "Amon",
+        "Hor",
+        "Usir"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jaký typ hudebního nástroje byla řehtačka Sistrum?",
+      "answers": [
+        "typický egyptský nástroj",
+        "dechový nástroj",
+        "strunný nástroj",
+        "bicí nástroj"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kde se nacházela Mezopotámie?",
+      "answers": [
+        "v povodí řek Eufrat a Tigris",
+        "v povodí řeky Nil",
+        "v povodí řeky Indus",
+        "v povodí řeky Dunaj"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo ovládl jih Mezopotámie kolem roku 3000 př. n. l.?",
+      "answers": [
+        "Sumerové",
+        "Akkadové",
+        "Babyloňané",
+        "Asyřané"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Která města založili Sumerové?",
+      "answers": [
+        "Ur, Uruk, Lagar, Kiš",
+        "Babylon, Ninive",
+        "Théby, Sakkara",
+        "Memfis, Gíza"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo ovládl Mezopotámii kolem roku 2000 př. n. l.?",
+      "answers": [
+        "Babyloňané",
+        "Sumerové",
+        "Akkadové",
+        "Asyřané"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy měla největší rozkvět Starobabylonská říše?",
+      "answers": [
+        "18. stol. př. n. l. za vlády krále Chammurabiho",
+        "20. stol. př. n. l.",
+        "16. stol. př. n. l.",
+        "19. stol. př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo nechal vypracovat zákoník s přísnými tresty (oko za oko, zub za zub)?",
+      "answers": [
+        "král Chammurabi",
+        "Nabukadnesar II.",
+        "Gilgameš",
+        "Ašurbanipal"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jak se nazývá mezopotámské písmo?",
+      "answers": [
+        "klínové",
+        "hieroglyfy",
+        "alfabeta",
+        "piktogramy"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy vzniko klínové písmo?",
+      "answers": [
+        "počátek 3000 př. n. l., Sumerové",
+        "počátek 2000 př. n. l.",
+        "počátek 4000 př. n. l.",
+        "počátek 2500 př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Na co se psalo klínové písmo?",
+      "answers": [
+        "na hliněné destičky",
+        "na papyrus",
+        "na kámen",
+        "na pergamen"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Která knihovna je nejznámější z Mezopotámie?",
+      "answers": [
+        "Ašurbanipalova knihovna",
+        "Alexandrijská knihovna",
+        "Babylonská knihovna",
+        "Knihovna v Uru"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo je hlavní postava Eposu o Gilgamešovi?",
+      "answers": [
+        "sumerský vládce Gilgameš",
+        "babylonský král",
+        "egyptský faraon",
+        "asyrský panovník"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Který bůh v mezopotámské mytologii byl bůh moudrosti?",
+      "answers": [
+        "Enki",
+        "Ištar",
+        "Tammúz",
+        "Ereškigal"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Která bohyně v mezopotámské mytologii byla bohyní lásky a války?",
+      "answers": [
+        "Ištar",
+        "Ereškigal",
+        "Enki",
+        "Tammúz"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy se při chrámech v Mezopotámii zřízeny taneční školy?",
+      "answers": [
+        "2. tisíciletí př. n. l.",
+        "1. tisíciletí př. n. l.",
+        "3. tisíciletí př. n. l.",
+        "4. tisíciletí př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo byl přijímán do tanečních škol při chrámech v Mezopotámii?",
+      "answers": [
+        "pouze mladé a zdravé chlapce",
+        "pouze dívky",
+        "dospělé muže",
+        "všechny zájemce"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy byl v Národním divadle v Praze uveden balet Istar?",
+      "answers": [
+        "1924",
+        "1914",
+        "1934",
+        "1904"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo vytvořil choreografii pro balet Istar v Národním divadle v Praze?",
+      "answers": [
+        "Remislav Remislavský",
+        "Bohuslav Martinů",
+        "Jiří Kylián",
+        "Pavel Šmok"
+      ],
+      "correct": 0
+    }
+  ]
+}

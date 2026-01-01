@@ -1,24 +1,14 @@
 {
   "id": "T01",
   "order": 1,
-  "title": "Introduction to Dance History",
+  "title": "PRAVĚK, EGYPT, MEZOPOTÁMIE",
   "objectives": [
     "Understand the origins of dance",
     "Learn about early dance forms",
     "Recognize key historical periods"
   ],
   "materials": {
-    "summary": "This topic introduces the fundamental concepts and origins of dance throughout history.",
-    "sections": [
-      {
-        "heading": "Early Origins",
-        "content": "Dance has been an integral part of human culture since ancient times. Evidence of dance can be traced back to prehistoric cave paintings and early rituals.\n\nThese early forms served multiple purposes: communication, celebration, religious ceremonies, and social bonding."
-      },
-      {
-        "heading": "Classical Periods",
-        "content": "As civilizations developed, dance evolved into more structured forms. Different cultures developed unique styles that reflected their values and traditions."
-      }
-    ]
+    "summary": "This topic introduces the fundamental concepts and origins of dance throughout history."
   },
   "audio": {
     "title": "Podcast: Introduction to Dance History",
@@ -42,44 +32,11 @@
       "a": "Prehistoric cave paintings and early ritual artifacts."
     }
   ],
-  "quiz": {
-    "questions": [
-      {
-        "question": "What were the primary purposes of early dance?",
-        "answers": [
-          "Only entertainment and celebration",
-          "Communication, celebration, religious ceremonies, and social bonding",
-          "Competition and sports",
-          "Only religious ceremonies"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Where can evidence of early dance be found?",
-        "answers": [
-          "Only in written documents",
-          "Modern dance studios",
-          "Prehistoric cave paintings and early ritual artifacts",
-          "Only in museums"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "What characterized the evolution of dance in different cultures?",
-        "answers": [
-          "All cultures developed identical dance styles",
-          "Different cultures developed unique styles reflecting their values and traditions",
-          "Dance did not evolve",
-          "Only Western cultures developed dance"
-        ],
-        "correct": 1
-      }
-    ]
-  },
   "mindmap": {
     "description": "Myšlenková mapa zobrazuje klíčové pojmy a souvislosti týkající se historie tance.",
     "image": "assets/images/mindmaps/T01.png"
   },
-  "summary": "Toto téma představuje základní koncepty a původ tance napříč historií. Rané formy tance sloužily různým účelům: komunikaci, oslavám, náboženským obřadům a sociálnímu spojení. Různé kultury rozvinuly jedinečné styly, které odrážely jejich hodnoty a tradice."
+  "materialsSource": "data/materials/T01_materials.json",
+  "summarySource": "data/summaries/T01_summary.txt",
+  "quizSource": "data/quizzes/T01_quiz.json"
 }
-
