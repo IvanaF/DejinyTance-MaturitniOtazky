@@ -1,0 +1,384 @@
+{
+  "questions": [
+    {
+      "question": "Co se stalo v roce  18. stol.?",
+      "answers": [
+        ", období vrcholného absolutismu (třicetiletá válka, válka na Bílé hoře)",
+        "Nelze určit z textu",
+        "Žádná významná událost",
+        "Informace nejsou k dispozici"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co zahrnuje baroko?",
+      "answers": [
+        "a 18. stol., období vrcholného absolutismu (třicetiletá válka, válka na Bílé hoře)",
+        "Nelze určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je charakteristické pro architektura?",
+      "answers": [
+        "Čechy – Kryštof a Kilián Ignác Dientzenhoferovi (otec a syn): K",
+        "(neboli Giovanni Battista Santini)",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je charakteristické pro sochařství?",
+      "answers": [
+        "(sochy Ctností a Neřestí na Kuksu, socha Vidění svaté Luitgardy na Karlově mostě)",
+        "Nelze určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co zahrnuje hudba?",
+      "answers": [
+        "- Johann Sebastian Bach (Braniborské koncerty, Ave Maria)",
+        "Nelze určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je hl. znak?",
+      "answers": [
+        "ostré oddělení jeviště od hlediště portálem a rampou",
+        "Nelze jednoznačně určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je změna i v rozdělení hlediště?",
+      "answers": [
+        "dle sociálních poměrů ve společnosti",
+        "Nelze jednoznačně určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je osvětlení?",
+      "answers": [
+        "svíčky -> časté požáry",
+        "Nelze jednoznačně určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je charakteristické pro divadlo?",
+      "answers": [
+        "náboženská představení",
+        "1",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co zahrnuje divadlo?",
+      "answers": [
+        "- kulisy malovali významní malíři",
+        "Nelze určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co zahrnuje divadlo?",
+      "answers": [
+        "- osvětlení = svíčky -> časté požáry",
+        "Nelze určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je baroko?",
+      "answers": [
+        "zlatá éra ve vývoji tanečního umění",
+        "Nelze jednoznačně určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je a) danse noble?",
+      "answers": [
+        "francouzský vznešený urozený taneční styl",
+        "Nelze jednoznačně určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je (vysoký) - zaměřen na skoky?",
+      "answers": [
+        "> rozvoj techniky skoku a dopadu",
+        "Nelze jednoznačně určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co se stalo v roce 1703 ?",
+      "answers": [
+        "– převzal funkce po Beauchampovi",
+        "Nelze určit z textu",
+        "Žádná významná událost",
+        "Informace nejsou k dispozici"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je charakteristické pro tanec?",
+      "answers": [
+        "(znalost tanečních kroků a tanců patřila k základnímu vzdělání šlechticů)",
+        "Nelze určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co zahrnuje tanec?",
+      "answers": [
+        "danse noble = francouzský vznešený urozený taneční styl",
+        "Nelze určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co zahrnuje tanec?",
+      "answers": [
+        "- znaky: poloha nohou pod 45°, nízké skoky, zaoblené paže, nástup na",
+        "Nelze určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co zahrnuje tanec?",
+      "answers": [
+        "danse haute – pochází z Itálie, rozvoj z komedie dell´ arte",
+        "Nelze určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je název rokoko?",
+      "answers": [
+        "z francouzského slova rocaille (lastura, ornament)",
+        "Nelze jednoznačně určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co se stalo v roce  18. stol.?",
+      "answers": [
+        "ve Francii, přelom vlády Ludvíka XIV",
+        "Nelze určit z textu",
+        "Žádná významná událost",
+        "Informace nejsou k dispozici"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je charakteristické pro rokoko?",
+      "answers": [
+        "+ stoupá zájem o exotiku, exotické země (Čína, Indie)",
+        "Nelze určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co zahrnuje rokoko?",
+      "answers": [
+        "- název rokoko = z francouzského slova rocaille (lastura, ornament)",
+        "Nelze určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co zahrnuje rokoko?",
+      "answers": [
+        "stol. ve Francii, přelom vlády Ludvíka XIV. a Ludvíka XV.",
+        "Nelze určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co zahrnuje umění?",
+      "answers": [
+        "- důležitá tvorba ze dřeva",
+        "Nelze určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je hl. téma baletní části?",
+      "answers": [
+        "příběhy z různých částí světa",
+        "Nelze jednoznačně určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je od dětství vystupovala v pantomimách a vaudevillech (?",
+      "answers": [
+        "komická hra se zpěvy)",
+        "Nelze jednoznačně určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je neúspěch?",
+      "answers": [
+        "> návrat do PO, tančila v představení Galantní Indové",
+        "Nelze jednoznačně určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je 1735 – návrat do Vídně (první vídeňské období)?",
+      "answers": [
+        "> dvorský pedagog tance a tanečník",
+        "Nelze jednoznačně určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co se stalo v roce 1760 ?",
+      "answers": [
+        "– Návrat jara aneb Vítězství Flóry",
+        "Nelze určit z textu",
+        "Žádná významná událost",
+        "Informace nejsou k dispozici"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co se stalo v roce 1735 ?",
+      "answers": [
+        "– Galantní Indové (Les Indes Galantes)",
+        "Nelze určit z textu",
+        "Žádná významná událost",
+        "Informace nejsou k dispozici"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co se stalo v roce 1734 ?",
+      "answers": [
+        "– nabídka z Londýna, Covent Garden (zakladatel – John Rich)",
+        "Nelze určit z textu",
+        "Žádná významná událost",
+        "Informace nejsou k dispozici"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co se stalo v roce 1758 ?",
+      "answers": [
+        "– zde uvedl první část Galantních Indů = Šlechetný Turek + titul Paní kmotro, půjčte mi ty nůžky",
+        "Nelze určit z textu",
+        "Žádná významná událost",
+        "Informace nejsou k dispozici"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co se stalo v roce 1751 ?",
+      "answers": [
+        "(od 18 let) – působení v PO",
+        "Nelze určit z textu",
+        "Žádná významná událost",
+        "Informace nejsou k dispozici"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je charakteristické pro tanec?",
+      "answers": [
+        "(divertir – bavit se)",
+        "(balet nemá souvislý děj, každá část má samostatný příběh – často milostný)",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co zahrnuje tanec?",
+      "answers": [
+        "- postupně se tento žánr začal nazývat opera-balet",
+        "Nelze určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co zahrnuje tanec?",
+      "answers": [
+        "- hudba: Jean Philippe Rameau",
+        "Nelze určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co zahrnuje tanec?",
+      "answers": [
+        "- soudobé tance (i přesto, že představovaly exotické země)",
+        "Nelze určit",
+        "Informace nejsou dostupné",
+        "Závisí na kontextu"
+      ],
+      "correct": 0
+    }
+  ]
+}
