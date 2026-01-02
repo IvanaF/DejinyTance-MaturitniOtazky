@@ -155,6 +155,9 @@ async function initTopicPage() {
     
     // Load current topic
     const topic = await topicLoader.loadTopic(topicId);
+    
+    // Pre-load term links for linking in materials (load topic-specific terms)
+    await loadTermLinks(topicId);
     if (!topic) {
       console.error(`Otázka ${topicId} nenalezena`);
       const titleElement = document.getElementById('topicTitle');
@@ -690,6 +693,143 @@ function setupTopicNavigation(topicId) {
 }
 
 /**
+ * Cache for term links (cached per topic)
+ */
+let termLinksCache = {};
+
+/**
+ * Current topic's term links (used by markdownToHtml)
+ */
+let currentTopicTermLinks = {};
+
+/**
+ * Load term links from JSON files
+ * @param {string} topicId - Optional topic ID (e.g., 'T02')
+ * @returns {Promise<Object>} Object mapping terms to URLs
+ */
+async function loadTermLinks(topicId = null) {
+  // Use cache key based on topicId (null for common terms only)
+  const cacheKey = topicId || 'common';
+  
+  if (termLinksCache[cacheKey]) {
+    return termLinksCache[cacheKey];
+  }
+
+  let allTerms = {};
+
+  try {
+    // First, load common terms
+    const commonResponse = await fetch('data/term_links/common_terms.json');
+    if (commonResponse.ok) {
+      const commonData = await commonResponse.json();
+      allTerms = { ...commonData.terms || {} };
+      console.log(`Načteno ${Object.keys(allTerms).length} společných termínů`);
+    } else {
+      console.warn('Nepodařilo se načíst common_terms.json');
+    }
+  } catch (error) {
+    console.warn('Chyba při načítání common_terms.json:', error);
+  }
+
+  // Then, load topic-specific terms if topicId is provided
+  if (topicId) {
+    try {
+      const topicResponse = await fetch(`data/term_links/${topicId}_terms.json`);
+      if (topicResponse.ok) {
+        const topicData = await topicResponse.json();
+        // Merge topic terms (they override common terms if there's a conflict)
+        allTerms = { ...allTerms, ...(topicData.terms || {}) };
+        console.log(`Načteno ${Object.keys(topicData.terms || {}).length} termínů pro ${topicId}`);
+      } else {
+        console.warn(`Nepodařilo se načíst ${topicId}_terms.json (může být normální, pokud soubor neexistuje)`);
+      }
+    } catch (error) {
+      console.warn(`Chyba při načítání ${topicId}_terms.json:`, error);
+    }
+  }
+  
+  // Sort terms by length (longer first) to avoid partial matches
+  const sortedEntries = Object.entries(allTerms).sort((a, b) => b[0].length - a[0].length);
+  const sortedTerms = Object.fromEntries(sortedEntries);
+  
+  // Cache the result
+  termLinksCache[cacheKey] = sortedTerms;
+  
+  // Set as current topic terms (for use by markdownToHtml which doesn't have topicId parameter)
+  // This allows markdownToHtml to access the terms without needing topicId
+  currentTopicTermLinks = sortedTerms;
+  
+  return sortedTerms;
+}
+
+/**
+ * Add links to terms in already-escaped HTML text
+ * This function does NOT modify the original text, only the HTML output
+ * @param {string} html - HTML-escaped text to process
+ * @param {Object} termLinks - Object mapping terms to URLs
+ * @returns {string} HTML with links added
+ */
+function addTermLinksToHtml(html, termLinks) {
+  if (!html || !termLinks || Object.keys(termLinks).length === 0) {
+    return html;
+  }
+
+  let result = html;
+  const processedRanges = []; // Track processed positions to avoid overlaps
+  
+  // Process each term (already sorted by length, longer first)
+  // Processing longer terms first prevents shorter terms from matching inside longer ones
+  for (const [term, url] of Object.entries(termLinks)) {
+    // Skip if term is empty
+    if (!term || term.trim() === '') continue;
+    
+    // Escape the term for HTML (same way as escapeHtml does)
+    const div = document.createElement('div');
+    div.textContent = term;
+    const escapedTerm = div.innerHTML;
+    
+    // Escape special regex characters in escaped term
+    const regexEscapedTerm = escapedTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    
+    // Split HTML by existing <a> tags to avoid processing inside links
+    const parts = result.split(/(<a\s+[^>]*>.*?<\/a>)/gi);
+    
+    const processedParts = parts.map((part) => {
+      // Skip parts that are already links
+      if (part.match(/^<a\s+/i)) {
+        return part;
+      }
+      
+      // Process this part for the current term
+      // For single-word terms, use word boundaries; for multi-word terms, match the phrase
+      const hasSpaces = term.includes(' ');
+      const regexPattern = hasSpaces ? regexEscapedTerm : `\\b${regexEscapedTerm}\\b`;
+      const regex = new RegExp(regexPattern, 'gi');
+      
+      return part.replace(regex, (match) => {
+        // Check if we're inside an HTML tag (avoid matching inside tags)
+        const matchIndex = part.indexOf(match);
+        const beforeMatch = part.substring(0, matchIndex);
+        const lastTagOpen = beforeMatch.lastIndexOf('<');
+        const lastTagClose = beforeMatch.lastIndexOf('>');
+        
+        // If we're inside a tag (last < is after last >), skip
+        if (lastTagOpen > lastTagClose) {
+          return match;
+        }
+        
+        // Create the link - use the original match (which is the escaped term)
+        return `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" class="term-link">${match}</a>`;
+      });
+    });
+    
+    result = processedParts.join('');
+  }
+  
+  return result;
+}
+
+/**
  * Escape HTML to prevent XSS
  * @param {string} text - Text to escape
  * @returns {string} Escaped HTML
@@ -702,14 +842,19 @@ function escapeHtml(text) {
 }
 
 /**
- * Simple Markdown to HTML converter
+ * Simple Markdown to HTML converter with term linking
+ * Uses cached term links if available
  * @param {string} markdown - Markdown text
  * @returns {string} HTML
  */
 function markdownToHtml(markdown) {
   if (!markdown) return '';
   
-  let html = escapeHtml(markdown);
+  // Keep original text unchanged - only process it for HTML output
+  const text = markdown;
+  
+  // Escape HTML first (this preserves the original text structure)
+  let html = escapeHtml(text);
   
   // Convert **bold** to <strong>
   html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
@@ -720,6 +865,12 @@ function markdownToHtml(markdown) {
   // Convert line breaks to <br> (only for double line breaks, or preserve single)
   html = html.replace(/\n\n/g, '</p><p>');
   html = html.replace(/\n/g, '<br>');
+  
+  // Add term links to HTML (this does NOT modify the original text)
+  // Use currentTopicTermLinks which is set when loading terms for a topic
+  if (currentTopicTermLinks && Object.keys(currentTopicTermLinks).length > 0) {
+    html = addTermLinksToHtml(html, currentTopicTermLinks);
+  }
   
   return html;
 }

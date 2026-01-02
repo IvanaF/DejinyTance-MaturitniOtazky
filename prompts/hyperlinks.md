@@ -1,0 +1,125 @@
+# Přidávání hyperlinků na termíny do studijních materiálů
+
+## Cíl
+Přidat odkazy na Wikipedia (nebo jiné kvalitní zdroje) k důležitým pojmům v sekcích studijních materiálů. Odkazy se automaticky zobrazí při zobrazení materiálů - termíny budou klikatelné, ale zobrazí se pouze původní text termínu.
+
+## Struktura souborů
+
+Termíny jsou organizovány podle témat v souborech:
+- `data/term_links/common_terms.json` - společné termíny používané napříč tématy (např. buddhismus, hinduismus, islám, křesťanství)
+- `data/term_links/{TOPIC_ID}_terms.json` - termíny specifické pro dané téma (např. `T02_terms.json`, `T03_terms.json`)
+
+## Postup pro přidání termínů do nové kapitoly
+
+### 1. Identifikace termínů
+Projdi text kapitoly v `data/materials/{TOPIC_ID}_materials.json` a identifikuj důležité pojmy, které by měly mít odkaz na Wikipedia:
+
+**Typy termínů k prolinkování:**
+- Historické osobnosti (např. "Alexandr Veliký", "Ašóka")
+- Geografické pojmy (řeky, města, regiony - např. "řeka Indus", "Peking")
+- Kulturní a náboženské pojmy (např. "buddhismus", "hinduismus", "kasty")
+- Umělecké pojmy (např. "Bharata Natyam", "Pekingská opera")
+- Historické události a období (např. "dynastie Tchang", "Harappská kultura")
+- Literární díla (např. "Mahabharáta", "Rámajána")
+- Technické termíny specifické pro dané téma (např. "mudry", "natya", "nrtta")
+
+**Co NEPROLINKOVAT:**
+- Obecná slova (např. "tanec", "hudba", "umění" - pokud nejsou specifickým termínem)
+- Velmi krátké nebo běžné pojmy, které nemají samostatný článek na Wikipedii
+
+### 2. Vyhledání Wikipedia odkazů
+
+Pro každý termín:
+1. Otevři českou Wikipedii: https://cs.wikipedia.org
+2. Vyhledej termín
+3. Zkopíruj URL stránky (např. `https://cs.wikipedia.org/wiki/Indus`)
+4. Ověř, že článek existuje a je relevantní
+
+**Tipy:**
+- Pokud termín nemá český článek, zkus anglickou verzi nebo jiný kvalitní zdroj
+- Pro varianty termínu (např. "Harappské kultury" vs "Harappská kultura") použij stejný odkaz
+- Pro víceslovné termíny zkontroluj přesný název článku (např. "řeka Indus" → článek může být jen "Indus")
+
+### 3. Vytvoření/úprava souboru s termíny
+
+#### Pro nové téma:
+Vytvoř nový soubor `data/term_links/{TOPIC_ID}_terms.json`:
+
+```json
+{
+  "terms": {
+    "termín 1": "https://cs.wikipedia.org/wiki/Termín_1",
+    "termín 2": "https://cs.wikipedia.org/wiki/Termín_2",
+    "víceslovný termín": "https://cs.wikipedia.org/wiki/Víceslovný_termín"
+  }
+}
+```
+
+#### Pro existující téma:
+Otevři existující soubor `data/term_links/{TOPIC_ID}_terms.json` a přidej nové termíny do objektu `terms`.
+
+### 4. Formátování
+
+**Důležité pravidla:**
+- Každý termín na novém řádku pro lepší čitelnost
+- Termíny seřaď abecedně (nebo logicky podle sekcí)
+- Pro varianty termínu přidej více záznamů:
+  ```json
+  "Harappské kultury": "https://cs.wikipedia.org/wiki/Harappská_kultura",
+  "harappské kultury": "https://cs.wikipedia.org/wiki/Harappská_kultura",
+  "Harappská kultura": "https://cs.wikipedia.org/wiki/Harappská_kultura",
+  "harappská kultura": "https://cs.wikipedia.org/wiki/Harappská_kultura"
+  ```
+- Pro víceslovné termíny zachovej přesný tvar, jak se vyskytuje v textu (např. "řeka Indus", "poloostrov Přední Indie")
+
+### 5. Ověření
+
+Po přidání termínů:
+1. Otevři aplikaci v prohlížeči
+2. Načti příslušnou kapitolu
+3. Zkontroluj, že termíny jsou klikatelné a vedou na správné stránky
+4. Ověř, že se zobrazuje pouze původní text termínu (ne URL)
+
+### 6. Příklady
+
+**Příklad pro T02 (Indie, Čína, Japonsko):**
+
+```json
+{
+  "terms": {
+    "řeka Indus": "https://cs.wikipedia.org/wiki/Indus",
+    "Indus": "https://cs.wikipedia.org/wiki/Indus",
+    "Harappské kultury": "https://cs.wikipedia.org/wiki/Harappská_kultura",
+    "Ašóka": "https://cs.wikipedia.org/wiki/Ašóka",
+    "buddhismus": "https://cs.wikipedia.org/wiki/Buddhismus",
+    "Bharata Natyam": "https://cs.wikipedia.org/wiki/Bharata_Natyam",
+    "Pekingská opera": "https://cs.wikipedia.org/wiki/Pekingská_opera",
+    "Divadlo Nó": "https://cs.wikipedia.org/wiki/Nó"
+  }
+}
+```
+
+## Tipy pro efektivní práci
+
+1. **Batch processing**: Místo přidávání jednoho termínu najednou, projdi celou kapitolu a vytvoř seznam všech termínů, pak je přidej najednou
+2. **Kontrola duplicit**: Před přidáním zkontroluj, zda termín už není v `common_terms.json` nebo v souboru tématu
+3. **Konzistence**: Používej stejné termíny pro stejné pojmy napříč kapitolami (např. "buddhismus" by měl být vždy stejný)
+4. **Priorita**: Začni s nejdůležitějšími termíny (osobnosti, místa, klíčové pojmy), méně důležité termíny můžeš přidat později
+
+## Technické poznámky
+
+- Systém automaticky načte termíny při načtení kapitoly
+- Termíny jsou tříděny podle délky (delší první), aby se předešlo částečným shodám
+- Odkazy se přidávají pouze při renderování HTML, původní text v JSON souborech zůstává nezměněn
+- Pokud soubor `{TOPIC_ID}_terms.json` neexistuje, systém použije pouze společné termíny (bez chyby)
+
+## Kontrolní seznam
+
+- [ ] Prošel jsem text kapitoly a identifikoval důležité termíny
+- [ ] Pro každý termín jsem našel relevantní Wikipedia článek
+- [ ] Vytvořil jsem/upravil jsem soubor `data/term_links/{TOPIC_ID}_terms.json`
+- [ ] Přidal jsem všechny varianty termínů (velká/malá písmena, jednotné/množné číslo)
+- [ ] Ověřil jsem JSON formát (validní JSON)
+- [ ] Otestoval jsem v aplikaci, že odkazy fungují správně
+- [ ] Zkontroloval jsem, že se zobrazuje pouze text termínu (ne URL)
+

@@ -361,6 +361,26 @@
   font-weight: var(--font-weight-semibold);
 }
 
+/* Term links in materials content */
+.materials-content .term-link {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary-light);
+  text-underline-offset: 2px;
+  transition: all var(--transition-fast);
+}
+
+.materials-content .term-link:hover {
+  color: var(--color-primary-hover);
+  text-decoration-color: var(--color-primary-hover);
+}
+
+.materials-content .term-link:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 .materials-content {
   font-size: var(--font-size-sm);
   line-height: 1.5;

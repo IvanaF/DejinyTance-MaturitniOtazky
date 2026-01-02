@@ -1,102 +1,182 @@
 {
   "questions": [
     {
-      "question": "Co je městské státy (?",
+      "question": "Jaké městské státy byly nejvýznamnější v Řecku?",
       "answers": [
-        "polis): nejvýznamnější – Sparta, Athény",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "Sparta a Athény",
+        "Athény a Korint",
+        "Sparta a Thébai",
+        "Korint a Thébai"
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje řecko?",
+      "question": "Kdy osídlily řecké kmeny Balkánský poloostrov?",
       "answers": [
-        "- městské státy (=polis): nejvýznamnější – Sparta, Athény",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "2. tisíciletí př. n. l.",
+        "1. tisíciletí př. n. l.",
+        "3. tisíciletí př. n. l.",
+        "4. tisíciletí př. n. l."
       ],
       "correct": 0
     },
     {
-      "question": "Co je vytvořily vyspělou civilizaci?",
-      "answers": [
-        "> základy evropské vzdělanosti",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "Co je 776 př. n. l.?",
-      "answers": [
-        "první olympijské hry",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "Co se stalo v roce 776 př. n. l.?",
-      "answers": [
-        "= první olympijské hry",
-        "Nelze určit z textu",
-        "Žádná významná událost",
-        "Informace nejsou k dispozici"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "Co je charakteristické pro historie?",
+      "question": "Které řecké kmeny osídlily Balkánský poloostrov?",
       "answers": [
         "Ionové, Aiolové, Dórové, Achájové",
-        "1",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "Dórové, Ionové, Aiolové",
+        "Achájové, Dórové, Ionové",
+        "Aiolové, Achájové, Dórové"
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje historie?",
+      "question": "Kdy probíhalo archaické období v Řecku?",
       "answers": [
-        "- rozvoj lékařských věd a medicíny",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "1000 – 500 př. n. l.",
+        "800 – 400 př. n. l.",
+        "1200 – 600 př. n. l.",
+        "900 – 450 př. n. l."
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje historie?",
+      "question": "Které eposy patří do archaického období řecké literatury?",
       "answers": [
-        "- 776 př. n. l. = první olympijské hry",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "Ilias a Odyssea",
+        "Mahabharáta a Rámajána",
+        "Epos o Gilgamešovi",
+        "Aeneis"
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje historie?",
+      "question": "Kdo byli přírodní filozofové v archaickém období?",
       "answers": [
-        "- filozofové: Sokrates, Platón, Aristoteles",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "Tháles, Pythagoras",
+        "Sokrates, Platón",
+        "Aristoteles",
+        "Epikúros"
       ],
       "correct": 0
     },
     {
-      "question": "Co je charakteristické pro architektura?",
+      "question": "Kdo vytvořil teorii čtyř temperamentů?",
       "answers": [
-        "iónský – nahoře zdobený volutou",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "Hippokrates",
+        "Aristoteles",
+        "Platón",
+        "Sokrates"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jaké jsou čtyři temperamenty podle Hippokrata?",
+      "answers": [
+        "sangvinik, cholerik, melancholik, flegmatik",
+        "sangvinik, cholerik, optimista, pesimista",
+        "extrovert, introvert, cholerik, flegmatik",
+        "aktivní, pasivní, melancholik, flegmatik"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy se konaly první olympijské hry?",
+      "answers": [
+        "776 př. n. l.",
+        "800 př. n. l.",
+        "750 př. n. l.",
+        "700 př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy probíhalo klasické období v Řecku?",
+      "answers": [
+        "480 – 330 př. n. l.",
+        "500 – 350 př. n. l.",
+        "450 – 300 př. n. l.",
+        "400 – 280 př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo vládl během klasického období a rozvíjel Athény jako kulturní centrum?",
+      "answers": [
+        "Perikles",
+        "Alexandr Veliký",
+        "Sokrates",
+        "Platón"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kteří filozofové patří do klasického období?",
+      "answers": [
+        "Sokrates, Platón, Aristoteles",
+        "Tháles, Pythagoras",
+        "Epikúros, Zénón",
+        "Platón, Aristoteles, Epikúros"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy probíhalo helénistické období?",
+      "answers": [
+        "330 př. n. l. – 30 př. n. l.",
+        "300 př. n. l. – 0 n. l.",
+        "350 př. n. l. – 50 př. n. l.",
+        "320 př. n. l. – 20 př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo dobil Řecko a začal helénistické období?",
+      "answers": [
+        "Alexandr Veliký",
+        "Perikles",
+        "Caesar",
+        "Augustus"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jaké jsou tři typy řeckých sloupů?",
+      "answers": [
+        "dórský, iónský, korintský",
+        "dórský, iónský, toskánský",
+        "iónský, korintský, toskánský",
+        "dórský, korintský, kompozitní"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Který typ řeckého sloupu je jednoduchý, bez zdobení a poměrně silný?",
+      "answers": [
+        "dórský",
+        "iónský",
+        "korintský",
+        "toskánský"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Který typ řeckého sloupu je nahoře zdobený volutou a je štíhlejší?",
+      "answers": [
+        "iónský",
+        "dórský",
+        "korintský",
+        "kompozitní"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Který typ řeckého sloupu je velmi zdobný a rozšířený spíše v Římě?",
+      "answers": [
+        "korintský",
+        "dórský",
+        "iónský",
+        "toskánský"
       ],
       "correct": 0
     },
@@ -104,399 +184,569 @@
       "question": "Co je kalokagathia?",
       "answers": [
         "ideál zdraví, krásy a vzdělání (soulad psychického a duševního zdraví)",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "typ řeckého chrámu",
+        "typ řeckého tance",
+        "typ řeckého divadla"
       ],
       "correct": 0
     },
     {
-      "question": "Co je charakteristické pro náboženství?",
+      "question": "Kdo je nejvyšší bůh v řecké mytologii?",
       "answers": [
-        "• Zeus – nejvyšší bůh, vládce všech bohů",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "Zeus",
+        "Poseidon",
+        "Apollón",
+        "Hádés"
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje náboženství?",
+      "question": "Kdo je manželka Dia a ochránkyně manželství?",
       "answers": [
-        "- na počest bohů se pořádaly slavnosti a lidé jim dávali dary (obětovali jim zvířata)",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "Héra",
+        "Afrodité",
+        "Artemis",
+        "Athéna"
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje náboženství?",
+      "question": "Kdo je bohyně smyslné lásky a krásy?",
       "answers": [
-        "• Dionýsos – bůh veselí, zábavy, vína a plodnosti",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "Afrodité",
+        "Héra",
+        "Artemis",
+        "Athéna"
       ],
       "correct": 0
     },
     {
-      "question": "Co je všestranná?",
+      "question": "Kdo je bůh lásky?",
       "answers": [
-        "> regionální odlišnosti",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "Amor",
+        "Apollón",
+        "Dionýsos",
+        "Árés"
       ],
       "correct": 0
     },
     {
-      "question": "Co je soutěže v tragédiích a přednesu, tzv. dithyramby (?",
+      "question": "Kdo je bůh moří?",
       "answers": [
-        "oslavné písně na počest boha Dionýsa)",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "Poseidon",
+        "Zeus",
+        "Hádés",
+        "Apollón"
       ],
       "correct": 0
     },
     {
-      "question": "Co je charakteristické pro slavnosti?",
+      "question": "Kdo je bůh umění a slunečního jasu, vůdce devíti múz?",
       "answers": [
-        "tanec a divadlo (drama):",
-        "1",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "Apollón",
+        "Dionýsos",
+        "Zeus",
+        "Hermes"
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje slavnosti?",
+      "question": "Která múza je múzou tance?",
       "answers": [
-        "- přelom prosince a ledna",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "Terpsichora",
+        "Kalliopé",
+        "Euterpé",
+        "Melpomené"
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje slavnosti?",
+      "question": "Kdo je bůh veselí, zábavy, vína a plodnosti?",
       "answers": [
-        "- příjezd zahraničních hostů",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "Dionýsos",
+        "Apollón",
+        "Zeus",
+        "Árés"
       ],
       "correct": 0
     },
     {
-      "question": "Co je námět?",
+      "question": "Kolik důležitých slavností se konalo v Athénách v průběhu roku?",
       "answers": [
-        "historie, mytologie",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "4",
+        "3",
+        "5",
+        "6"
       ],
       "correct": 0
     },
     {
-      "question": "Co je Aischylos – 499 př. n. l.?",
+      "question": "Kdy se konaly Dionýsie venkovské (malé Dionýsie)?",
       "answers": [
-        "začal soutěžit na Městských Dionýsiích",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "přelom prosince a ledna",
+        "přelom ledna a února",
+        "přelom února a března",
+        "přelom března a dubna"
       ],
       "correct": 0
     },
     {
-      "question": "Co je 468 př. n. l.?",
+      "question": "Kdy se konaly Lenáje?",
       "answers": [
-        "začal soutěžit (vyhrál 24 soutěží",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "přelom ledna a února",
+        "přelom prosince a ledna",
+        "přelom února a března",
+        "přelom března a dubna"
       ],
       "correct": 0
     },
     {
-      "question": "Co je 468 př. n. l.?",
+      "question": "Kdy se konaly Anthestérie?",
       "answers": [
-        "počet ustálen na tři herce",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "přelom února a března",
+        "přelom ledna a února",
+        "přelom prosince a ledna",
+        "přelom března a dubna"
       ],
       "correct": 0
     },
     {
-      "question": "Co je orchestra?",
+      "question": "Kdy se konaly Dionýsie městské (velké)?",
       "answers": [
-        "kruhový prostor uprostřed (hrál zde chór – sbor herců)",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "přelom března a dubna",
+        "přelom února a března",
+        "přelom ledna a února",
+        "přelom prosince a ledna"
       ],
       "correct": 0
     },
     {
-      "question": "Co je parodos?",
+      "question": "Co jsou dithyramby?",
       "answers": [
-        "postranní vchody",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "oslavné písně na počest boha Dionýsa",
+        "tragédie",
+        "komedie",
+        "tance"
       ],
       "correct": 0
     },
     {
-      "question": "Co je proskénium?",
+      "question": "Kdy vzniklo řecké divadlo?",
       "answers": [
-        "velmi úzké vyvýšené pódium (hráli zde herci)",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "550 – 520 př. n. l.",
+        "500 – 480 př. n. l.",
+        "600 – 550 př. n. l.",
+        "480 – 450 př. n. l."
       ],
       "correct": 0
     },
     {
-      "question": "Co se stalo v roce 499 př. n. l.?",
+      "question": "Který bůh stál u zrodu řeckého divadla?",
       "answers": [
-        "= začal soutěžit na Městských Dionýsiích",
-        "Nelze určit z textu",
-        "Žádná významná událost",
-        "Informace nejsou k dispozici"
+        "Dionýsos",
+        "Apollón",
+        "Zeus",
+        "Poseidon"
       ],
       "correct": 0
     },
     {
-      "question": "Co se stalo v roce 468 př. n. l.?",
+      "question": "Kdo byl nejstarší známý autor tragédií?",
       "answers": [
-        "= začal soutěžit (vyhrál 24 soutěží",
-        "Nelze určit z textu",
-        "Žádná významná událost",
-        "Informace nejsou k dispozici"
+        "Thespis",
+        "Aischylos",
+        "Sofokles",
+        "Euripides"
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje divadlo?",
+      "question": "Kdy začal Aischylos soutěžit na Městských Dionýsiích?",
       "answers": [
-        "- ty zpíval chór (sbor zpěváků) a v čele byl vůdce",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "499 př. n. l.",
+        "480 př. n. l.",
+        "450 př. n. l.",
+        "420 př. n. l."
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje divadlo?",
+      "question": "Kolik her napsal Aischylos a kolik se dochovalo?",
       "answers": [
-        "- cca 120 her, dochovalo se 7, např.:",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "80 her, dochovalo se 7",
+        "120 her, dochovalo se 7",
+        "90 her, dochovalo se 18",
+        "100 her, dochovalo se 10"
       ],
       "correct": 0
     },
     {
-      "question": "Co je první zmínka o tanci?",
+      "question": "Která trilogie je jediná dochovaná od Aischyla?",
+      "answers": [
+        "Oresteia (Agamemnón, Oběť na hrobě, Usmířené lítice)",
+        "Antigona, Elektra, Král Oidipus",
+        "Medea, Elektra, Prosebnice",
+        "Peršané, Prométheus, Sedm proti Thébám"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy začal Sofokles soutěžit na Městských Dionýsiích?",
+      "answers": [
+        "468 př. n. l.",
+        "450 př. n. l.",
+        "440 př. n. l.",
+        "430 př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kolik soutěží vyhrál Sofokles?",
+      "answers": [
+        "24",
+        "20",
+        "30",
+        "18"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kolik her napsal Sofokles a kolik se dochovalo?",
+      "answers": [
+        "cca 120 her, dochovalo se 7",
+        "cca 90 her, dochovalo se 18",
+        "cca 80 her, dochovalo se 7",
+        "cca 100 her, dochovalo se 10"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Které hry napsal Sofokles?",
+      "answers": [
+        "Antigona, Elektra, Král Oidipus, Slídiči",
+        "Oresteia, Peršané, Prométheus",
+        "Medea, Bakchantky, Kyklóp",
+        "Vosy, Žáby, Ptáci"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kolik her napsal Euripides a kolik se dochovalo?",
+      "answers": [
+        "cca 90 her, dochovalo se 18",
+        "cca 120 her, dochovalo se 7",
+        "cca 80 her, dochovalo se 7",
+        "cca 100 her, dochovalo se 10"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Které hry napsal Euripides?",
+      "answers": [
+        "Medea, Elektra, Prosebnice, Bakchantky, Kyklóp",
+        "Antigona, Elektra, Král Oidipus",
+        "Oresteia, Peršané, Prométheus",
+        "Vosy, Žáby, Ptáci"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo je nejznámější autor řeckých komedií?",
+      "answers": [
+        "Aristofanes",
+        "Sofokles",
+        "Euripides",
+        "Aischylos"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kolik her napsal Aristofanes a kolik se dochovalo?",
+      "answers": [
+        "cca 40 her, dochovalo se 11",
+        "cca 30 her, dochovalo se 7",
+        "cca 50 her, dochovalo se 15",
+        "cca 35 her, dochovalo se 10"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy byl počet herců v řeckém divadle ustálen na tři?",
+      "answers": [
+        "468 př. n. l.",
+        "500 př. n. l.",
+        "450 př. n. l.",
+        "420 př. n. l."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kolik sboristů měl chór v tragédii?",
+      "answers": [
+        "15",
+        "24",
+        "12",
+        "20"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kolik sboristů měl chór v komedii?",
+      "answers": [
+        "24",
+        "15",
+        "20",
+        "12"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jak se nazývaly sandály s platformou, které nosili herci?",
+      "answers": [
+        "kothurny",
+        "sandály",
+        "boty",
+        "pantofle"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jak se nazývá kruhový prostor uprostřed řeckého divadla, kde hrál chór?",
+      "answers": [
+        "orchestra",
+        "proskénium",
+        "skéna",
+        "parodos"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jak se nazývá velmi úzké vyvýšené pódium, kde hráli herci?",
+      "answers": [
+        "proskénium",
+        "orchestra",
+        "skéna",
+        "parodos"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jak se nazývá šatna za jevištěm v řeckém divadle?",
+      "answers": [
+        "skéna",
+        "orchestra",
+        "proskénium",
+        "parodos"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jak se nazývají postranní vchody v řeckém divadle?",
+      "answers": [
+        "parodos",
+        "orchestra",
+        "proskénium",
+        "skéna"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jak se nazývají malované kulisy (trojboké hranoly) v řeckém divadle?",
+      "answers": [
+        "periakty",
+        "kulisy",
+        "scéna",
+        "dekorace"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Odkud pocházely nejstarší tance v Řecku?",
+      "answers": [
+        "z Kréty",
+        "ze Sparty",
+        "z Athén",
+        "z Théb"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo vládl na Krétě a v jakém paláci?",
+      "answers": [
+        "král Mínos, palác Knóssos",
+        "král Theseus, palác Athény",
+        "král Agamemnón, palác Mykény",
+        "král Oidipus, palác Thébai"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo první zmínil tanec v řecké literatuře a jaký tanec?",
       "answers": [
         "Homér, tanec Tří Grácií",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "Sofokles, tanec Dionýsa",
+        "Euripides, tanec Múz",
+        "Aristofanes, tanec Satyrů"
       ],
       "correct": 0
     },
     {
-      "question": "Co je Pajány – tanečníci?",
+      "question": "Co jsou Hyporchemata?",
       "answers": [
-        "muži a ženy dohromady, - na počest boha Apollóna",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "náboženské tance, kde tanečníci pantomimicky předváděli gesta bohů",
+        "světské tance",
+        "divadelní tance",
+        "lidové tance"
       ],
       "correct": 0
     },
     {
-      "question": "Co je řetězový tanec?",
+      "question": "Co jsou Parthenaje?",
       "answers": [
-        "> drželi se za ruce",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "náboženské tance, které tančily pouze dívky",
+        "tance, které tančili pouze muži",
+        "tance, které tančili muži a ženy dohromady",
+        "bojové tance"
       ],
       "correct": 0
     },
     {
-      "question": "Co je Sikkinis – v satyrském dramatu?",
+      "question": "Co jsou Pajány?",
       "answers": [
-        "komický tanec, ale někdy byl na hranici vkusu",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "náboženské tance, které tančili muži a ženy dohromady na počest boha Apollóna",
+        "tance, které tančily pouze dívky",
+        "bojové tance",
+        "divadelní tance"
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje tanec?",
+      "question": "Odkud pochází Pyrhický tanec?",
       "answers": [
-        "- významné místo v řecké kultuře",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "z Kréty",
+        "ze Sparty",
+        "z Athén",
+        "z Théb"
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje tanec?",
+      "question": "Co je Pyrhický tanec?",
       "answers": [
-        "náboženské tance",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "tanec se zbraní (bojový tanec na ochranu Dia) s prvky útoku a obrany",
+        "tanec na počest boha Apollóna",
+        "tanec dívky",
+        "tanec v komediích"
       ],
       "correct": 0
     },
     {
-      "question": "Co je starověký Řím?",
+      "question": "Co je Geranos?",
       "answers": [
-        "civilizace vzešlá z města Říma",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "řetězový tanec chlapců a dívek na počest Thésea",
+        "bojový tanec",
+        "tanec se zbraní",
+        "tanec v tragédiích"
       ],
       "correct": 0
     },
     {
-      "question": "Co je do roku 510 př. n. l.?",
+      "question": "Co je Hormos?",
       "answers": [
-        "nadvláda Etrusků",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "řetězový tanec chlapců i dívek",
+        "bojový tanec",
+        "tanec se zbraní",
+        "tanec v komediích"
       ],
       "correct": 0
     },
     {
-      "question": "Co je 395 př. n. l.?",
+      "question": "Co je Gymnopadie?",
       "answers": [
-        "rozdělení Římské říše na Východní (Byzantskou) a na Západní říši",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "tanec chlapců a dívek sloužící k získání pružnosti a zdatnosti",
+        "bojový tanec",
+        "tanec se zbraní",
+        "tanec v tragédiích"
       ],
       "correct": 0
     },
     {
-      "question": "Co je 476 př. n. l.?",
+      "question": "Co je Emmeléia?",
       "answers": [
-        "zánik Západořímské říše",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "pomalý vážný tanec, který tančil chór v tragédiích",
+        "veselý tanec v komediích",
+        "komický tanec v satyrském dramatu",
+        "řetězový tanec"
       ],
       "correct": 0
     },
     {
-      "question": "Co je 1453?",
+      "question": "Co je Cordax?",
       "answers": [
-        "zánik Východní říše",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "veselý tanec, který tančil chór v komediích",
+        "pomalý vážný tanec v tragédiích",
+        "komický tanec v satyrském dramatu",
+        "bojový tanec"
       ],
       "correct": 0
     },
     {
-      "question": "Co se stalo v roce 395 př. n. l.?",
+      "question": "Co je Sikkinis?",
       "answers": [
-        "= rozdělení Římské říše na Východní (Byzantskou) a na Západní říši",
-        "Nelze určit z textu",
-        "Žádná významná událost",
-        "Informace nejsou k dispozici"
+        "komický tanec v satyrském dramatu, někdy na hranici vkusu",
+        "veselý tanec v komediích",
+        "pomalý vážný tanec v tragédiích",
+        "bojový tanec"
       ],
       "correct": 0
     },
     {
-      "question": "Co se stalo v roce 510 př. n. l.?",
+      "question": "Kdy vznikl Řím podle legendy?",
       "answers": [
-        "= nadvláda Etrusků",
-        "Nelze určit z textu",
-        "Žádná významná událost",
-        "Informace nejsou k dispozici"
+        "753 př. n. l.",
+        "800 př. n. l.",
+        "700 př. n. l.",
+        "750 př. n. l."
       ],
       "correct": 0
     },
     {
-      "question": "Co se stalo v roce 1453 ?",
+      "question": "Kdy probíhala Římská republika?",
       "answers": [
-        "= zánik Východní říše",
-        "Nelze určit z textu",
-        "Žádná významná událost",
-        "Informace nejsou k dispozici"
+        "510 př. n. l. – 30 př. n. l.",
+        "500 př. n. l. – 0 n. l.",
+        "550 př. n. l. – 50 př. n. l.",
+        "480 př. n. l. – 20 př. n. l."
       ],
       "correct": 0
     },
     {
-      "question": "Co se stalo v roce 2000 př. n. l.?",
+      "question": "Kdy začalo Římské císařství?",
       "answers": [
-        ", Apeninský poloostrov",
-        "Nelze určit z textu",
-        "Žádná významná událost",
-        "Informace nejsou k dispozici"
+        "30 př. n. l.",
+        "0 n. l.",
+        "27 př. n. l.",
+        "44 př. n. l."
       ],
       "correct": 0
     },
     {
-      "question": "Co se stalo v roce 753 př. n. l.?",
+      "question": "Kdo byl prvním římským císařem?",
       "answers": [
-        "Romulem (dle legendy – dva bratři = Romulus zabil Rema)",
-        "Nelze určit z textu",
-        "Žádná významná událost",
-        "Informace nejsou k dispozici"
+        "Augustus",
+        "Julius Caesar",
+        "Nero",
+        "Caligula"
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje historie?",
+      "question": "Kdy skončilo Západořímské císařství?",
       "answers": [
-        "- do roku 510 př. n. l. = nadvláda Etrusků",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "Co zahrnuje historie?",
-      "answers": [
-        "- ve stejném roce nastalo období císařství",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "Co zahrnuje historie?",
-      "answers": [
-        "a na Západní říši",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "Co je sloužilo ke gladiátorským hrám, k tzv. naumáchiím (?",
-      "answers": [
-        "námořnické bitvy),",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "476 n. l.",
+        "400 n. l.",
+        "500 n. l.",
+        "450 n. l."
       ],
       "correct": 0
     }

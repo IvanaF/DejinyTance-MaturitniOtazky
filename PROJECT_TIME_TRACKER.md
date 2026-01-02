@@ -14,6 +14,7 @@ Tento soubor slouží k zaznamenávání času stráveného na projektu, počtu 
 |-------|----------------|---------------|----------|-----------------|
 | 27. prosince 2025 (Session 1) | 3.5 | ~25-30 | Cursor AI, Python HTTP server, Chrome DevTools, Git | Počáteční setup projektu, implementace základní struktury (HTML, CSS, JS), index stránka a topic detail stránky, responzivní design (desktop sidebar, mobile drawer), navigační funkcionalita, překlad do češtiny, úprava designu (velikosti fontů, spacing), přidání obrázků do témat, implementace quick navigation, implementace kvízu (one-by-one, random order), implementace flashcards (one-by-one, random order), přidání scroll-to-top funkcionality, integrace "Zpět na přehled" tlačítka, Czech pluralization, kompaktnější design kvízu, přidání template a scaling guide |
 | 27. prosince 2025 (Session 2) | 2.5 | ~15-20 | Cursor AI, Python HTTP server, Chrome DevTools, Git | Kontrola a úprava responzivního designu, finální úpravy CSS (kompaktní kvíz, vertikální zarovnání), přidání kvízu do T02, vytvoření _TEMPLATE.json, vytvoření SCALING_GUIDE.md, kontrola konzistence mezi webovou a mobilní verzí, vytvoření PROJECT_TIME_TRACKER.md, překlad README do češtiny, doplnění mindmap sekce |
+| 2. ledna 2026 (Session 3) | 3.0 | ~30-35 | Cursor AI, Python | Vytvoření kvalitních ručně psaných kvízových otázek pro T03 (75 otázek) a T04 (53 otázek), vytvoření promptu pro pozdější vytváření otázek (prompts/quiz_questions.md), úklid projektu - smazání dočasných Python skriptů (check_page5.py, create_quality_quizzes_full.py, create_quality_quiz_questions.py), sjednocení struktury prompts do prompts/ (audioscript.md, hyperlinks.md, quiz_questions.md), přesun AI_ODBORNA_KONTROLA_STUDIJNICH_MATERIALU.md do docs/ |
 
 ---
 
@@ -21,10 +22,11 @@ Tento soubor slouží k zaznamenávání času stráveného na projektu, počtu 
 
 | Metrika | Hodnota |
 |---------|---------|
-| Celkový čas | 6 hodin |
-| Celkový počet promptů | ~40-50 |
+| Celkový čas | 9 hodin |
+| Celkový počet promptů | ~70-85 |
 | Počet témat implementováno | 2 (T01, T02) |
-| Fáze projektu | Pilot verze dokončena |
+| Počet kvízů vytvořeno | 4 (T01, T02, T03, T04) |
+| Fáze projektu | Pilot verze dokončena, škálování v průběhu |
 
 ---
 
@@ -38,4 +40,4 @@ Tento soubor slouží k zaznamenávání času stráveného na projektu, počtu 
 
 ---
 
-*Poslední aktualizace: 27. prosince 2025*
+*Poslední aktualizace: 2. ledna 2026*

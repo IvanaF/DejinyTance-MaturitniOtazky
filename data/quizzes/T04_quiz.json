@@ -1,422 +1,532 @@
 {
   "questions": [
     {
-      "question": "Co je společnost?",
+      "question": "Kdy probíhal raný středověk?",
       "answers": [
-        "rolnictvo (větší část) a feudální vlastníci pozemků (šlechta, církev)",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "5. – 11. stol.",
+        "4. – 10. stol.",
+        "6. – 12. stol.",
+        "3. – 9. stol."
       ],
       "correct": 0
     },
     {
-      "question": "Co je charakteristické pro historie?",
+      "question": "Co charakterizovalo raný středověk?",
       "answers": [
-        "1",
-        "2",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "šíření křesťanství, rozvoj románské kultury, vznik samostatných feudálních států",
+        "rozvoj gotického umění, vznik měst",
+        "první zámořské objevy",
+        "vrchol feudalismu"
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje historie?",
+      "question": "Kdy probíhal vrcholný středověk?",
       "answers": [
-        "a feudální vlastníci pozemků (šlechta, církev)",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "11. – 14. stol.",
+        "10. – 13. stol.",
+        "12. – 15. stol.",
+        "9. – 12. stol."
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje historie?",
+      "question": "Která nová společenská třída vznikla ve vrcholném středověku?",
       "answers": [
-        "- vrchol gotického umění",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "měšťanstvo",
+        "šlechta",
+        "duchovenstvo",
+        "rolnictvo"
       ],
       "correct": 0
     },
     {
-      "question": "Co je náměty?",
+      "question": "Kdy probíhal pozdní středověk?",
       "answers": [
-        "náboženské, výjevy z Bible a ze života svatých",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "14. – 15. stol.",
+        "13. – 14. stol.",
+        "15. – 16. stol.",
+        "12. – 13. stol."
       ],
       "correct": 0
     },
     {
-      "question": "Co je fiály (?",
+      "question": "Co charakterizovalo pozdní středověk?",
       "answers": [
-        "věžičky, zdobily střechu)",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "první zámořské objevy, sílí vliv měšťanstva, vrchol gotického umění",
+        "šíření křesťanství, rozvoj románské kultury",
+        "vznik samostatných feudálních států",
+        "rozvoj měst jako center obchodu"
       ],
       "correct": 0
     },
     {
-      "question": "Co je (dvě podoby - madona s ježíškem v náručí; pieta?",
+      "question": "Kdy probíhal románský sloh?",
       "answers": [
-        "stárnoucí žena držící Kristovo mrtvé tělo)",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "10. – 12. stol.",
+        "9. – 11. stol.",
+        "11. – 13. stol.",
+        "8. – 10. stol."
       ],
       "correct": 0
     },
     {
-      "question": "Co je náměty?",
+      "question": "Z jaké kultury vychází románský sloh?",
       "answers": [
-        "převážně legendy ze života svatých",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "z římského umění a kultury",
+        "z řeckého umění",
+        "z byzantského umění",
+        "z egyptského umění"
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje umění?",
+      "question": "Jaký půdorys má rotunda?",
       "answers": [
-        "- díky mnišským řádům se šířil do západní, jižní a střední Evropy",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "kruh",
+        "kříž",
+        "čtverec",
+        "obdélník"
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje umění?",
+      "question": "Jaký půdorys má bazilika?",
       "answers": [
-        "- většina knih měla náboženský obsah",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "kříž",
+        "kruh",
+        "čtverec",
+        "obdélník"
       ],
       "correct": 0
     },
     {
-      "question": "Co je tropy?",
+      "question": "Co jsou iluminace?",
       "answers": [
-        "dramatické výstupy v rámci bohoslužeb",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "zdobená počáteční písmena v knižní malbě",
+        "malby na stěnu",
+        "sochy na chrámech",
+        "vitráže v oknech"
       ],
       "correct": 0
     },
     {
-      "question": "Co je základní téma?",
+      "question": "Kdy probíhal gotický sloh?",
       "answers": [
-        "konflikt mezi dobrem a zlem",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "2. pol. 12. – 15. stol.",
+        "11. – 14. stol.",
+        "13. – 16. stol.",
+        "12. – 14. stol."
       ],
       "correct": 0
     },
     {
-      "question": "Co je do těchto her bylo zapojeno celé město?",
+      "question": "Kde se poprvé objevil gotický sloh?",
       "answers": [
-        "vystupovali zde amatérští herci",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "ve Francii v opatství Saint-Denis",
+        "v Anglii",
+        "v Itálii",
+        "v Německu"
       ],
       "correct": 0
     },
     {
-      "question": "Co je časem vznikla pašijová bratrstva (?",
+      "question": "Co je vertikalismus v gotické architektuře?",
       "answers": [
-        "organizátoři mysterií a pašijových her)",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "stavění do výšky, aby byli blíž k Bohu",
+        "použití lomeného oblouku",
+        "vnější opěrný systém",
+        "kruhová okna"
       ],
       "correct": 0
     },
     {
-      "question": "Co je herci?",
+      "question": "Co jsou fiály?",
       "answers": [
-        "jokulátoři (mimové, baviči, kejklíři)",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "věžičky zdobící střechu",
+        "chrliče sloužící jako okap",
+        "kruhová okna",
+        "opěrné oblouky"
       ],
       "correct": 0
     },
     {
-      "question": "Co je Typy světského divadla 1.) fraška?",
+      "question": "Co jsou chrliče v gotické architektuře?",
       "answers": [
-        "krátká, veršovaná, komická hra",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "slouží jako okap",
+        "věžičky zdobící střechu",
+        "kruhová okna",
+        "opěrné pilíře"
       ],
       "correct": 0
     },
     {
-      "question": "Co je autor?",
+      "question": "Co jsou rozety?",
       "answers": [
-        "francouzský lidový básník z konce 15",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "kruhová okna",
+        "věžičky zdobící střechu",
+        "chrliče",
+        "lomené oblouky"
       ],
       "correct": 0
     },
     {
-      "question": "Co je ) slavnosti bláznů?",
+      "question": "Co je pieta?",
       "answers": [
-        "společenská, politická, nebo náboženská satira (sotties) - tradice slavností spadá až k římským Saturnáliím",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "stárnoucí žena držící Kristovo mrtvé tělo",
+        "madona s ježíškem v náručí",
+        "socha ukřižovaného Ježíše",
+        "socha apoštola"
       ],
       "correct": 0
     },
     {
-      "question": "Co je ) interludia?",
+      "question": "Kdy se rozvíjela gotická malba v Čechách?",
       "answers": [
-        "hry pro pobavení panovníků, šlechty a zámožných kupců",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "ve 14. stol.",
+        "ve 13. stol.",
+        "ve 15. stol.",
+        "ve 12. stol."
       ],
       "correct": 0
     },
     {
-      "question": "Co je náměty?",
+      "question": "Který umělec patří k české gotické malbě 14. stol.?",
       "answers": [
-        "různé (náboženské, historické, fraškovité)",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "Mistr Třeboňského oltáře, Mistr Vyšebrodského oltáře, Mistr Theodorik",
+        "Mistr Theodorik pouze",
+        "Mistr Třeboňského oltáře pouze",
+        "Mistr Vyšebrodského oltáře pouze"
       ],
       "correct": 0
     },
     {
-      "question": "Co je ) mumraje?",
+      "question": "Kdy se znovu objevilo církevní divadlo?",
+      "answers": [
+        "od 9. stol.",
+        "od 10. stol.",
+        "od 8. stol.",
+        "od 11. stol."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co jsou tropy?",
+      "answers": [
+        "dramatické výstupy v rámci bohoslužeb, krátké literární vstupy",
+        "církevní hry",
+        "světské hry",
+        "lidové hry"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo hrál v církevním divadle?",
+      "answers": [
+        "pouze kněží",
+        "kněží a laici",
+        "pouze laici",
+        "šlechta"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy se poprvé objevil tropus?",
+      "answers": [
+        "r. 925 na Velikonoce – scéna Tři Marie",
+        "r. 900 na Vánoce",
+        "r. 950 na Velikonoce",
+        "r. 1000 na Vánoce"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je mirákl?",
+      "answers": [
+        "příběhy ze života světců a svatých (lat. miraculum = zázrak)",
+        "alegorické hry",
+        "hry ze Starého a Nového zákona",
+        "krátké komické hry"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kde byl nejrozšířenější mirákl?",
+      "answers": [
+        "ve Francii a Anglii",
+        "v Německu a Itálii",
+        "v Čechách a Polsku",
+        "ve Španělsku a Portugalsku"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je moralita?",
+      "answers": [
+        "alegorické hry s konfliktem mezi dobrem a zlem",
+        "příběhy ze života světců",
+        "hry ze Starého a Nového zákona",
+        "krátké komické hry"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jaká je nejznámější moralita?",
+      "answers": [
+        "Everyman (= Kdokoliv ; Anglie, 1485)",
+        "Mirákl o Theofilovi",
+        "Mirákl o sv. Mikulášovi",
+        "Mistr Pleticha"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je mystérium?",
+      "answers": [
+        "nejoblíbenější žánr církevního divadla, scény ze Starého i Nového zákona",
+        "alegorické hry",
+        "příběhy ze života světců",
+        "krátké komické hry"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jak dlouho trvala mystéria?",
+      "answers": [
+        "několik dnů, někdy i několik týdnů",
+        "pouze jeden den",
+        "několik hodin",
+        "týden"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co jsou pašijová bratrstva?",
+      "answers": [
+        "organizátoři mysterií a pašijových her",
+        "herci v církevním divadle",
+        "tvůrci moralit",
+        "tvůrci frašek"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co jsou mansiony?",
+      "answers": [
+        "dřevěná stanoviště (jednoduchá pódia) vedle sebe před kostelem",
+        "kostelní prostory",
+        "světské divadelní prostory",
+        "církevní hry"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je simultánní divadelní prostor?",
+      "answers": [
+        "scény se hrály najednou ve více mansionech",
+        "scény se hrály postupně",
+        "scény se hrály v kostele",
+        "scény se hrály na jednom pódiu"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo byli jokulátoři?",
+      "answers": [
+        "mimové, baviči, kejklíři",
+        "kněží",
+        "šlechta",
+        "měšťané"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co je fraška?",
+      "answers": [
+        "krátká, veršovaná, komická hra zobrazující směšné situace z každodenního života",
+        "alegorická hra",
+        "náboženská hra",
+        "historická hra"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Jaká je populární středověká fraška?",
+      "answers": [
+        "Mistr Pleticha",
+        "Everyman",
+        "Mirákl o Theofilovi",
+        "Tři Marie"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co jsou slavnosti bláznů (sotties)?",
+      "answers": [
+        "společenská, politická, nebo náboženská satira",
+        "církevní hry",
+        "lidové tance",
+        "dvorské hry"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdo psal úspěšné sotties v Paříži?",
+      "answers": [
+        "Pierre Gringoire",
+        "Mistr Pleticha",
+        "Jean Gringoire",
+        "Pierre Beauchamp"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Kdy se konaly slavnosti bláznů v Čechách?",
+      "answers": [
+        "28. prosince v Den Neviňátek",
+        "25. prosince na Vánoce",
+        "1. ledna na Nový rok",
+        "6. ledna na Tři krále"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co jsou interludia?",
+      "answers": [
+        "hry pro pobavení panovníků, šlechty a zámožných kupců v průběhu hostiny",
+        "církevní hry",
+        "lidové hry",
+        "profesionální hry"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Co jsou mumraje?",
       "answers": [
         "maškarády, karnevaly – slavnosti maskovaných postav",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "církevní hry",
+        "lidové tance",
+        "dvorské hry"
       ],
       "correct": 0
     },
     {
-      "question": "Co je de cour?",
+      "question": "Co vzniklo z mumrajů?",
       "answers": [
-        "> tyto žánry stály na počátku vzniku baletního umění",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "anglické masky, italské intermezzi a francouzské ballet de cour",
+        "církevní divadlo",
+        "světské divadlo",
+        "profesionální divadlo"
       ],
       "correct": 0
     },
     {
-      "question": "Co se stalo v roce  12. stol.?",
+      "question": "Kdo byli profesionální tanečníci ve středověku?",
       "answers": [
-        "národní jazyky (hlavně komické scény)",
-        "Nelze určit z textu",
-        "Žádná významná událost",
-        "Informace nejsou k dispozici"
+        "žakéři (= žertéři), jokulátoři (mimové, baviči, kejklíři)",
+        "pouze kněží",
+        "pouze šlechta",
+        "pouze měšťané"
       ],
       "correct": 0
     },
     {
-      "question": "Co se stalo v roce  9. stol.?",
+      "question": "Co jsou řetězové tance v raném středověku?",
       "answers": [
-        "a vychází ze samotné církve",
-        "Nelze určit z textu",
-        "Žádná významná událost",
-        "Informace nejsou k dispozici"
+        "tance, kde tančí muži i ženy po kruhu za doprovodu zpěvu",
+        "tance pouze mužů",
+        "tance pouze žen",
+        "tance ve dvojicích"
       ],
       "correct": 0
     },
     {
-      "question": "Co je charakteristické pro divadlo?",
+      "question": "Co je estampida?",
       "answers": [
-        "a) Církevní divadlo (liturgické)",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "hlavní dvorský tanec ze 14. stol. s vážným kráčivým charakterem",
+        "lidový tanec",
+        "cechovní tanec",
+        "církevní tanec"
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje divadlo?",
+      "question": "Co je saltarello?",
       "answers": [
-        "Církevní divadlo (liturgické)",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "rychlá část estampidy (= skákat)",
+        "pomalý tanec",
+        "církevní tanec",
+        "cechovní tanec"
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje divadlo?",
+      "question": "Od kdy se osamostatňovala řemesla a zakládaly cechy?",
       "answers": [
-        "- poprvé se tropus objevil v r. 925 na Velikonoce – scéna Tři Marie",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "od 12. stol.",
+        "od 11. stol.",
+        "od 13. stol.",
+        "od 14. stol."
       ],
       "correct": 0
     },
     {
-      "question": "Co zahrnuje divadlo?",
+      "question": "Co jsou cechovní tance?",
       "answers": [
-        "- příběhy ze života světců a svatých (ze života Panny Marie)",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "řetězové, řadové nebo kruhové tance za doprovodu flétny a bubnu při slavnostech cechů",
+        "dvorské tance",
+        "lidové tance",
+        "církevní tance"
       ],
       "correct": 0
     },
     {
-      "question": "Co je žakéřstvím se zabývaly i ženy (?",
+      "question": "Co je tanec smrti (danse macaber)?",
       "answers": [
-        "tanečnice, které obvesovaly lid neslušnými pohyby)",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "tanec živých s mrtvými, kostlivec pobízí k tanci bohaté i chudé lidi",
+        "církevní tanec",
+        "dvorský tanec",
+        "cechovní tanec"
       ],
       "correct": 0
     },
     {
-      "question": "Co je saltarello (?",
-      "answers": [
-        "skákat) - rychlá část",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "Co je od 12. stol.?",
-      "answers": [
-        "osamostatňování jednotlivých řemesel -> zakládání řemeslnických cechů",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "Co je ) choreománie (Tanec sv. Víta)?",
+      "question": "Co je choreománie (Tanec sv. Víta)?",
       "answers": [
         "taneční mánie, která se zmocňovala lidí na hřbitovech a v kostelích",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "církevní tanec",
+        "dvorský tanec",
+        "cechovní tanec"
       ],
       "correct": 0
     },
     {
-      "question": "Co je kousnutí pavouka tarantuly?",
+      "question": "Co je tarantismus?",
       "answers": [
-        "> tanec byl nazván tarantismem",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "tanec léčící následky kousnutí pavouka tarantuly",
+        "tanec smrti",
+        "tanec sv. Víta",
+        "sabath"
       ],
       "correct": 0
     },
     {
-      "question": "Co je ) sabath?",
+      "question": "Kdo pojal pochodňový tanec jako obřadní tanec v Byzancii?",
       "answers": [
-        "tanec na vzdor vůči církevním zákazům (parodie církevních obřadů)",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "Konstantin Veliký ve 4. stol.",
+        "Karel Veliký",
+        "Justinián I.",
+        "Theodosius"
       ],
       "correct": 0
     },
     {
-      "question": "Co je tanečníci?",
+      "question": "Co je sabath?",
       "answers": [
-        "muži převlečení za démony a obnažené ženy",
-        "Nelze jednoznačně určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "Co se stalo v roce  13. stol.?",
-      "answers": [
-        "– tanec byl součástí žákovských her a mysterií",
-        "Nelze určit z textu",
-        "Žádná významná událost",
-        "Informace nejsou k dispozici"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "Co se stalo v roce  4. stol.?",
-      "answers": [
-        "jej Konstantin Veliký pojal jako obřadní tanec v Byzancii",
-        "Nelze určit z textu",
-        "Žádná významná událost",
-        "Informace nejsou k dispozici"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "Co se stalo v roce  12. stol.?",
-      "answers": [
-        "= osamostatňování jednotlivých řemesel -> zakládání řemeslnických cechů",
-        "Nelze určit z textu",
-        "Žádná významná událost",
-        "Informace nejsou k dispozici"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "Co je charakteristické pro tanec?",
-      "answers": [
-        "= strohé zprávy z církevních spisů, zmínky kronikářů a z výtvarných památek",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "Co zahrnuje tanec?",
-      "answers": [
-        "- žakéřstvím se zabývaly i ženy (= tanečnice, které obvesovaly lid neslušnými pohyby)",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "Co zahrnuje tanec?",
-      "answers": [
-        "- také se tančilo v kruhu a v řadách bez držení",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "Co zahrnuje tanec?",
-      "answers": [
-        "- hrálo se u kostelů, nebo na hřbitovech v plátěných stanech, tzv. tančírny",
-        "Nelze určit",
-        "Informace nejsou dostupné",
-        "Závisí na kontextu"
+        "tanec na vzdor vůči církevním zákazům, parodie církevních obřadů",
+        "církevní tanec",
+        "dvorský tanec",
+        "cechovní tanec"
       ],
       "correct": 0
     }
