@@ -180,8 +180,10 @@ Skript automaticky aktualizuje `data/topics/TXX.json`:
 **Poznámka k názvům částí:**
 - Názvy částí jsou automaticky extrahovány z obsahu scénáře
 - Skript hledá fráze jako "zaměříme na", "části se zaměříme na" a extrahuje téma
+- Skript automaticky převádí běžné názvy zemí z 4. pádu na 1. pád (např. "Indii" → "Indie", "Čínu" → "Čína")
 - Namísto generických názvů "(část 1)", "(část 2)" se používají smysluplné názvy založené na obsahu
-- Příklady: "Pravěk", "Egypt", "Mezopotámie", "Indie", atd.
+- Příklady: "Pravěk", "Egypt", "Mezopotámie", "Indie", "Čína", "Japonsko", atd.
+- Pokud je extrahovaný název v nesprávném pádu, můžete ho ručně opravit v `data/topics/TXX.json`
 
 ---
 

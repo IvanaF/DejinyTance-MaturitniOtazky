@@ -1,0 +1,38 @@
+{
+  "sections": [
+    {
+      "heading": "Indie",
+      "resources": [
+        {
+          "title": "[PLACEHOLDER - Konkrétní název zdroje o indických tancích]",
+          "platform": "[PLACEHOLDER - Platforma/instituce]",
+          "url": "[PLACEHOLDER - Funkční URL odkazující přímo na konkrétní téma]",
+          "explanation": "[PLACEHOLDER - Vysvětlení relevance zdroje k tématu indických tanců z materiálů]"
+        }
+      ]
+    },
+    {
+      "heading": "Čína",
+      "resources": [
+        {
+          "title": "[PLACEHOLDER - Konkrétní název zdroje o čínských tancích]",
+          "platform": "[PLACEHOLDER - Platforma/instituce]",
+          "url": "[PLACEHOLDER - Funkční URL odkazující přímo na konkrétní téma]",
+          "explanation": "[PLACEHOLDER - Vysvětlení relevance zdroje k tématu čínských tanců z materiálů]"
+        }
+      ]
+    },
+    {
+      "heading": "Japonsko",
+      "resources": [
+        {
+          "title": "[PLACEHOLDER - Konkrétní název zdroje o japonských tancích]",
+          "platform": "[PLACEHOLDER - Platforma/instituce]",
+          "url": "[PLACEHOLDER - Funkční URL odkazující přímo na konkrétní téma]",
+          "explanation": "[PLACEHOLDER - Vysvětlení relevance zdroje k tématu japonských tanců z materiálů]"
+        }
+      ]
+    }
+  ]
+}
+

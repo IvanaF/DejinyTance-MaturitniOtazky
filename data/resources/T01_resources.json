@@ -1,0 +1,38 @@
+{
+  "sections": [
+    {
+      "heading": "Pravěk",
+      "resources": [
+        {
+          "title": "[PLACEHOLDER - Konkrétní název zdroje o pravěkých tancích]",
+          "platform": "[PLACEHOLDER - Platforma/instituce]",
+          "url": "[PLACEHOLDER - Funkční URL odkazující přímo na konkrétní téma]",
+          "explanation": "[PLACEHOLDER - Vysvětlení relevance zdroje k tématu pravěkých tanců z materiálů]"
+        }
+      ]
+    },
+    {
+      "heading": "Egypt",
+      "resources": [
+        {
+          "title": "[PLACEHOLDER - Konkrétní název zdroje o egyptských tancích]",
+          "platform": "[PLACEHOLDER - Platforma/instituce]",
+          "url": "[PLACEHOLDER - Funkční URL odkazující přímo na konkrétní téma]",
+          "explanation": "[PLACEHOLDER - Vysvětlení relevance zdroje k tématu egyptských tanců z materiálů]"
+        }
+      ]
+    },
+    {
+      "heading": "Mezopotámie",
+      "resources": [
+        {
+          "title": "[PLACEHOLDER - Konkrétní název zdroje o mezopotámských tancích]",
+          "platform": "[PLACEHOLDER - Platforma/instituce]",
+          "url": "[PLACEHOLDER - Funkční URL odkazující přímo na konkrétní téma]",
+          "explanation": "[PLACEHOLDER - Vysvětlení relevance zdroje k tématu mezopotámských tanců z materiálů]"
+        }
+      ]
+    }
+  ]
+}
+

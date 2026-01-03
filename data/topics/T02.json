@@ -4,45 +4,42 @@
   "title": "INDIE, ČÍNA, JAPONSKO",
   "image": "assets/images/topics/T02.svg",
   "objectives": [
-    "Identify key Renaissance dance styles",
-    "Understand social context of court dances",
-    "Recognize influence on modern ballet"
+    "Understand classical Indian dance forms (Bharata Natyam, Kathak, Kathakali)",
+    "Learn about Chinese opera and traditional dance",
+    "Recognize Japanese theater forms (Nó, Kabuki) and their dance elements"
   ],
   "materials": {
-    "summary": "Explore the sophisticated dance forms that emerged during the Renaissance period, particularly in European courts."
+    "summary": "Toto téma se zabývá vývojem tance v Indii, Číně a Japonsku. V Indii tanec úzce souvisel s náboženstvím, zejména s hinduismem a jeho božstvy, rozvinul se klasický tanec jako Bharatanatyam, Kathak a další styly. V Číně se vyvinul tradiční čínský tanec ovlivněný filozofií, a zejména čínská opera kombinující zpěv, tanec a herectví. V Japonsku vznikl tradiční divadelní tanec Nó a Kabuki, které jsou stále živé součásti japonské kultury."
   },
   "audio": {
     "title": "Otázka 2 - INDIE, ČÍNA, JAPONSKO",
-    "src": "assets/audio/T02.mp3",
-    "transcript": "This is a placeholder transcript. The actual audio file will be added later."
+    "src": "assets/audio/Otazka-2-indie-cina-japonsko-cast-1.mp3",
+    "transcript": "Přepis audio nahrávky bude přidán po dokončení audio souboru pro toto téma.",
+    "files": [
+      {
+        "src": "assets/audio/Otazka-2-indie-cina-japonsko-cast-1.mp3",
+        "title": "Otázka 2 - Indie",
+        "part": 1
+      },
+      {
+        "src": "assets/audio/Otazka-2-indie-cina-japonsko-cast-2.mp3",
+        "title": "Otázka 2 - Čína",
+        "part": 2
+      },
+      {
+        "src": "assets/audio/Otazka-2-indie-cina-japonsko-cast-3.mp3",
+        "title": "Otázka 2 - Japonsko",
+        "part": 3
+      }
+    ]
   },
-  "resources": [
-    {
-      "title": "Renaissance Dance Manuals",
-      "url": "https://example.com/renaissance-manuals",
-      "reason": "Original dance instruction books from the period"
-    },
-    {
-      "title": "Court Dance Reconstruction",
-      "url": "https://example.com/court-dance",
-      "reason": "Modern recreations of historical dance performances"
-    }
-  ],
-  "flashcards": [
-    {
-      "q": "What characterized Renaissance court dances?",
-      "a": "Elaborate choreography, displays of grace and social status, and emphasis on etiquette and refinement."
-    },
-    {
-      "q": "How did Renaissance dance influence ballet?",
-      "a": "It provided foundations in posture, footwork patterns, and the emphasis on elegance and control."
-    }
-  ],
+  "resourcesSource": "data/resources/T02_resources.json",
   "mindmap": {
-    "description": "Myšlenková mapa znázorňuje sofistikované taneční formy renesance a jejich vliv na klasický balet.",
+    "description": "Myšlenková mapa zobrazuje klíčové pojmy a souvislosti týkající se tance v Indii, Číně a Japonsku, včetně klasických tanečních forem, divadelních tradic a jejich kulturního kontextu.",
     "image": "assets/images/mindmaps/T02.png"
   },
   "materialsSource": "data/materials/T02_materials.json",
   "summarySource": "data/summaries/T02_summary.txt",
-  "quizSource": "data/quizzes/T02_quiz.json"
+  "quizSource": "data/quizzes/T02_quiz.json",
+  "flashcardSource": "data/flashcards/T02_flashcards.json"
 }

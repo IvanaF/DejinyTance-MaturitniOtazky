@@ -142,6 +142,50 @@ class TopicLoader {
         }
       }
       
+      // Load flashcards from external file if flashcardSource is specified
+      if (topic.flashcardSource) {
+        try {
+          const flashcardUrl = topic.flashcardSource;
+          console.log(`Načítání flashcards z ${flashcardUrl}...`);
+          const flashcardResponse = await fetch(flashcardUrl);
+          if (flashcardResponse.ok) {
+            const flashcardData = await flashcardResponse.json();
+            // Merge flashcards into topic.flashcards
+            if (flashcardData.flashcards) {
+              topic.flashcards = flashcardData.flashcards;
+              console.log(`Flashcards načteny: ${flashcardData.flashcards.length} kartiček`);
+            }
+          } else {
+            console.warn(`Nepodařilo se načíst flashcards z ${flashcardUrl}: ${flashcardResponse.status}`);
+          }
+        } catch (flashcardError) {
+          console.warn(`Chyba při načítání flashcards pro ${topicId}:`, flashcardError);
+          // Continue without external flashcards - topic will use inline flashcards if available
+        }
+      }
+      
+      // Load resources from external file if resourcesSource is specified
+      if (topic.resourcesSource) {
+        try {
+          const resourcesUrl = topic.resourcesSource;
+          console.log(`Načítání zdrojů z ${resourcesUrl}...`);
+          const resourcesResponse = await fetch(resourcesUrl);
+          if (resourcesResponse.ok) {
+            const resourcesData = await resourcesResponse.json();
+            // Merge resources sections into topic.resources
+            if (resourcesData.sections) {
+              topic.resources = resourcesData.sections;
+              console.log(`Zdroje načteny: ${resourcesData.sections.length} sekcí`);
+            }
+          } else {
+            console.warn(`Nepodařilo se načíst zdroje z ${resourcesUrl}: ${resourcesResponse.status}`);
+          }
+        } catch (resourcesError) {
+          console.warn(`Chyba při načítání zdrojů pro ${topicId}:`, resourcesError);
+          // Continue without external resources - topic will use inline resources if available
+        }
+      }
+      
       return topic;
     } catch (error) {
       console.error(`Chyba při načítání otázky ${topicId}:`, error);

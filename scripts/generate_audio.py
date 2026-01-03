@@ -144,7 +144,7 @@ def extract_content_title(text: str) -> Optional[str]:
         if match:
             title = match.group(1).strip()
             
-            # Normalizuj běžné výrazy
+            # Normalizuj běžné výrazy a převeď z 4. pádu na 1. pád
             title_normalizations = {
                 'egyptskou civilizaci': 'Egypt',
                 'egyptské civilizace': 'Egypt',
@@ -153,6 +153,10 @@ def extract_content_title(text: str) -> Optional[str]:
                 'mezopotámii': 'Mezopotámie',
                 'mezopotámie': 'Mezopotámie',
                 'pravěk': 'Pravěk',
+                # Převod z 4. pádu na 1. pád pro běžné názvy zemí
+                'indii': 'Indie',
+                'čínu': 'Čína',
+                'japonsko': 'Japonsko',  # už je v 1. pádě
             }
             
             # Zkus najít normalizovaný výraz (case-insensitive)

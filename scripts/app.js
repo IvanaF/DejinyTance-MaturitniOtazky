@@ -562,31 +562,6 @@ function renderTopicContent(topic) {
     }
   }
 
-  // Render mindmap
-  if (topic.mindmap) {
-    const mindmapContent = document.getElementById('mindmapContent');
-    if (mindmapContent) {
-      let html = '';
-      if (topic.mindmap.description) {
-        html += `<p class="mindmap-description">${escapeHtml(topic.mindmap.description)}</p>`;
-      }
-      if (topic.mindmap.image) {
-        html += `
-          <div class="mindmap-image-container">
-            <img src="${escapeHtml(topic.mindmap.image)}" alt="Myšlenková mapa pojmů" class="mindmap-image"
-                 onerror="this.style.display='none';">
-          </div>
-        `;
-      }
-      mindmapContent.innerHTML = html;
-    }
-  } else {
-    const mindmapSection = document.getElementById('mindmapSection');
-    if (mindmapSection) {
-      mindmapSection.style.display = 'none';
-    }
-  }
-
   // Render quiz
   if (topic.quiz && topic.quiz.questions && topic.quiz.questions.length > 0) {
     const quizContent = document.getElementById('quizContent');
@@ -629,17 +604,49 @@ function renderTopicContent(topic) {
   if (topic.resources && topic.resources.length > 0) {
     const resourcesList = document.getElementById('resourcesList');
     if (resourcesList) {
-      resourcesList.innerHTML = topic.resources.map(resource => {
-        const typeText = resource.type ? ` (${escapeHtml(resource.type)})` : '';
-        const description = resource.reason ? ` - ${escapeHtml(resource.reason)}` : '';
-        return `
-          <li class="resource-item">
-            <a href="${escapeHtml(resource.url)}" target="_blank" rel="noopener noreferrer" class="resource-link">
-              ${escapeHtml(resource.title)}${typeText}${description}
-            </a>
-          </li>
-        `;
-      }).join('');
+      // Check if resources is structured with sections (new format) or flat array (old format)
+      const isSectionedFormat = topic.resources[0] && topic.resources[0].heading && topic.resources[0].resources;
+      
+      if (isSectionedFormat) {
+        // New format: sections with sub-sections
+        resourcesList.innerHTML = topic.resources.map(section => {
+          const sectionResources = section.resources.map(resource => {
+            const platformText = resource.platform ? `<span class="resource-platform">${escapeHtml(resource.platform)}</span>` : '';
+            const explanationText = resource.explanation ? `<span class="resource-explanation">${escapeHtml(resource.explanation)}</span>` : '';
+            return `
+              <li class="resource-item">
+                <a href="${escapeHtml(resource.url)}" target="_blank" rel="noopener noreferrer" class="resource-link">
+                  ${escapeHtml(resource.title)}
+                </a>
+                ${platformText}
+                ${explanationText}
+              </li>
+            `;
+          }).join('');
+          
+          return `
+            <li class="resource-section">
+              <h3 class="resource-section-heading">${escapeHtml(section.heading)}</h3>
+              <ul class="resource-sub-list">
+                ${sectionResources}
+              </ul>
+            </li>
+          `;
+        }).join('');
+      } else {
+        // Old format: flat array of resources
+        resourcesList.innerHTML = topic.resources.map(resource => {
+          const typeText = resource.type ? ` (${escapeHtml(resource.type)})` : '';
+          const description = resource.reason ? ` - ${escapeHtml(resource.reason)}` : '';
+          return `
+            <li class="resource-item">
+              <a href="${escapeHtml(resource.url)}" target="_blank" rel="noopener noreferrer" class="resource-link">
+                ${escapeHtml(resource.title)}${typeText}${description}
+              </a>
+            </li>
+          `;
+        }).join('');
+      }
     }
   } else {
     const resourcesSection = document.getElementById('resourcesSection');
