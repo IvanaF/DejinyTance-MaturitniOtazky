@@ -291,9 +291,9 @@
 }
 
 .quick-nav-button:hover {
-  background-color: var(--color-primary);
-  color: white;
-  border-color: var(--color-primary);
+  background-color: var(--color-background-hover);
+  color: var(--color-text);
+  border-color: var(--color-border);
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
 }
@@ -1163,12 +1163,6 @@
   background-color: var(--color-background);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-md);
-  transition: all var(--transition-fast);
-}
-
-.structure-item:hover {
-  border-color: var(--color-primary);
-  box-shadow: var(--shadow-sm);
 }
 
 .structure-icon {
