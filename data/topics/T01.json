@@ -2,6 +2,7 @@
   "id": "T01",
   "order": 1,
   "title": "PRAVĚK, EGYPT, MEZOPOTÁMIE",
+  "image": "assets/images/topics/T01.svg",
   "objectives": [
     "Understand the origins of dance",
     "Learn about early dance forms",
@@ -11,9 +12,26 @@
     "summary": "This topic introduces the fundamental concepts and origins of dance throughout history."
   },
   "audio": {
-    "title": "Podcast: Introduction to Dance History",
-    "src": "assets/audio/T01.mp3",
-    "transcript": "This is a placeholder transcript. The actual audio file will be added later."
+    "title": "Otázka 1 - PRAVĚK, EGYPT, MEZOPOTÁMIE",
+    "src": "assets/audio/Otazka-1-pravek-egypt-mezopotamie-cast-1.mp3",
+    "transcript": "This is a placeholder transcript. The actual audio file will be added later.",
+    "files": [
+      {
+        "src": "assets/audio/Otazka-1-pravek-egypt-mezopotamie-cast-1.mp3",
+        "title": "Otázka 1 - Pravěk",
+        "part": 1
+      },
+      {
+        "src": "assets/audio/Otazka-1-pravek-egypt-mezopotamie-cast-2.mp3",
+        "title": "Otázka 1 - Egypt",
+        "part": 2
+      },
+      {
+        "src": "assets/audio/Otazka-1-pravek-egypt-mezopotamie-cast-3.mp3",
+        "title": "Otázka 1 - Mezopotámie",
+        "part": 3
+      }
+    ]
   },
   "resources": [
     {

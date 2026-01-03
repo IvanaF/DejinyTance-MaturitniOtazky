@@ -70,7 +70,7 @@ Použijte `data/topics/_TEMPLATE.json` jako základ pro nové téma.
 
 - `image` - Cesta k obrázku tématu (doporučeno)
 - `summary` - Shrnutí (1-2 odstavce) - zobrazuje se v sekci "Shrnutí"
-- `audio` - Podcast audio soubor
+- `audio` - Audio soubor
 - `resources` - Dodatečné zdroje
 - `flashcards` - Kartičky pro učení
 - `quiz` - Kvízové otázky
@@ -141,7 +141,7 @@ Použijte `data/topics/_TEMPLATE.json` jako základ pro nové téma.
 **Pravidla:**
 - `title` - Název zdroje (povinné)
 - `url` - URL adresa zdroje (povinné)
-- `type` - Typ zdroje (volitelné): "video", "podcast", "article", "book", atd.
+- `type` - Typ zdroje (volitelné): "video", "audio", "article", "book", atd.
 - `reason` - Krátký popis zdroje (volitelné)
 - Zobrazuje se jako seznam ve formátu: `Název (typ) - popis`
 - Pokud `type` není zadán, zobrazí se pouze: `Název - popis`
@@ -198,7 +198,7 @@ Po přidání nového tématu se automaticky:
 4. Ověřte všechny sekce:
    - Shrnutí
    - Studijní text
-   - Podcast (pokud je)
+   - Audio (pokud je)
    - Myšlenková mapa (pokud je)
    - Kartičky
    - Kvíz

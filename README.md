@@ -84,7 +84,7 @@ Pro rychlý start použijte: `data/topics/_TEMPLATE.json`
 
 - ✅ Studijní materiály (sekce s nadpisy)
 - ✅ Shrnutí (automaticky generované 1-2 odstavce)
-- ✅ Podcast (audio soubory)
+- ✅ Audio (audio soubory)
 - ✅ Kvízové otázky (po jedné, náhodné pořadí)
 - ✅ Flashcards (po jedné, náhodné pořadí)
 - ✅ Myšlenková mapa pojmů
@@ -110,11 +110,7 @@ Pro rychlý start použijte: `data/topics/_TEMPLATE.json`
 
 ### 📋 Backlog
 
-- Sledování pokroku (localStorage) - odstraněno z UI, architektura připravena pro budoucí implementaci
-- Funkcionalita poznámek - architektura připravena, UI pro MVP deaktivováno
-- Automatické skenování témat z adresáře (aktuálně hardcoded v topic-loader.js)
-- Vycentrování navigačních tlačítek na stránce tématu
-- T00, úvod, základní pojmy - materials nelze otevřít
+Pro aktuální seznam úkolů a oprav viz **[TODO.md](TODO.md)**.
 
 ## Přizpůsobení designu
 

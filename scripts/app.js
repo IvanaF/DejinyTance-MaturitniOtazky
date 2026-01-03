@@ -261,6 +261,81 @@ function updateIndexStats(totalTopics) {
 }
 
 /**
+ * Group sections by subtopics based on topic title
+ * @param {Array} sections - Array of section objects
+ * @param {Array} subtopics - Array of subtopic names (from title, comma-separated)
+ * @returns {Array} Array of grouped sections with subtopic info
+ */
+function groupSectionsBySubtopics(sections, subtopics) {
+  const groups = [];
+  let currentGroup = null;
+  
+  sections.forEach((section, index) => {
+    const sectionHeading = section.heading ? section.heading.trim().toUpperCase() : '';
+    const sectionContent = section.content ? section.content.trim().toUpperCase() : '';
+    
+    // Check if this section's heading exactly matches a subtopic (case-insensitive)
+    let matchingSubtopic = subtopics.find(subtopic => {
+      const normalizedSubtopic = subtopic.trim().toUpperCase();
+      return sectionHeading === normalizedSubtopic;
+    });
+    
+    // If no match in heading, check if content contains a subtopic name on its own line
+    // (e.g., "JAPONSKO" might appear in content rather than as a heading)
+    if (!matchingSubtopic) {
+      matchingSubtopic = subtopics.find(subtopic => {
+        const normalizedSubtopic = subtopic.trim().toUpperCase();
+        // Check if content starts with the subtopic name (possibly followed by space, parenthesis, etc.)
+        // Or if it appears on its own line (preceded by newline)
+        return sectionContent.startsWith(normalizedSubtopic + ' ') || 
+               sectionContent.startsWith(normalizedSubtopic + '(') ||
+               sectionContent.startsWith(normalizedSubtopic + '\n') ||
+               sectionContent.includes('\n' + normalizedSubtopic + ' ') ||
+               sectionContent.includes('\n' + normalizedSubtopic + '(');
+      });
+    }
+    
+    if (matchingSubtopic) {
+      // Start a new group for this subtopic
+      if (currentGroup && currentGroup.sections.length > 0) {
+        groups.push(currentGroup);
+      }
+      // Use the original case from subtopics array for display
+      // Find the original case from the title
+      const originalSubtopic = subtopics.find(st => st.trim().toUpperCase() === matchingSubtopic.trim().toUpperCase());
+      currentGroup = {
+        subtopic: originalSubtopic ? originalSubtopic.trim() : matchingSubtopic,
+        sections: [section]
+      };
+    } else {
+      // This section doesn't match a subtopic heading - it's a subsection
+      // Add it to the current group if one exists, otherwise create an ungrouped section
+      if (currentGroup) {
+        // Add to current group (subsections of the subtopic)
+        currentGroup.sections.push(section);
+      } else {
+        // No current group - create an ungrouped section
+        if (groups.length === 0 || groups[groups.length - 1].subtopic) {
+          groups.push({
+            subtopic: null,
+            sections: [section]
+          });
+        } else {
+          groups[groups.length - 1].sections.push(section);
+        }
+      }
+    }
+  });
+  
+  // Add the last group if it exists
+  if (currentGroup && currentGroup.sections.length > 0) {
+    groups.push(currentGroup);
+  }
+  
+  return groups;
+}
+
+/**
  * Render topic content
  * @param {Object} topic - Topic object
  */
@@ -326,12 +401,57 @@ function renderTopicContent(topic) {
       let html = '';
       
       if (topic.materials.sections && topic.materials.sections.length > 0) {
-        html += topic.materials.sections.map(section => `
-          <div class="materials-section">
-            ${section.heading ? `<h3 class="materials-heading">${escapeHtml(section.heading)}</h3>` : ''}
-            <div class="materials-content">${markdownToHtml(section.content || '')}</div>
-          </div>
-        `).join('');
+        // Check if topic title contains multiple subtopics (comma-separated)
+        const titleParts = topic.title ? topic.title.split(',').map(part => part.trim().toUpperCase()) : [];
+        const hasMultipleSubtopics = titleParts.length > 1;
+        
+        if (hasMultipleSubtopics) {
+          // Group sections by subtopic
+          const groupedSections = groupSectionsBySubtopics(topic.materials.sections, titleParts);
+          
+          // Render grouped sections
+          groupedSections.forEach(group => {
+            if (group.subtopic) {
+              html += `<div class="materials-subtopic-group">`;
+              html += `<h2 class="materials-subtopic-heading">${escapeHtml(group.subtopic)}</h2>`;
+              
+              group.sections.forEach((section, sectionIndex) => {
+                // Skip the heading if it's the first section and matches the subtopic name
+                const sectionHeading = section.heading ? section.heading.trim() : '';
+                const subtopicNormalized = group.subtopic.trim().toUpperCase();
+                const sectionHeadingNormalized = sectionHeading.toUpperCase();
+                const shouldSkipHeading = sectionIndex === 0 && sectionHeadingNormalized === subtopicNormalized;
+                
+                html += `
+                  <div class="materials-section">
+                    ${section.heading && !shouldSkipHeading ? `<h3 class="materials-heading">${escapeHtml(section.heading)}</h3>` : ''}
+                    <div class="materials-content">${markdownToHtml(section.content || '')}</div>
+                  </div>
+                `;
+              });
+              
+              html += `</div>`;
+            } else {
+              // Sections that don't match any subtopic - render normally
+              group.sections.forEach(section => {
+                html += `
+                  <div class="materials-section">
+                    ${section.heading ? `<h3 class="materials-heading">${escapeHtml(section.heading)}</h3>` : ''}
+                    <div class="materials-content">${markdownToHtml(section.content || '')}</div>
+                  </div>
+                `;
+              });
+            }
+          });
+        } else {
+          // Single topic - render sections normally
+          html += topic.materials.sections.map(section => `
+            <div class="materials-section">
+              ${section.heading ? `<h3 class="materials-heading">${escapeHtml(section.heading)}</h3>` : ''}
+              <div class="materials-content">${markdownToHtml(section.content || '')}</div>
+            </div>
+          `).join('');
+        }
       }
       
       materialsContent.innerHTML = html;
@@ -343,22 +463,82 @@ function renderTopicContent(topic) {
     const audioContent = document.getElementById('audioContent');
     if (audioContent) {
       const hasTranscript = topic.audio.transcript && topic.audio.transcript.trim() !== '';
-      audioContent.innerHTML = `
-        <h3 style="margin-bottom: var(--spacing-md);">${escapeHtml(topic.audio.title || 'Audio')}</h3>
-        <audio class="audio-player" controls>
-          <source src="${escapeHtml(topic.audio.src || '')}" type="audio/mpeg">
-          Váš prohlížeč nepodporuje audio element.
-        </audio>
-        ${hasTranscript ? `
-          <div class="audio-transcript">
-            <button class="audio-transcript-toggle" id="transcriptToggle">Zobrazit přepis</button>
-            <div class="audio-transcript-content" id="transcriptContent">${markdownToHtml(topic.audio.transcript)}</div>
+      
+      // Check if we have multiple audio files
+      const audioFiles = topic.audio.files && Array.isArray(topic.audio.files) ? topic.audio.files : null;
+      
+      let audioHtml = '';
+      
+      if (audioFiles && audioFiles.length > 1) {
+        // Render multiple audio files
+        audioHtml = audioFiles.map((audioFile, index) => {
+          const fileHasTranscript = audioFile.transcript && audioFile.transcript.trim() !== '';
+          const transcriptId = `transcriptToggle_${index}`;
+          const transcriptContentId = `transcriptContent_${index}`;
+          
+          return `
+          <div class="audio-item">
+            <div class="audio-title">${escapeHtml(audioFile.title || `Audio ${index + 1}`)}</div>
+            <audio class="audio-player" controls>
+              <source src="${escapeHtml(audioFile.src || '')}" type="audio/mpeg">
+              Váš prohlížeč nepodporuje audio element.
+            </audio>
+            ${fileHasTranscript ? `
+              <div class="audio-transcript">
+                <button class="audio-transcript-toggle" id="${transcriptId}">Zobrazit přepis</button>
+                <div class="audio-transcript-content" id="${transcriptContentId}">${markdownToHtml(audioFile.transcript)}</div>
+              </div>
+            ` : ''}
           </div>
-        ` : ''}
-      `;
+        `;
+        }).join('');
+      } else {
+        // Single audio file (backward compatibility)
+        const audioSrc = audioFiles && audioFiles.length === 1 ? audioFiles[0].src : (topic.audio.src || '');
+        const audioTitle = audioFiles && audioFiles.length === 1 ? audioFiles[0].title : (topic.audio.title || 'Audio');
+        
+        audioHtml = `
+          <div class="audio-item">
+            <div class="audio-title">${escapeHtml(audioTitle)}</div>
+            <audio class="audio-player" controls>
+              <source src="${escapeHtml(audioSrc)}" type="audio/mpeg">
+              Váš prohlížeč nepodporuje audio element.
+            </audio>
+            ${hasTranscript ? `
+              <div class="audio-transcript">
+                <button class="audio-transcript-toggle" id="transcriptToggle">Zobrazit přepis</button>
+                <div class="audio-transcript-content" id="transcriptContent">${markdownToHtml(topic.audio.transcript)}</div>
+              </div>
+            ` : ''}
+          </div>
+        `;
+      }
+      
+      audioContent.innerHTML = audioHtml;
 
-      // Setup transcript toggle
-      if (hasTranscript) {
+      // Setup transcript toggles
+      if (audioFiles && audioFiles.length > 1) {
+        // Multiple audio files - setup toggles for each
+        audioFiles.forEach((audioFile, index) => {
+          if (audioFile.transcript && audioFile.transcript.trim() !== '') {
+            const toggle = document.getElementById(`transcriptToggle_${index}`);
+            const content = document.getElementById(`transcriptContent_${index}`);
+            if (toggle && content) {
+              toggle.addEventListener('click', () => {
+                const isVisible = content.classList.contains('show');
+                if (isVisible) {
+                  content.classList.remove('show');
+                  toggle.textContent = 'Zobrazit přepis';
+                } else {
+                  content.classList.add('show');
+                  toggle.textContent = 'Skrýt přepis';
+                }
+              });
+            }
+          }
+        });
+      } else if (hasTranscript) {
+        // Single audio file
         const toggle = document.getElementById('transcriptToggle');
         const content = document.getElementById('transcriptContent');
         if (toggle && content) {

@@ -2,6 +2,7 @@
   "id": "T02",
   "order": 2,
   "title": "INDIE, ČÍNA, JAPONSKO",
+  "image": "assets/images/topics/T02.svg",
   "objectives": [
     "Identify key Renaissance dance styles",
     "Understand social context of court dances",
@@ -11,7 +12,7 @@
     "summary": "Explore the sophisticated dance forms that emerged during the Renaissance period, particularly in European courts."
   },
   "audio": {
-    "title": "Podcast: Renaissance Dance Forms",
+    "title": "Otázka 2 - INDIE, ČÍNA, JAPONSKO",
     "src": "assets/audio/T02.mp3",
     "transcript": "This is a placeholder transcript. The actual audio file will be added later."
   },

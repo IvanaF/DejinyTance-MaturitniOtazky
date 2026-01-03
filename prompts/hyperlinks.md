@@ -33,10 +33,20 @@ Pro každý termín:
 1. Otevři českou Wikipedii: https://cs.wikipedia.org
 2. Vyhledej termín
 3. Zkopíruj URL stránky (např. `https://cs.wikipedia.org/wiki/Indus`)
-4. Ověř, že článek existuje a je relevantní
+4. **Důležité:** Ověř, že článek skutečně existuje a je relevantní
+
+**Co znamená "nefunkční odkaz":**
+- Odkaz může vracet chybu 404 (stránka neexistuje)
+- **ALE také:** Odkaz může technicky fungovat, ale stránka neexistuje v daném jazyce (např. česká Wikipedie nemá článek, i když URL nevrací chybu)
+- V takovém případě použij anglickou verzi Wikipedie nebo odkaz úplně odstraň
+
+**Jak ověřit, že článek existuje:**
+- Otevři odkaz v prohlížeči a zkontroluj, že se zobrazuje skutečný článek s obsahem
+- Pokud se zobrazí pouze prázdná stránka, přesměrování na jiný článek, nebo zpráva "článek neexistuje", stránka neexistuje
+- Nepoužívej odkazy, které vedou na neexistující stránky - i když URL nevrací technickou chybu
 
 **Tipy:**
-- Pokud termín nemá český článek, zkus anglickou verzi nebo jiný kvalitní zdroj
+- Pokud termín nemá český článek, použij anglickou verzi (`https://en.wikipedia.org/wiki/...`) nebo odkaz úplně odstraň
 - Pro varianty termínu (např. "Harappské kultury" vs "Harappská kultura") použij stejný odkaz
 - Pro víceslovné termíny zkontroluj přesný název článku (např. "řeka Indus" → článek může být jen "Indus")
 
@@ -79,6 +89,7 @@ Po přidání termínů:
 2. Načti příslušnou kapitolu
 3. Zkontroluj, že termíny jsou klikatelné a vedou na správné stránky
 4. Ověř, že se zobrazuje pouze původní text termínu (ne URL)
+5. **Kontrola funkčnosti odkazů:** Klikni na každý odkaz a ověř, že vede na existující Wikipedia stránku s obsahem (ne na prázdnou stránku nebo chybovou hlášku)
 
 ### 6. Příklady
 
@@ -112,14 +123,18 @@ Po přidání termínů:
 - Termíny jsou tříděny podle délky (delší první), aby se předešlo částečným shodám
 - Odkazy se přidávají pouze při renderování HTML, původní text v JSON souborech zůstává nezměněn
 - Pokud soubor `{TOPIC_ID}_terms.json` neexistuje, systém použije pouze společné termíny (bez chyby)
+- **Důležité:** Vždy ověřuj, že odkazy vedou na skutečně existující stránky. Nefunkční odkaz může znamenat jak technickou chybu (404), tak i stránku, která neexistuje v daném jazyce (i když URL nevrací chybu)
 
 ## Kontrolní seznam
 
 - [ ] Prošel jsem text kapitoly a identifikoval důležité termíny
 - [ ] Pro každý termín jsem našel relevantní Wikipedia článek
+- [ ] Ověřil jsem, že všechny odkazy vedou na skutečně existující stránky (ne jen technicky funkční URL)
+- [ ] Pro neexistující české stránky jsem použil anglickou verzi nebo odkaz odstranil
 - [ ] Vytvořil jsem/upravil jsem soubor `data/term_links/{TOPIC_ID}_terms.json`
 - [ ] Přidal jsem všechny varianty termínů (velká/malá písmena, jednotné/množné číslo)
 - [ ] Ověřil jsem JSON formát (validní JSON)
 - [ ] Otestoval jsem v aplikaci, že odkazy fungují správně
 - [ ] Zkontroloval jsem, že se zobrazuje pouze text termínu (ne URL)
+- [ ] Klikl jsem na každý odkaz a ověřil, že vede na existující stránku s obsahem
 

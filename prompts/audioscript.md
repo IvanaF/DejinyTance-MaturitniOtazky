@@ -13,9 +13,14 @@ Vytvoř finální audio-scénář pro TTS (text-to-speech) pro danou kapitolu z 
    - `data/materials/TXX_materials.json` (kde XX je číslo kapitoly)
    - Nebo v PDF / extrahovaných podkladech
 
-2. **Pokud je kapitola dlouhá nebo obsahuje více témat:**
-   - Rozděl ji na části (ČÁST 1/2/3) tak, aby každá část měla cca 7–12 minut poslechu
-   - Každá část = samostatný soubor
+2. **Rozdělení kapitoly na části:**
+   - **VŽDY rozděl kapitolu na části, pokud materiály obsahují logicky oddělené sekce:**
+     - Různé země nebo regiony (např. Pravek, Egypt, Mezopotamie)
+     - Větší časové období nebo epochy
+     - Výrazně odlišná témata nebo oblasti
+   - Každá logická sekce = samostatný soubor (part1, part2, part3...)
+   - Každá část by měla mít cca 7–12 minut poslechu (pokud je část příliš krátká, lze spojit s další)
+   - Název souboru: `TXX_partY.txt` (např. `T01_part1.txt`, `T01_part2.txt`, `T01_part3.txt`)
 
 ---
 
@@ -55,8 +60,10 @@ Vytvoř finální audio-scénář pro TTS (text-to-speech) pro danou kapitolu z 
 ## VÝSTUP
 
 ### Formát souboru
-- **Jeden soubor** pro každou část: `data/audio_scripts/TXX_partY.txt`
-- Pokud je jen jedna část: `data/audio_scripts/TXX.txt`
+- **Vždy jeden soubor pro každou logickou sekci:** `data/audio_scripts/TXX_partY.txt`
+  - part1 = první logická sekce (např. Pravek)
+  - part2 = druhá logická sekce (např. Egypt)
+  - part3 = třetí logická sekce (např. Mezopotamie)
 - **Pouze čistý mluvený text** – žádné nadpisy, komentáře, nebo markdown syntaxe
 - **Připraveno přímo pro ElevenLabs** – lze okamžitě vložit
 
@@ -70,8 +77,10 @@ Závěrem si připomeňme, co jsme v této části probrali. [Kontrolní shrnut�
 ```
 
 ### Příklad názvu souboru
-- `data/audio_scripts/T02_part1.txt` (pokud je rozděleno)
-- `data/audio_scripts/T02.txt` (pokud je jedna část)
+- `data/audio_scripts/T01_part1.txt` (Pravek)
+- `data/audio_scripts/T01_part2.txt` (Egypt)
+- `data/audio_scripts/T01_part3.txt` (Mezopotamie)
+- Číslo tématu (T01) se vždy zachovává, části se označují part1, part2, part3...
 
 ---
 
@@ -82,9 +91,13 @@ Závěrem si připomeňme, co jsme v této části probrali. [Kontrolní shrnut�
 2. Projdi všechny sekce a jejich obsah
 3. Zjisti rozsah a složitost kapitoly
 
-### Krok 2: Rozdělení (pokud potřeba)
-- Pokud text bude delší než ~12 minut poslechu → rozděl na části
-- Každá část by měla být logicky ucelená (např. podle zemí, období, témat)
+### Krok 2: Rozdělení na části (POVINNÉ pro logicky oddělené sekce)
+- **VŽDY rozděl materiály na části podle logických sekcí v materiálech:**
+  - Identifikuj hlavní sekce v materiálech (např. podle nadpisů "PRAVĚK", "EGYPT", "MEZOPOTÁMIE")
+  - Každá logická sekce = samostatná část (part1, part2, part3...)
+  - Pokud materiál obsahuje více zemí/regionů/témat, vytvoř pro každou část samostatný soubor
+- Každá část by měla být logicky ucelená a obsahovat všechny související podsekce
+- Příklad: T01 s sekcemi Pravek, Egypt, Mezopotamie → T01_part1.txt, T01_part2.txt, T01_part3.txt
 
 ### Krok 3: Tvorba textu
 1. **Převeď všechny body na plynulý text:**
@@ -124,12 +137,63 @@ Závěrem si připomeňme, co jsme v této části probrali. [Kontrolní shrnut�
 - Formulace: "Závěrem si připomeňme, co jsme v této části probrali..."
 - 3–8 vět stručně, bez odrážek
 
-### Krok 6: Finální kontrola
+### Krok 6: Systematická kontrola obsahu (POVINNÉ)
+
+**PŘED uložením MUSÍŠ provést tuto systematickou kontrolu:**
+
+**Používej nástroje k ověření:**
+- Použij `grep` k vyhledání klíčových termínů v materiálech a jejich ověření ve skriptu
+- Použij `read_file` k porovnání sekcí materiálů se skriptem
+- Nezapomeň na detaily v závorkách, poznámkách a sekundárních informacích
+
+1. **Kontrola pokrytí všech sekcí:**
+   - [ ] Projdi každou sekci ze zdrojových materiálů (`TXX_materials.json`)
+   - [ ] Pro každou sekci ověř pomocí grep/read_file, že všechny body jsou zahrnuty ve skriptu
+   - [ ] Zkontroluj, že nechybí žádná podsekce, podbod nebo detail
+   - [ ] Ověř všechny výčty (např. všechny druhy tanců, všechny typy pyramid, všichni bohové)
+
+2. **Kontrola specifických detailů (sekce po sekci):**
+   - [ ] Všechna data (roky, století, období) jsou uvedena správně - použij grep k ověření klíčových dat
+   - [ ] Všechna jména osob (panovníci, umělci, bohové) jsou zahrnuta a správně skloňována - ověř každé jméno z materiálů
+   - [ ] Všechna místa (města, regiony, řeky) jsou zmíněna - zkontroluj všechny geografické názvy
+   - [ ] Všechna díla, stavby, artefakty jsou uvedena - ověř všechny konkrétní názvy děl/staveb
+   - [ ] Všechny termíny a pojmy jsou vysvětleny nebo zahrnuty
+   - [ ] Všechny druhy/třídy/kategorie (např. druhy tanců, typy pyramid) jsou kompletní - spočítej a ověř
+   - [ ] Všechny detaily v závorkách nebo poznámkách jsou zahrnuty - nevynechávej žádné vedlejší informace
+
+3. **Kontrola gramatiky a pravopisu:**
+   - [ ] Správné skloňování všech vlastních jmen (např. Amenhotepa, Atona, Remislava Remislavského)
+   - [ ] Správná shoda podmětu s přísudkem
+   - [ ] Správné psaní čísel: "před naším letopočtem" vs "našeho letopočtu"
+   - [ ] Opraveny chyby z materiálů (např. "palentologie" → "paleontologie", "jednotnou říší" → "jednotnou říši")
+   - [ ] Diakritika u všech slov (háčky, čárky)
+   - [ ] Velká písmena u vlastních jmen
+   - [ ] Správná interpunkce (čárky před větami vedlejšími, tečky na konci vět)
+
+4. **Kontrola formátu pro TTS:**
+   - [ ] Žádné odrážky (•, -, a), b), c)) v hlavním textu
+   - [ ] Žádné emoji nebo speciální znaky
+   - [ ] Žádné markdown syntaxe (**, *, #, [])
+   - [ ] Pouze plynulý mluvený text
+   - [ ] Přirozené přechody mezi tématy
+
+5. **Kontrola struktury:**
+   - [ ] Úvodní věta je přítomna
+   - [ ] Závěrečné shrnutí obsahuje 3–8 vět
+   - [ ] Závěr začíná formulací: "Závěrem si připomeňme..."
+   - [ ] Pokud více částí: každá část má označení "ČÁST 1", "ČÁST 2" atd.
+
+6. **Finální cross-checking:**
+   - [ ] Porovnej každou sekci materiálů se skriptem pomocí grep nebo ruční kontroly
+   - [ ] Ověř klíčové detaily: všechna data, jména, místa, díla
+   - [ ] Zkontroluj, že v závěru je zmíněno alespoň jedno klíčové téma z každé hlavní sekce
+
+### Krok 7: Finální validace
 - ✅ Je text plynulý a přirozený?
-- ✅ Jsou všechny informace zahrnuty?
-- ✅ Je text gramaticky správný?
-- ✅ Je vhodný pro TTS (žádné odrážky, emoji)?
-- ✅ Má správnou délku (7–12 minut na část)?
+- ✅ Jsou všechny informace zahrnuty? (100% pokrytí ověřeno systematicky)
+- ✅ Je text gramaticky správný? (všechny chyby opraveny)
+- ✅ Je vhodný pro TTS? (žádné odrážky, emoji, markdown)
+- ✅ Má správnou délku? (7–12 minut na část, cca 1500–2500 slov)
 
 ---
 
@@ -145,41 +209,58 @@ Závěrem si připomeňme, co jsme v této lekci probrali. [Shrnutí 3-8 vět].
 ```
 
 ### Pro více částí:
-**Soubor 1: `TXX_part1.txt`**
+**Soubor 1: `TXX_part1.txt` (např. Pravek)**
 ```
-Vítejte u audio-lekce o [téma]. Tato lekce je rozdělena do [počet] částí. V první části se zaměříme na [téma části 1].
+Vítejte u první části audio-lekce o [hlavní téma tématu]. V této části se zaměříme na [téma části 1, např. pravěk].
 
-[Obsah části 1]
+[Obsah části 1 - všechny sekce související s částí 1]
 
-Závěrem si připomeňme, co jsme v této části probrali. [Shrnutí].
+Závěrem si připomeňme, co jsme v této části probrali. [Shrnutí pouze obsahu části 1].
 ```
 
-**Soubor 2: `TXX_part2.txt`**
+**Soubor 2: `TXX_part2.txt` (např. Egypt)**
 ```
-Vítejte u druhé části audio-lekce o [téma]. V této části se zaměříme na [téma části 2].
+Vítejte u druhé části audio-lekce o [hlavní téma tématu]. V této části se zaměříme na [téma části 2, např. Egypt].
 
-[Obsah části 2]
+[Obsah části 2 - všechny sekce související s částí 2]
 
-Závěrem si připomeňme, co jsme v této části probrali. [Shrnutí].
+Závěrem si připomeňme, co jsme v této části probrali. [Shrnutí pouze obsahu části 2].
+```
+
+**Soubor 3: `TXX_part3.txt` (např. Mezopotamie)**
+```
+Vítejte u třetí části audio-lekce o [hlavní téma tématu]. V této části se zaměříme na [téma části 3, např. Mezopotámii].
+
+[Obsah části 3 - všechny sekce související s částí 3]
+
+Závěrem si připomeňme, co jsme v této části probrali. [Shrnutí pouze obsahu části 3].
 ```
 
 ---
 
 ## DŮLEŽITÉ POZNÁMKY
 
-1. **Jeden soubor = jeden text pro ElevenLabs**
+1. **Systematická kontrola je POVINNÁ před uložením**
+   - ❌ NEUkládej skript bez provedení systematické kontroly (Krok 6)
+   - ✅ Skript musí být perfektní na první pokus - žádné chybějící informace, žádné gramatické chyby
+   - ✅ Projdi každou sekci materiálů a ověř 100% pokrytí
+   - ✅ Zkontroluj všechny specifické detaily (jména, data, místa, díla)
+
+2. **Jeden soubor = jeden text pro ElevenLabs**
    - Není potřeba vytvářet separátní MD a TXT soubory
    - Jeden TXT soubor obsahuje vše
 
-2. **Gramatická kontrola je součástí procesu**
+3. **Gramatická kontrola je součástí procesu**
    - Neukládej text s chybami
-   - Vždy zkontroluj před uložením
+   - Oprav všechny chyby nalezené v materiálech (např. "palentologie" → "paleontologie")
+   - Správné skloňování je kritické
 
-3. **Zachovej všechny informace**
-   - Pokud něco chybí, vrať se k materiálům
+4. **Zachovej všechny informace**
+   - Pokud něco chybí, vrať se k materiálům a doplň
    - Lepší delší text než chybějící informace
+   - Všechny detaily v závorkách nebo poznámkách musí být zahrnuty
 
-4. **Přirozenost před formálností**
+5. **Přirozenost před formálností**
    - Text má znít jako mluvené slovo
    - Ale stále spisovně a gramaticky správně
 
@@ -187,29 +268,49 @@ Závěrem si připomeňme, co jsme v této části probrali. [Shrnutí].
 
 ## KONTROLA KVALITY
 
-Před uložením zkontroluj:
-- [ ] Všechny body z materiálů jsou zahrnuty
-- [ ] Text je plynulý (žádné odrážky v hlavním textu)
-- [ ] Gramatika a pravopis jsou správné
+**Tato kontrola MUSÍ být provedena před uložením souboru.**
+
+Postupuj podle systematické kontroly v Kroku 6 a ověř:
+
+### Obsahová kontrola
+- [ ] Projdi každou sekci materiálů a ověř, že všechny body jsou zahrnuty
+- [ ] Zkontroluj všechny data, jména, místa, díla, termíny
+- [ ] Ověř, že nechybí žádné detaily z poznámek nebo závorek
+- [ ] Použij grep nebo podobný nástroj k ověření klíčových termínů
+
+### Gramatická a formátová kontrola
+- [ ] Gramatika a pravopis jsou správné (všechny chyby opraveny)
+- [ ] Skloňování všech vlastních jmen je správné
 - [ ] Interpunkce je správná
-- [ ] Vlastní jména jsou správně napsaná (diakritika, velká písmena)
-- [ ] Data jsou správně formulovaná
+- [ ] Vlastní jména mají správnou diakritiku a velká písmena
+- [ ] Data jsou správně formulovaná ("před naším letopočtem" vs "našeho letopočtu")
+
+### Formát pro TTS
+- [ ] Text je plynulý (žádné odrážky v hlavním textu)
+- [ ] Žádné emoji nebo speciální znaky
+- [ ] Žádné markdown syntaxe
 - [ ] Text má přirozené přechody mezi tématy
-- [ ] Závěr obsahuje kontrolní shrnutí
-- [ ] Délka je vhodná (7–12 minut na část)
-- [ ] Text je připraven pro TTS (žádné emoji, markdown syntaxe)
+
+### Struktura
+- [ ] Úvodní věta je přítomna
+- [ ] Závěr obsahuje kontrolní shrnutí (3–8 vět)
+- [ ] Závěr začíná "Závěrem si připomeňme..."
+- [ ] Délka je vhodná (7–12 minut na část, cca 1500–2500 slov)
+
+**⚠️ NEPOKRAČUJ k uložení, dokud všechny body nejsou splněny!**
 
 ---
 
 ## PŘÍKLAD POUŽITÍ
 
-**Vstup:** `data/materials/T03_materials.json`
+**Vstup:** `data/materials/T01_materials.json` (obsahuje sekce: PRAVĚK, EGYPT, MEZOPOTÁMIE)
 
 **Výstup:** 
-- `data/audio_scripts/T03.txt` (pokud jedna část)
-- NEBO `data/audio_scripts/T03_part1.txt` a `data/audio_scripts/T03_part2.txt` (pokud rozděleno)
+- `data/audio_scripts/T01_part1.txt` (obsahuje všechny sekce související s pravěkem)
+- `data/audio_scripts/T01_part2.txt` (obsahuje všechny sekce související s Egyptem)
+- `data/audio_scripts/T01_part3.txt` (obsahuje všechny sekce související s Mezopotámií)
 
-**Obsah souboru:** Pouze čistý mluvený text, připravený pro ElevenLabs, gramaticky správný, s kontrolním shrnutím na konci.
+**Obsah každého souboru:** Pouze čistý mluvený text, připravený pro ElevenLabs, gramaticky správný, s kontrolním shrnutím na konci pouze obsahu dané části.
 
 ---
 

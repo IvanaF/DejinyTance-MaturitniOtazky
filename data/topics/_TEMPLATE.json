@@ -18,9 +18,23 @@
     ]
   },
   "audio": {
-    "title": "Podcast: Topic Title",
-    "src": "assets/audio/TXX.mp3",
-    "transcript": "Transcript text here."
+    "title": "Otázka X - Topic Title",
+    "src": "assets/audio/Otazka-X-topic-title.mp3",
+    "transcript": "Transcript text here (optional, for single audio file).",
+    "files": [
+      {
+        "src": "assets/audio/Otazka-X-topic-title-cast-1.mp3",
+        "title": "Otázka X - Content-Based Title Part 1",
+        "part": 1,
+        "transcript": "Transcript for part 1 (optional)."
+      },
+      {
+        "src": "assets/audio/Otazka-X-topic-title-cast-2.mp3",
+        "title": "Otázka X - Content-Based Title Part 2",
+        "part": 2,
+        "transcript": "Transcript for part 2 (optional)."
+      }
+    ]
   },
   "resources": [
     {
