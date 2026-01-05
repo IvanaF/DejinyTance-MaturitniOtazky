@@ -19,6 +19,7 @@ Tento soubor slouží k zaznamenávání času stráveného na projektu, počtu 
 | 3. ledna 2026 (Session 5) | 2.5 | ~20-25 | Cursor AI, Python, Edge TTS | Implementace externího načítání flashcards a resources (flashcardSource, resourcesSource v topic JSON, rozšíření topic-loader.js), vytvoření flashcards pro T01 a T02, vytvoření resources pro T01 a T02 (s placeholdery), vytvoření promptů pro generování flashcards (prompts/flashcards.md) a resources (prompts/resources.md), vygenerování audio souborů pro T02 (3 části), vytvoření audio scriptů pro T02, vytvoření term_links pro T01, úpravy styling pro resources (sekce, platformy, vysvětlení) a quick navigation (responzivní úpravy), aktualizace components.css, app.js, generate_audio.py |
 | 3. ledna 2026 (Session 6) | 1.5 | ~12-15 | Cursor AI | Aktualizace resources pro T01 a T02 - nahrazení placeholderů skutečnými funkčními zdroji (UNESCO, YouTube vyhledávání, Česká televize, Český rozhlas, Metropolitan Museum), vylepšení promptu pro resources (prompts/resources.md) - přidání pravidel pro vyhýbání se problematickým URL strukturám (/learn/schools/, /ivysilani/vyhledavani/), ověření funkčnosti všech URL, aktualizace preferovaných zdrojů a problémových zdrojů v dokumentaci |
 | 3. ledna 2026 (Session 7) | 0.5 | ~8-10 | Cursor AI | Vylepšení hlavní stránky - přidání sekce "Jak studovat" s přehledem struktury otázek (6 částí s SVG ikonami), odstranění nadbytečných sekcí (doporučený postup, meta-info s počtem), přidání roku 2026 do sidebaru, sjednocení názvu na "Dějiny tance a baletu" všude, změna nadpisu na "Seznam maturitních otázek", úpravy CSS pro nové komponenty |
+| 6. ledna 2026 (Session 8) | 2.5 | ~20-25 | Cursor AI, Git | Implementace help modalu s nápovědou - přidání plovoucího tlačítka s ikonou otazníku, vytvoření help modalu s navigačním průvodcem (pohyb mezi otázkami, rychlá navigace, užitečné funkce), vytvoření SVG screenshotu rychlé navigace, změna ikony kvízu z otazníku na checklist (odlišení od help ikony), přejmenování "Osnova" na "Shrnutí" ve všech souborech, přidání ikon v kruhu do nápovědy, úpravy CSS pro help modal a plovoucí tlačítka, aktualizace README.md s novými funkcemi, commit a push na GitHub |
 
 ---
 
@@ -26,8 +27,8 @@ Tento soubor slouží k zaznamenávání času stráveného na projektu, počtu 
 
 | Metrika | Hodnota |
 |---------|---------|
-| Celkový čas | 17.0 hodin |
-| Celkový počet promptů | ~135-165 |
+| Celkový čas | 19.5 hodin |
+| Celkový počet promptů | ~155-190 |
 | Počet témat implementováno | 2 (T01, T02) |
 | Počet kvízů vytvořeno | 4 (T01, T02, T03, T04) |
 | Fáze projektu | Pilot verze dokončena, škálování v průběhu, audio a ikony připraveny, externí flashcards a resources podporovány, resources pro T01 a T02 dokončeny |
@@ -52,4 +53,4 @@ Tento soubor slouží k zaznamenávání času stráveného na projektu, počtu 
 
 ---
 
-*Poslední aktualizace: 3. ledna 2026 (Session 7)*
+*Poslední aktualizace: 6. ledna 2026 (Session 8)*
