@@ -7,15 +7,9 @@
     "Objective 2",
     "Objective 3"
   ],
-  "image": "assets/images/topics/TXX.jpg",
+  "image": "assets/images/topics/TXX.svg",
   "materials": {
-    "summary": "Brief 1-2 paragraph summary generated from materials.",
-    "sections": [
-      {
-        "heading": "Section Heading",
-        "content": "Content text with paragraphs separated by \\n\\n."
-      }
-    ]
+    "summary": "Brief 1-2 paragraph summary generated from materials."
   },
   "audio": {
     "title": "Otázka X - Topic Title",
@@ -36,20 +30,8 @@
       }
     ]
   },
-  "resources": [
-    {
-      "title": "Resource Title",
-      "url": "https://example.com/resource",
-      "type": "article",
-      "reason": "Reason why this resource is relevant"
-    }
-  ],
-  "flashcards": [
-    {
-      "q": "Question text?",
-      "a": "Answer text."
-    }
-  ],
+  "resourcesSource": "data/resources/TXX_resources.json",
+  "flashcardSource": "data/flashcards/TXX_flashcards.json",
   "mindmap": {
     "description": "Optional description of the mindmap",
     "image": "assets/images/mindmaps/TXX.png"

@@ -7,13 +7,13 @@
 
 /**
  * Configuration for GitHub repository
- * This repository: https://github.com/IvanaF/DejinyTance-MaturitniOtazky
+ * This repository: https://github.com/IvanaF/DejinyTance
  */
 const GITHUB_CONFIG = {
   // Your GitHub username or organization
   owner: 'IvanaF',
   // Repository name (must match the actual GitHub repository)
-  repo: 'DejinyTance-MaturitniOtazky',
+  repo: 'DejinyTance',
   // Labels to add to the issue (optional)
   // Make sure these labels exist in your repository: Settings → Issues → Labels
   labels: ['feedback', 'user-submitted'],

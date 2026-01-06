@@ -36,7 +36,7 @@ const GITHUB_CONFIG = {
 ```javascript
 const GITHUB_CONFIG = {
   owner: 'ifouk',
-  repo: '20251227_DejinyTance',
+  repo: 'DejinyTance',
   labels: ['feedback', 'user-submitted'],
   template: 'feedback.md'
 };

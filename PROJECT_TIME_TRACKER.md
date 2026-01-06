@@ -20,6 +20,7 @@ Tento soubor slouží k zaznamenávání času stráveného na projektu, počtu 
 | 3. ledna 2026 (Session 6) | 1.5 | ~12-15 | Cursor AI | Aktualizace resources pro T01 a T02 - nahrazení placeholderů skutečnými funkčními zdroji (UNESCO, YouTube vyhledávání, Česká televize, Český rozhlas, Metropolitan Museum), vylepšení promptu pro resources (prompts/resources.md) - přidání pravidel pro vyhýbání se problematickým URL strukturám (/learn/schools/, /ivysilani/vyhledavani/), ověření funkčnosti všech URL, aktualizace preferovaných zdrojů a problémových zdrojů v dokumentaci |
 | 3. ledna 2026 (Session 7) | 0.5 | ~8-10 | Cursor AI | Vylepšení hlavní stránky - přidání sekce "Jak studovat" s přehledem struktury otázek (6 částí s SVG ikonami), odstranění nadbytečných sekcí (doporučený postup, meta-info s počtem), přidání roku 2026 do sidebaru, sjednocení názvu na "Dějiny tance a baletu" všude, změna nadpisu na "Seznam maturitních otázek", úpravy CSS pro nové komponenty |
 | 6. ledna 2026 (Session 8) | 2.5 | ~20-25 | Cursor AI, Git | Implementace help modalu s nápovědou - přidání plovoucího tlačítka s ikonou otazníku, vytvoření help modalu s navigačním průvodcem (pohyb mezi otázkami, rychlá navigace, užitečné funkce), vytvoření SVG screenshotu rychlé navigace, změna ikony kvízu z otazníku na checklist (odlišení od help ikony), přejmenování "Osnova" na "Shrnutí" ve všech souborech, přidání ikon v kruhu do nápovědy, úpravy CSS pro help modal a plovoucí tlačítka, aktualizace README.md s novými funkcemi, commit a push na GitHub |
+| [Datum] (Session 9) | 1.0 | ~10-15 | Cursor AI, Git | Aktualizace repository konfigurace (zkrácení názvu z DejinyTance-MaturitniOtazky a 20251227_DejinyTance na DejinyTance ve všech souborech - scripts/feedback.js, dokumentace), aktualizace topic template (_TEMPLATE.json) - přechod na externí soubory pro resources (resourcesSource) a flashcards (flashcardSource) místo inline polí, úpravy dokumentace (FEEDBACK_SYSTEM.md), odstranění starých feedback setup souborů (FEEDBACK_SETUP.md, FEEDBACK_GITHUB_SETUP.md, FEEDBACK_GITHUB_FINEGRAINED_TOKEN.md, FEEDBACK_TEST_CHECKLIST.md, FEEDBACK_EMAIL_SETUP.md) |
 
 ---
 
@@ -50,7 +51,9 @@ Tento soubor slouží k zaznamenávání času stráveného na projektu, počtu 
 - Flashcards a resources pro T01 a T02 jsou vytvořené
 - Prompt pro generování flashcards a resources je připraven
 - Resources pro T01 a T02 obsahují skutečné funkční zdroje (placeholdery nahrazeny)
+- Systém zpětné vazby s automatickým vytvářením GitHub Issues je implementován a konfigurován
+- Topic template je aktualizován a připraven k použití s externími soubory pro resources a flashcards
 
 ---
 
-*Poslední aktualizace: 6. ledna 2026 (Session 8)*
+*Poslední aktualizace: [Datum] (Session 9)*
