@@ -28,11 +28,11 @@ Tento soubor slouží k zaznamenávání času stráveného na projektu, počtu 
 
 | Metrika | Hodnota |
 |---------|---------|
-| Celkový čas | 19.5 hodin |
-| Celkový počet promptů | ~155-190 |
-| Počet témat implementováno | 2 (T01, T02) |
-| Počet kvízů vytvořeno | 4 (T01, T02, T03, T04) |
-| Fáze projektu | Pilot verze dokončena, škálování v průběhu, audio a ikony připraveny, externí flashcards a resources podporovány, resources pro T01 a T02 dokončeny |
+| Celkový čas | 21.0 hodin |
+| Celkový počet promptů | ~170-210 |
+| Počet témat implementováno | 3 (T01, T02, T12) |
+| Počet kvízů vytvořeno | 5 (T01, T02, T03, T04, T12) |
+| Fáze projektu | Pilot verze dokončena, škálování v průběhu, audio a ikony připraveny, externí flashcards a resources podporovány, T12 kompletně implementováno |
 
 ---
 
