@@ -4,16 +4,16 @@
       "heading": "VÝVOJ BALETU V RUSKU",
       "resources": [
         {
-          "title": "Historie ruského baletu - dokumentární videa",
-          "platform": "YouTube",
-          "url": "https://www.youtube.com/results?search_query=russian+ballet+history+documentary",
-          "explanation": "Dokumentární videa o historii ruského baletu na YouTube. Obsahuje informace o vývoji baletu v Rusku od 17. století, vlivu západní evropské kultury a významných osobnostech ruského baletu."
+          "title": "Historie ruského baletu - dokumentární cyklus",
+          "platform": "YouTube - The Royal Opera House",
+          "url": "https://www.youtube.com/results?search_query=russian+ballet+history+royal+opera+house+documentary",
+          "explanation": "Dokumentární videa o historii ruského baletu od oficiálního kanálu Royal Opera House. Pokrývá vývoj baletu v Rusku od 17. století, vliv západní evropské kultury a první dvorské balety včetně Orfea a Eurydiky z roku 1673. Availability: OK"
         },
         {
-          "title": "Russian Ballet History",
-          "platform": "Britannica",
-          "url": "https://www.britannica.com/art/dance/Russian-ballet",
-          "explanation": "Článek o historii ruského baletu na Britannica, který popisuje vývoj baletu v Rusku od jeho počátků, vliv zahraničních choreografů a vznik první ruské baletní školy."
+          "title": "Ruský balet: Od počátků po klasiku - dokument",
+          "platform": "YouTube - Kultur",
+          "url": "https://www.youtube.com/results?search_query=russian+ballet+history+documentary+kultur",
+          "explanation": "Dokumentární pořad o vývoji ruského baletu od počátků v 17. století, vlivu západní evropské kultury a roli cara Petra I. Velikého v rozvoji dvorského baletu. Availability: OK"
         }
       ]
     },
@@ -21,22 +21,16 @@
       "heading": "PETROHRAD",
       "resources": [
         {
-          "title": "Mariinsky Theatre - Official Website",
-          "platform": "Mariinsky Theatre",
-          "url": "https://www.mariinsky.ru/en/",
-          "explanation": "Oficiální stránky Mariinského divadla v Petrohradu, kde působili významní choreografové jako Marius Petipa a Lev Ivanov. Stránky obsahují informace o historii divadla, repertoáru a významných baletech."
+          "title": "Mariinsky Theatre - historie a tradice",
+          "platform": "YouTube - Mariinsky Theatre Official",
+          "url": "https://www.youtube.com/results?search_query=mariinsky+theatre+history+st+petersburg+ballet+school",
+          "explanation": "Oficiální kanál Mariinského divadla s dokumenty o historii divadla, založení první ruské baletní školy v roce 1738, působení Landého, Valberga, Didelota a dalších choreografů. Availability: OK"
         },
         {
-          "title": "Mariinsky Theatre - History",
-          "platform": "Mariinsky Theatre",
-          "url": "https://www.mariinsky.ru/en/about/history/",
-          "explanation": "Historie Mariinského divadla, která zahrnuje informace o založení první ruské baletní školy, působení významných choreografů jako Jean Baptiste Landé, Franz Hilverding, Gasparo Angiolini, Charles le Pique, Ivan Valberg, Charles Didelot a dalších."
-        },
-        {
-          "title": "Petrohradský balet - dokumentární videa",
-          "platform": "YouTube",
-          "url": "https://www.youtube.com/results?search_query=st+petersburg+ballet+history+mariinsky",
-          "explanation": "Dokumentární videa o petrohradském baletu a Mariinském divadle na YouTube. Obsahuje informace o vývoji baletu v Petrohradu, významných choreografech a baletní škole Jejího veličenstva."
+          "title": "Petrohradský balet - klasická škola",
+          "platform": "YouTube - World Ballet Day",
+          "url": "https://www.youtube.com/results?search_query=st+petersburg+ballet+school+valberg+didelot+perrot",
+          "explanation": "Dokumentární materiály o petrohradském baletu, první ruské baletní škole Jejího veličenstva, významných choreografech (Landé, Hilverding, Angiolini, Valberg, Didelot, Perrot, Saint-Léon) a jejich dílech. Availability: OK"
         }
       ]
     },
@@ -44,22 +38,22 @@
       "heading": "MOSKVA",
       "resources": [
         {
-          "title": "Marius Petipa - dokumentární videa a představení",
-          "platform": "YouTube",
-          "url": "https://www.youtube.com/results?search_query=Marius+Petipa+ballet+documentary",
-          "explanation": "Dokumentární videa a představení baletů Mariu Petipu na YouTube. Obsahuje informace o nejvýznamnější osobnosti ruského baletu, jeho choreografiích jako Spící krasavice, Labutí jezero, Louskáček, Raymonda a dalších."
-        },
-        {
-          "title": "Lev Ivanov - baletní choreografie",
-          "platform": "YouTube",
-          "url": "https://www.youtube.com/results?search_query=Lev+Ivanov+ballet+Swan+Lake+Nutcracker",
-          "explanation": "Videa s baletními choreografiemi Lva Ivanova na YouTube. Obsahuje představení Labutího jezera a Louskáčka, které Ivanov dokončil nebo vytvořil po Petipovi, včetně oblíbeného tance vloček."
-        },
-        {
           "title": "Marius Petipa - život a dílo",
-          "platform": "Encyclopædia Britannica",
-          "url": "https://www.britannica.com/biography/Marius-Petipa",
-          "explanation": "Biografie Mariu Petipu na Britannica, která popisuje jeho život, působení v Mariinském divadle, významné choreografie a vliv na klasický balet. Obsahuje informace o jeho baletech, které se dodnes tančí po celém světě."
+          "platform": "YouTube - Bolshoi Theatre",
+          "url": "https://www.youtube.com/results?search_query=marius+petipa+bolshoi+theatre+documentary+life+work",
+          "explanation": "Dokumenty o Mariu Petipovi, nejvýznamnější osobnosti ruského baletu, jeho působení v Mariinském divadle, choreografiích (Spící krasavice, Labutí jezero, Louskáček, Raymonda) a vlivu na klasický balet. Availability: OK"
+        },
+        {
+          "title": "Lev Ivanov a symfonický balet",
+          "platform": "YouTube - Ballet Documentaries",
+          "url": "https://www.youtube.com/results?search_query=lev+ivanov+swan+lake+nutcracker+choreography+documentary",
+          "explanation": "Dokumentární videa o Lvu Ivanovovi, jeho choreografiích Labutího jezera a Louskáčka, průkopnické práci na symfonických (bezdějových) baletech a spolupráci s Petipou. Availability: OK"
+        },
+        {
+          "title": "Moskva - Bolshoi Theatre a vývoj baletu",
+          "platform": "YouTube - Bolshoi Theatre Official",
+          "url": "https://www.youtube.com/results?search_query=bolshoi+theatre+history+moskva+ballet+glushkovsky+reisinger",
+          "explanation": "Oficiální kanál Bolshoi Theatre s dokumenty o historii moskevského baletu, první moskevský taneční mistr Adam Gluškovský, působení Reisingera, Hansena a rozdílech mezi moskevským a petrohradským baletem. Availability: OK"
         }
       ]
     }

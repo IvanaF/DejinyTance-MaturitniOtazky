@@ -120,6 +120,9 @@ async function initIndexPage() {
 
     // Update stats
     updateIndexStats(topics.length);
+    
+    // Setup smooth scroll for hero CTA button
+    setupHeroCTA();
   } catch (error) {
     console.error('Error initializing index page:', error);
     const containers = ['topicsList', 'mobileTopicsList', 'indexTopicsList'];
@@ -395,7 +398,7 @@ function renderTopicContent(topic) {
   if (topic.summary) {
     const outlineContent = document.getElementById('outlineContent');
     if (outlineContent) {
-      outlineContent.innerHTML = `<div class="outline-text">${markdownToHtml(topic.summary)}</div>`;
+      outlineContent.innerHTML = markdownToHtml(topic.summary);
     }
   } else {
     const outlineSection = document.getElementById('outlineSection');
@@ -577,16 +580,7 @@ function renderTopicContent(topic) {
     const quizContent = document.getElementById('quizContent');
     const quizSection = document.getElementById('quizSection');
     
-    if (quizSection) {
-      // Update section title (no count)
-      const sectionTitle = quizSection.querySelector('.section-title');
-      if (sectionTitle) {
-        const spanElement = sectionTitle.querySelector('span');
-        if (spanElement) {
-          spanElement.textContent = `Kvíz`;
-        }
-      }
-    }
+    // Section title is already set in HTML - no need to update
     
     if (quizContent) {
       // Shuffle questions randomly
@@ -832,6 +826,34 @@ function calculateScrollOffset() {
   // This prevents overlap with topic header
   // If no sticky elements, use minimum offset to account for any fixed elements
   return Math.max(offset + 40, 100); // 40px extra padding, minimum 100px
+}
+
+/**
+ * Setup smooth scroll for hero CTA button
+ */
+function setupHeroCTA() {
+  const ctaButton = document.querySelector('.hero-cta-button');
+  if (ctaButton) {
+    ctaButton.addEventListener('click', (e) => {
+      const targetId = ctaButton.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        e.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          // Account for mobile navigation bar height
+          const mobileNav = document.querySelector('.mobile-nav');
+          const offset = mobileNav && window.getComputedStyle(mobileNav).display !== 'none' ? 80 : 20;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  }
 }
 
 /**

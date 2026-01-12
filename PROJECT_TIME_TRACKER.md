@@ -21,6 +21,7 @@ Tento soubor slouží k zaznamenávání času stráveného na projektu, počtu 
 | 3. ledna 2026 (Session 7) | 0.5 | ~8-10 | Cursor AI | Vylepšení hlavní stránky - přidání sekce "Jak studovat" s přehledem struktury otázek (6 částí s SVG ikonami), odstranění nadbytečných sekcí (doporučený postup, meta-info s počtem), přidání roku 2026 do sidebaru, sjednocení názvu na "Dějiny tance a baletu" všude, změna nadpisu na "Seznam maturitních otázek", úpravy CSS pro nové komponenty |
 | 6. ledna 2026 (Session 8) | 2.5 | ~20-25 | Cursor AI, Git | Implementace help modalu s nápovědou - přidání plovoucího tlačítka s ikonou otazníku, vytvoření help modalu s navigačním průvodcem (pohyb mezi otázkami, rychlá navigace, užitečné funkce), vytvoření SVG screenshotu rychlé navigace, změna ikony kvízu z otazníku na checklist (odlišení od help ikony), přejmenování "Osnova" na "Shrnutí" ve všech souborech, přidání ikon v kruhu do nápovědy, úpravy CSS pro help modal a plovoucí tlačítka, aktualizace README.md s novými funkcemi, commit a push na GitHub |
 | [Datum] (Session 9) | 1.0 | ~10-15 | Cursor AI, Git | Aktualizace repository konfigurace (zkrácení názvu z DejinyTance-MaturitniOtazky a 20251227_DejinyTance na DejinyTance ve všech souborech - scripts/feedback.js, dokumentace), aktualizace topic template (_TEMPLATE.json) - přechod na externí soubory pro resources (resourcesSource) a flashcards (flashcardSource) místo inline polí, úpravy dokumentace (FEEDBACK_SYSTEM.md), odstranění starých feedback setup souborů (FEEDBACK_SETUP.md, FEEDBACK_GITHUB_SETUP.md, FEEDBACK_GITHUB_FINEGRAINED_TOKEN.md, FEEDBACK_TEST_CHECKLIST.md, FEEDBACK_EMAIL_SETUP.md) |
+| 6. ledna 2026 (Session 10) | 2.5 | ~25-30 | Cursor AI, Python, Edge TTS, Git | Kompletní implementace T03 (Řecko, Řím) - vytvoření topic JSON, materials, flashcards, resources, term links, audio scripts (2 části), generování audio souborů (Edge TTS), úprava formátování materials pro konzistenci s T01, přidání České televize zdrojů do resources, aktualizace workflow dokumentace (topic_generation_workflow.md) - přidání poznámek o formátování title pro multi-section topics, validaci resources, testování linků, vytvoření dokumentace o formátování sekcí (docs/T01_section_formatting_explanation.md), aktualizace prompts/resources.md s požadavky na testování video/audio přehrávání, úpravy CSS a JS pro správné zobrazení multi-section materials, odstranění starého action plan souboru |
 
 ---
 
@@ -28,11 +29,11 @@ Tento soubor slouží k zaznamenávání času stráveného na projektu, počtu 
 
 | Metrika | Hodnota |
 |---------|---------|
-| Celkový čas | 21.0 hodin |
-| Celkový počet promptů | ~170-210 |
-| Počet témat implementováno | 3 (T01, T02, T12) |
+| Celkový čas | 23.5 hodin |
+| Celkový počet promptů | ~195-240 |
+| Počet témat implementováno | 4 (T01, T02, T03, T12) |
 | Počet kvízů vytvořeno | 5 (T01, T02, T03, T04, T12) |
-| Fáze projektu | Pilot verze dokončena, škálování v průběhu, audio a ikony připraveny, externí flashcards a resources podporovány, T12 kompletně implementováno |
+| Fáze projektu | Pilot verze dokončena, škálování v průběhu, audio a ikony připraveny, externí flashcards a resources podporovány, T03 kompletně implementováno (včetně audio), workflow dokumentace rozšířena |
 
 ---
 

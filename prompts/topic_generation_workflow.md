@@ -187,9 +187,11 @@ git commit -m "Backup before updating TXX"
 - Každá logická sekce = jeden objekt v `sections`
 - `heading` = název sekce (VELKÁ PÍSMENA, pokud je v originále)
 - **⚠️ DŮLEŽITÉ:** `heading` NESMÍ obsahovat číslo tématu (např. "12.)" nebo "T12 -"). Použij pouze název sekce (např. "VÝVOJ BALETU V RUSKU", ne "12.) VÝVOJ BALETU V RUSKU")
+- **⚠️ DŮLEŽITÉ - Pro více sekcí:** Pokud téma má více logických částí (např. "ŘECKO, ŘÍM"), MUSÍ existovat sekce s nadpisy, které přesně odpovídají názvům v title (např. sekce s `heading: "ŘECKO"` a `heading: "ŘÍM"`). Tyto sekce vytvoří modré hlavičky v sekci "Studijní materiály". Nadpisy musí odpovídat názvům v title přesně (case-insensitive).
 - `content` = celý obsah sekce (zachovej odrážky, odstavce, formátování)
 - Použij `\n` pro nové řádky
 - Zachovej všechny informace (data, jména, pojmy, seznamy)
+- **Formátování:** Zachovej konzistentní formátování s existujícími tématy (viz `T01_materials.json` jako referenci pro styl odrážek, číslování, atd.)
 
 **Kontrola:**
 - [ ] Všechny sekce z PDF jsou zahrnuty
@@ -248,10 +250,11 @@ git commit -m "Backup before updating TXX"
 - `objectives`: Vytvoř 3-5 cílů učení na základě obsahu kapitoly
 - `image`: Cesta k SVG ikoně (bude vygenerována v Kroku 9)
 - Ostatní cesty budou vyplněny v dalších krocích
+- **⚠️ DŮLEŽITÉ - Formát názvu pro více sekcí:** Pokud téma obsahuje více logických sekcí (např. "Řecko, Řím" nebo "Egypt, Mezopotámie"), název MUSÍ být oddělený čárkami (např. `"ŘECKO, ŘÍM"`), NE s závorkami (např. `"ANTIKA (Řecko, Řím)"`). Toto umožní správné seskupení sekcí a vytvoření modrých hlaviček v sekci "Studijní materiály".
 
 **Kontrola:**
 - [ ] ID a order odpovídají `_TOPICS.csv`
-- [ ] Název je přesně z `_TOPICS.csv`
+- [ ] Název je ve správném formátu (čárky pro více sekcí, ne závorky)
 - [ ] Objectives jsou relevantní k obsahu
 - [ ] JSON je validní
 
@@ -449,6 +452,8 @@ git commit -m "Backup before updating TXX"
 - ✅ **KONKRÉTNÍ odkazy** - ne obecné stránky
 - ✅ **RELEVANTNÍ k obsahu** - přímo souvisí s tématem kapitoly
 - ✅ **FUNKČNÍ URL** - POVINNĚ ověř každý URL v prohlížeči před přidáním
+- ✅ **TEST PŘEHRÁVÁNÍ** - POVINNĚ otestuj, že video/audio odkazy skutečně přehrávají (zvláště důležité pro iVysílání - mnoho starých dokumentů není dostupných). NEPŘIDÁVEJ odkazy, které nelze přehrát.
+- ✅ **Česká televize a rozhlas** - preferuj zdroje z České televize (ČT edu, iVysílání) a Českého rozhlasu, pokud jsou dostupné a přehrávatelné
 - ✅ **2-6 zdrojů na sekci** (podle hustoty tématu)
 - ✅ **Čeština** - všechny popisy v češtině
 
@@ -463,15 +468,20 @@ git commit -m "Backup before updating TXX"
 - Odborné instituce (konkrétní stránky)
 
 **⚠️ KRITICKÉ: VALIDACE ODKAZŮ**
-1. **PŘED přidáním:** Otevři každý URL v prohlížeči a ověř, že stránka existuje
+1. **PŘED přidáním:** Otevři každý URL v prohlížeči a ověř:
+   - Stránka existuje (ne 404/500)
+   - Video/audio odkazy SKUTEČNĚ PŘEHRÁVAJÍ (zvláště důležité pro iVysílání)
+   - Obsah je přístupný (nevyžaduje login nebo není geo-blocked pro české uživatele)
 2. **PO vytvoření souboru:** Spusť validační skript:
    ```bash
    python scripts/validate_resource_links.py
    ```
 3. Skript automaticky odstraní nefunkční odkazy (404, 403, connection errors, timeouts)
+4. **NEPŘIDÁVEJ odkazy, které nelze přehrát nebo zobrazit** - lépe méně zdrojů, ale všechny funkční
 
 **Kontrola:**
 - [ ] Všechny URL jsou funkční (ověřeno v prohlížeči)
+- [ ] Všechny video/audio odkazy byly testovány na přehrávání (zvláště iVysílání)
 - [ ] Validační skript byl spuštěn
 - [ ] Všechny URL jsou konkrétní (ne obecné stránky)
 - [ ] Zdroje souvisí PŘÍMO S TANCEM
@@ -745,10 +755,11 @@ python scripts/validate_resource_links.py
    - [ ] Téma se zobrazuje v seznamu témat
    - [ ] Detail tématu se načítá správně
    - [ ] Materiály se zobrazují s hyperlinky
+   - [ ] **Pro více sekcí:** Modré hlavičky se zobrazují správně (pokud má téma více částí oddělených čárkami v názvu)
    - [ ] Audio přehrává správně
    - [ ] Flashcards fungují
    - [ ] Kvíz funguje
-   - [ ] Zdroje se zobrazují
+   - [ ] Zdroje se zobrazují a všechny odkazy jsou funkční a všechny odkazy jsou funkční
    - [ ] Shrnutí se zobrazuje
    - [ ] Ikona se zobrazuje
 
@@ -851,7 +862,9 @@ git commit -m "Add topic TXX: NÁZEV TÉMATU"
 - ✅ **DODRŽUJ** všechny pravidla z jednotlivých promptů
 - ✅ **VALIDUJ** všechny JSON soubory před uložením
 - ✅ **OVĚŘUJ** funkčnost všech odkazů (resources, hyperlinky)
+- ✅ **TESTOVAT PŘEHRÁVÁNÍ** video/audio odkazů před přidáním (zvláště iVysílání)
 - ✅ **KONTROLUJ** kvalitu obsahu (100% pokrytí, gramatika, formát)
+- ✅ **KONZISTENTNÍ FORMÁTOVÁNÍ** materiálů s existujícími tématy (odrážky, číslování, struktura)
 
 ### Po dokončení
 - ✅ **TESTOVAT** na webu před commitem
@@ -873,6 +886,30 @@ git commit -m "Add topic TXX: NÁZEV TÉMATU"
 ---
 
 **Vytvořeno:** 2025-01-27  
-**Verze:** 1.0  
+**Aktualizováno:** 2025-01-27 (lekce z T03)  
+**Verze:** 1.1  
 **Status:** K REVIZI - NEPROVÁDĚT BEZ SCHVÁLENÍ
+
+---
+
+## ZMĚNY VERZE 1.1 (2025-01-27)
+
+**Lekce z implementace T03:**
+
+1. **Formát názvu pro více sekcí (Krok 2):**
+   - Přidáno upozornění, že názvy více sekcí MUSÍ být odděleny čárkami (např. `"ŘECKO, ŘÍM"`), ne závorkami (např. `"ANTIKA (Řecko, Řím)"`)
+   - Toto umožňuje správné seskupení sekcí a vytvoření modrých hlaviček
+
+2. **Sekce v materials.json pro více sekcí (Krok 1):**
+   - Přidáno upozornění, že pro více sekcí MUSÍ existovat sekce s nadpisy přesně odpovídajícími názvům v title
+   - Přidáno upozornění na konzistentní formátování s existujícími tématy
+
+3. **Validace resources odkazů (Krok 6):**
+   - Přidáno upozornění na testování přehrávání video/audio odkazů (zvláště iVysílání)
+   - Přidána poznámka o preferenci českých veřejnoprávních médií (ČT, ČRo)
+   - Rozšířeny pokyny pro validaci odkazů před přidáním
+
+4. **Testování (Krok 12):**
+   - Přidána kontrola modrých hlaviček pro více sekcí
+   - Rozšířena kontrola zdrojů (všechny odkazy musí být funkční)
 

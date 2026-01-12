@@ -213,6 +213,28 @@
   
   .mobile-nav-title {
     font-size: var(--font-size-base);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 375px) {
+  .content-wrapper {
+    padding: var(--spacing-sm);
+  }
+  
+  .mobile-nav {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+}
+
+@media (max-width: 320px) {
+  .content-wrapper {
+    padding: var(--spacing-xs);
+  }
+  
+  .mobile-nav-title {
+    font-size: var(--font-size-sm);
   }
 }
 

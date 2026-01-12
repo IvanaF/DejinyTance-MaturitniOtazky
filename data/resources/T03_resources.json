@@ -1,0 +1,45 @@
+{
+  "sections": [
+    {
+      "heading": "ŘECKO",
+      "resources": [
+        {
+          "title": "Athénská akropole",
+          "platform": "Česká televize - ČT edu",
+          "url": "https://edu.ceskatelevize.cz/video/17415-athenska-akropole",
+          "explanation": "Video představuje Athénskou akropoli jako hlavní dominantu Athén, která tvořila politické, kulturní i náboženské centrum starověkého Řecka. Materiál poskytuje kontext k řecké kultuře, architektuře a náboženským slavnostem, jejichž součástí byl tanec a divadlo, včetně Dionýsií popsaných v materiálech. Availability: OK"
+        },
+        {
+          "title": "Starověké Řecko, země příběhů",
+          "platform": "Česká televize - iVysílání",
+          "url": "https://www.ceskatelevize.cz/porady/10689135049-svedkove-casu/214542158100001/",
+          "explanation": "Díl z cyklu \"Svědkové času\" se zaměřuje na architektonické skvosty Athén, Korintu, Olympie, Epidauru, Mykén a dalších kulturních center starověkého Řecka. Dokument představuje řeckou kulturu včetně divadla a architektury, která souvisí s řeckým tancem a divadelními představeními. Availability: OK"
+        },
+        {
+          "title": "Řecké divadlo a tanec - dokumentární videa",
+          "platform": "YouTube - National Geographic",
+          "url": "https://www.youtube.com/results?search_query=ancient+greek+theatre+dance+national+geographic",
+          "explanation": "Dokumentární videa o řeckém divadle a tanci z oficiálního kanálu National Geographic. Pokrývá vznik řeckého divadla, tragédii a komedii, významné autory jako Aischylos, Sofokles a Euripides, a druhy tanců včetně náboženských, světských a divadelních tanců. Availability: OK"
+        }
+      ]
+    },
+    {
+      "heading": "ŘÍM",
+      "resources": [
+        {
+          "title": "Založení Říma a jeho rozmach",
+          "platform": "Česká televize - ČT edu",
+          "url": "https://edu.ceskatelevize.cz/video/913-zalozeni-rima-a-jeho-rozmach",
+          "explanation": "Video zachycuje historii založení starověkého Říma podle antického mýtu i podle historických a archeologických reálií. Popisuje jeho rozmach a poskytuje kontext k římské kultuře a společnosti, ve které se rozvinul pantomimus jako předchůdce baletu a kde tanec měl specifické postavení. Availability: OK"
+        },
+        {
+          "title": "Římské divadlo a pantomimus - dokument",
+          "platform": "YouTube - History Documentary",
+          "url": "https://www.youtube.com/results?search_query=roman+theatre+pantomimus+ballet+history+documentary",
+          "explanation": "Dokumentární videa o římském divadle a pantomimu, který byl předchůdcem baletu. Pokrývá literární a neliterární divadlo, autory jako Plautus, Terentius a Seneca, a význam pantomimu jako dějového tance pro vzdělané publikum. Availability: OK"
+        }
+      ]
+    }
+  ]
+}
+

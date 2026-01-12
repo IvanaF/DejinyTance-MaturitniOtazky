@@ -1,0 +1,42 @@
+{
+  "id": "T03",
+  "order": 3,
+  "title": "ŘECKO, ŘÍM",
+  "image": "assets/images/topics/T03.svg",
+  "objectives": [
+    "Pochopit vývoj řecké a římské kultury a její vliv na tanec",
+    "Naučit se o řeckých a římských tancích a jejich významu v antické společnosti",
+    "Rozpoznat různé druhy tanců (náboženské, světské, divadelní) v Řecku a Římě",
+    "Pochopit souvislosti mezi náboženstvím, divadlem a tancem v antice",
+    "Naučit se o významných řeckých a římských umělcích, dramatikách a jejich dílech"
+  ],
+  "materials": {
+    "summary": "Antika zahrnuje řeckou a římskou civilizaci, které měly mimořádně vyspělou kulturu v různých oborech včetně divadla, věd, filozofie a architektury. V Řecku měl tanec významné místo v kultuře, souvisel s náboženstvím a mytologií a existovaly různé druhy tanců – náboženské, světské, divadelní a lidové. V Římě tanec neměl tak významné místo jako v Řecku, tančili pouze profesionálové, ale rozvinul se pantomimus jako nový pohybový žánr a předchůdce baletu."
+  },
+  "audio": {
+    "title": "Otázka 3 - ANTIKA (Řecko, Řím)",
+    "src": "assets/audio/Otazka-3-antika-recko-rim-cast-1.mp3",
+    "transcript": "Více audio souborů - viz jednotlivé části níže.",
+    "files": [
+      {
+        "src": "assets/audio/Otazka-3-antika-recko-rim-cast-1.mp3",
+        "title": "Otázka 3 - Řecko",
+        "part": 1
+      },
+      {
+        "src": "assets/audio/Otazka-3-antika-recko-rim-cast-2.mp3",
+        "title": "Otázka 3 - Řím",
+        "part": 2
+      }
+    ]
+  },
+  "resourcesSource": "data/resources/T03_resources.json",
+  "flashcardSource": "data/flashcards/T03_flashcards.json",
+  "mindmap": {
+    "description": "Myšlenková mapa zobrazuje klíčové pojmy a souvislosti týkající se antické kultury Řecka a Říma, řeckých a římských tanců, divadla a jejich významu.",
+    "image": "assets/images/mindmaps/T03.png"
+  },
+  "materialsSource": "data/materials/T03_materials.json",
+  "summarySource": "data/summaries/T03_summary.txt",
+  "quizSource": "data/quizzes/T03_quiz.json"
+}
